@@ -37,6 +37,24 @@ I am currently studying at the College of Software, Zhejiang University, under t
 </div>
 </div> -->
 
+## Conference Papers
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025 Main</div><img src='images/MEraser-Framework.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[MEraser: An Effective Fingerprint Erasure Approach for Large Language Models](暂时未公开)
+
+**Jingxuan Zhang** and **Zhenhua Xu** (co-first authors), Rui Hu, Wenpeng Xing, Xuhong Zhang, Meng Han  
+
+Large Language Models (LLMs) are widely used, raising concerns about model ownership. MEraser is a method to remove backdoor-based fingerprints from LLMs while preserving performance. It uses a two-phase fine-tuning strategy with mismatched and clean datasets, achieving fingerprint removal with minimal data. The method is transferable across models without repeated training, highlighting vulnerabilities in current techniques and setting benchmarks for better model protection.
+</div>
+</div>
+
+
+## Journal Papers
+*(To be added)*
+
+## Preprints
 - [RAP-SM: Robust Adversarial Prompt via Shadow Models for Copyright Verification of Large Language Models](https://arxiv.org/abs/2505.06304), **Zhebo Wang** and **Zhenhua Xu** (co-first authors), Maike Li, Wenpeng Xing, Chunqiang Hu, Chen Zhi, Meng Han
 
 # 🎖 Honors and Awards
