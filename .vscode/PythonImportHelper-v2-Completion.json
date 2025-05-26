@@ -1,0 +1,81 @@
+[
+    {
+        "label": "scholarly",
+        "importPath": "scholarly",
+        "description": "scholarly",
+        "isExtraImport": true,
+        "detail": "scholarly",
+        "documentation": {}
+    },
+    {
+        "label": "jsonpickle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jsonpickle",
+        "description": "jsonpickle",
+        "detail": "jsonpickle",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "kind": 5,
+        "importPath": "google_scholar_crawler.main",
+        "description": "google_scholar_crawler.main",
+        "peekOfCode": "name = author['name']\nauthor['updated'] = str(datetime.now())\nauthor['publications'] = {v['author_pub_id']:v for v in author['publications']}\nprint(json.dumps(author, indent=2))\nos.makedirs('results', exist_ok=True)\nwith open(f'results/gs_data.json', 'w') as outfile:\n    json.dump(author, outfile, ensure_ascii=False)\nshieldio_data = {\n  \"schemaVersion\": 1,\n  \"label\": \"citations\",",
+        "detail": "google_scholar_crawler.main",
+        "documentation": {}
+    },
+    {
+        "label": "author['updated']",
+        "kind": 5,
+        "importPath": "google_scholar_crawler.main",
+        "description": "google_scholar_crawler.main",
+        "peekOfCode": "author['updated'] = str(datetime.now())\nauthor['publications'] = {v['author_pub_id']:v for v in author['publications']}\nprint(json.dumps(author, indent=2))\nos.makedirs('results', exist_ok=True)\nwith open(f'results/gs_data.json', 'w') as outfile:\n    json.dump(author, outfile, ensure_ascii=False)\nshieldio_data = {\n  \"schemaVersion\": 1,\n  \"label\": \"citations\",\n  \"message\": f\"{author['citedby']}\",",
+        "detail": "google_scholar_crawler.main",
+        "documentation": {}
+    },
+    {
+        "label": "author['publications']",
+        "kind": 5,
+        "importPath": "google_scholar_crawler.main",
+        "description": "google_scholar_crawler.main",
+        "peekOfCode": "author['publications'] = {v['author_pub_id']:v for v in author['publications']}\nprint(json.dumps(author, indent=2))\nos.makedirs('results', exist_ok=True)\nwith open(f'results/gs_data.json', 'w') as outfile:\n    json.dump(author, outfile, ensure_ascii=False)\nshieldio_data = {\n  \"schemaVersion\": 1,\n  \"label\": \"citations\",\n  \"message\": f\"{author['citedby']}\",\n}",
+        "detail": "google_scholar_crawler.main",
+        "documentation": {}
+    },
+    {
+        "label": "shieldio_data",
+        "kind": 5,
+        "importPath": "google_scholar_crawler.main",
+        "description": "google_scholar_crawler.main",
+        "peekOfCode": "shieldio_data = {\n  \"schemaVersion\": 1,\n  \"label\": \"citations\",\n  \"message\": f\"{author['citedby']}\",\n}\nwith open(f'results/gs_data_shieldsio.json', 'w') as outfile:\n    json.dump(shieldio_data, outfile, ensure_ascii=False)",
+        "detail": "google_scholar_crawler.main",
+        "documentation": {}
+    }
+]
