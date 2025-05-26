@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am currently studying at the College of Software, Zhejiang University, under the supervision of [Meng Han](https://scholar.google.com/citations?user=TnCrl1cAAAAJ). My research focuses on AI Security, specifically Model Watermarking & Fingerprinting, involving LLM and VLM. 📚🔍 If you are interested in this topic, feel free to contact me via email! ✉️
+I am currently studying at the College of Software, Zhejiang University, under the supervision of [Meng Han](https://scholar.google.com/citations?user=TnCrl1cAAAAJ). My research focuses on AI Security, specifically Model Watermarking &amp; Fingerprinting, involving LLM and VLM. 📚🔍 If you are interested in this topic, feel free to contact me via email! ✉️
 
 
 # 🔥 News
@@ -48,6 +48,6 @@ During Undergraduate Studies:
 - *2023.11 - 2024.5*, [LianLianPay (LianLian Yintong Electronic Payment Co., Ltd.)](https://www.lianlianpay.com/home), China.
 
 # 📖 Educations
-- *2024.06 - Present*, Master’s student in Software Engineering, College of Software, Zhejiang University
-- *2020.09 - 2024.06*, Bachelor’s degree in Digital Media Technology, College of Computer Science and Technology, College of Software, Zhejiang University of Technology
+- *2024.06 - Present*, Master's student in Software Engineering, College of Software, Zhejiang University
+- *2020.09 - 2024.06*, Bachelor's degree in Digital Media Technology, College of Computer Science and Technology, College of Software, Zhejiang University of Technology
 
