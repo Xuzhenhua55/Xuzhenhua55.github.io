@@ -52,7 +52,7 @@ LLMs are widely used, raising concerns about model ownership. MEraser is a metho
 
 
 ## Journal Papers
-*(To be added)*
+*None yet.*
 
 ## Preprints
 - [RAP-SM: Robust Adversarial Prompt via Shadow Models for Copyright Verification of Large Language Models](https://arxiv.org/abs/2505.06304), **Zhebo Wang** and **Zhenhua Xu** (co-first authors), Maike Li, Wenpeng Xing, Chunqiang Hu, Chen Zhi, Meng Han
