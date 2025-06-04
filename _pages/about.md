@@ -17,7 +17,9 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am currently studying at the College of Software, Zhejiang University, under the supervision of [Meng Han](https://scholar.google.com/citations?user=TnCrl1cAAAAJ). My research focuses on AI Security, specifically Model Watermarking &amp; Fingerprinting, involving LLM and VLM. 📚🔍 If you are interested in this topic, feel free to contact me via email! ✉️
+I am currently studying at the College of Software, Zhejiang University, under the supervision of [Meng Han](https://scholar.google.com/citations?user=TnCrl1cAAAAJ). 
+
+My research focuses on AI Security, specifically Model Watermarking and Fingerprinting, involving LLM and VLM. 📚🔍 If you are interested in this topic, feel free to contact me via email! ✉️
 
 
 # 🔥 News
