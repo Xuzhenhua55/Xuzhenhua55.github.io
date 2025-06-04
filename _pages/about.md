@@ -23,6 +23,9 @@ I am currently studying at the College of Software, Zhejiang University, under t
 # 🔥 News
 - *2025.05*: &nbsp;🎉🎉 One paper was accepted by [ACL 2025 Main Conference](https://2025.aclweb.org/).
 
+# 🚀 Projects
+- [Awesome LLM Copyright Protection](https://github.com/Xuzhenhua55/awesome-llm-copyright-protection) - A curated collection of research and techniques for protecting intellectual property of large language models, including watermarking, fingerprinting, and more. [[Website]](https://xuzhenhua55.github.io/awesome-llm-copyright-protection/)
+
 # 📝 Publications 
 
 <!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
@@ -39,7 +42,6 @@ I am currently studying at the College of Software, Zhejiang University, under t
 
 ## Conference Papers
 
-<!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025 Main</div><img src='images/MEraser-Framework.png' alt="sym" width="100%"></div></div> -->
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025 Main</div><img src='images/MEraser-Framework.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
