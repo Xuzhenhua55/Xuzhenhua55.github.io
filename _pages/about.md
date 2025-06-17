@@ -47,9 +47,9 @@ My research focuses on AI Security, specifically Model Watermarking and Fingerpr
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025 Main</div><img src='images/MEraser-Framework.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[MEraser: An Effective Fingerprint Erasure Approach for Large Language Models](#)
+[MEraser: An Effective Fingerprint Erasure Approach for Large Language Models](https://arxiv.org/abs/2506.12551)
 
-**Jingxuan Zhang** and **Zhenhua Xu** (co-first authors), Rui Hu, Wenpeng Xing, Xuhong Zhang, Meng Han  
+**Jingxuan Zhang** and **Zhenhua Xu** (co-first authors), Rui Hu, Wenpeng Xing, Xuhong Zhang, Meng Han  <a href="https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC" target="_blank" class="github-btn" style="display:inline-block;padding:2px 10px;border:1px solid #333;border-radius:5px;color:#333;text-decoration:none;"><i class="fab fa-github"></i> Code</a>
 
 LLMs are widely used, raising concerns about model ownership. MEraser is a method to remove backdoor-based fingerprints from LLMs while preserving performance. It uses a two-phase fine-tuning strategy with mismatched and clean datasets, achieving fingerprint removal with minimal data. The method is transferable across models without repeated training, highlighting vulnerabilities in current techniques and setting benchmarks for better model protection.
 </div>
