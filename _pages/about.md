@@ -61,7 +61,8 @@ LLMs are widely used, raising concerns about model ownership. MEraser is a metho
 
 ## Preprints
 - [RAP-SM: Robust Adversarial Prompt via Shadow Models for Copyright Verification of Large Language Models](https://arxiv.org/abs/2505.06304), **Zhebo Wang** and **Zhenhua Xu** (co-first authors), Maike Li, Wenpeng Xing, Chunqiang Hu, Chen Zhi, Meng Han
-
+- [FP-VEC: Fingerprinting Large Language Models via Efficient Vector Addition](https://arxiv.org/abs/2409.08846), **Zhenhua Xu**, Wenpeng Xing, Zhebo Wang, Chang Hu, Chen Jie, Meng Han
+- [A Survey of LLM-Driven AI Agent Communication: Protocols, Security Risks, and Defense Countermeasures](https://arxiv.org/abs/2506.19676), Dezhang Kong, Shi Lin, **Zhenhua Xu**, Zhebo Wang, Minghao Li, Yufeng Li, Yilun Zhang, Zeyang Sha, Yuyuan Li, Changting Lin, Xun Wang, Xuan Liu, Muhammad Khurram Khan, Ningyu Zhang, Chaochao Chen, Meng Han
 # 🎖 Honors and Awards
 During Undergraduate Studies:
 - Outstanding Graduate of Zhejiang Province
