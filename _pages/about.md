@@ -8,6 +8,28 @@ redirect_from:
   - /about.html
 ---
 
+<style>
+@media (max-width: 768px) {
+  .paper-container {
+    flex-direction: column !important;
+  }
+  .paper-image {
+    flex: 0 0 auto !important;
+    height: 200px !important;
+    min-width: 0 !important;
+  }
+  .paper-content {
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+  .paper-tags {
+    float: none !important;
+    margin: 0 0 15px 0 !important;
+    justify-content: flex-start !important;
+  }
+}
+</style>
+
 {% if site.google_scholar_stats_use_cdn %}
 {% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
 {% else %}
@@ -23,6 +45,7 @@ My research focuses on AI Security, specifically Model Watermarking and Fingerpr
 
 
 # 🔥 News
+- *2025.08*: &nbsp;🎉🎉 One paper was accepted by [SCIENTIA SINICA Informationis](http://scis.scichina.com/).
 - *2025.05*: &nbsp;🎉🎉 One paper was accepted by [ACL 2025 Main Conference](https://2025.aclweb.org/).
 
 # 🚀 Projects
@@ -42,27 +65,71 @@ My research focuses on AI Security, specifically Model Watermarking and Fingerpr
 </div>
 </div> -->
 
-## Conference Papers
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2025 Main</div><img src='images/MEraser-Framework.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[MEraser: An Effective Fingerprint Erasure Approach for Large Language Models](https://arxiv.org/abs/2506.12551)
-
-**Jingxuan Zhang** and **Zhenhua Xu** (co-first authors), Rui Hu, Wenpeng Xing, Xuhong Zhang, Meng Han  <a href="https://github.com/fatdove77/MEraser" target="_blank" class="github-btn" style="display:inline-block;padding:2px 10px;border:1px solid #333;border-radius:5px;color:#333;text-decoration:none;"><i class="fab fa-github"></i> Code</a>
-
-LLMs are widely used, raising concerns about model ownership. MEraser is a method to remove backdoor-based fingerprints from LLMs while preserving performance. It uses a two-phase fine-tuning strategy with mismatched and clean datasets, achieving fingerprint removal with minimal data. The method is transferable across models without repeated training, highlighting vulnerabilities in current techniques and setting benchmarks for better model protection.
+<div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 16px; padding: 15px; margin: 25px 0; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+  <h2 style="margin: 0 0 15px 0; color: #24292e; font-size: 20px; font-weight: 600;">Conference Papers</h2>
+  
+  <div class="paper-container" style="display: flex; flex-direction: row; margin: 20px 0; border: 1px solid #e1e4e8; border-radius: 12px; overflow: hidden; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <div class="paper-image" style="flex: 0 0 350px; position: relative; padding: 15px; min-width: 0;">
+      <img src='images/papers/MEraser-Framework.png' alt="MEraser Framework" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+    </div>
+    <div class="paper-content" style="flex: 1; padding: 25px; min-width: 0;">
+      <div class="paper-tags" style="float: right; margin-left: 15px; margin-bottom: 10px;">
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <span style="background: #0366d6; color: white; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">ACL 2025 Main</span>
+          <span style="background: #28a745; color: white; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">CCF-A</span>
+        </div>
+      </div>
+      <h3 style="margin: 0 0 15px 0; font-size: 16px; line-height: 1.3; color: #24292e;">
+        <a href="https://arxiv.org/abs/2506.12551" style="color: #0366d6; text-decoration: none; transition: color 0.2s;">MEraser: An Effective Fingerprint Erasure Approach for Large Language Models</a>
+      </h3>
+      <p style="margin: 0 0 15px 0; color: #586069; font-size: 15px; font-weight: 500;">
+        <strong style="color: #24292e;">Jingxuan Zhang</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Rui Hu, Wenpeng Xing, Xuhong Zhang, Meng Han  <a href="https://github.com/fatdove77/MEraser" target="_blank" class="github-btn" style="display:inline-block;padding:2px 10px;border:1px solid #333;border-radius:5px;color:#333;text-decoration:none;"><i class="fab fa-github"></i> Code</a>
+      </p>
+      <p style="margin: 0; color: #24292e; line-height: 1.6; font-size: 14px;">
+        LLMs are widely used, raising concerns about model ownership. MEraser is a method to remove backdoor-based fingerprints from LLMs while preserving performance. It uses a two-phase fine-tuning strategy with mismatched and clean datasets, achieving fingerprint removal with minimal data. The method is transferable across models without repeated training, highlighting vulnerabilities in current techniques and setting benchmarks for better model protection.
+      </p>
+    </div>
+  </div>
 </div>
+
+<div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 16px; padding: 15px; margin: 25px 0; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+  <h2 style="margin: 0 0 15px 0; color: #24292e; font-size: 20px; font-weight: 600;">Journal Papers</h2>
+  
+  <div class="paper-container" style="display: flex; flex-direction: row; margin: 20px 0; border: 1px solid #e1e4e8; border-radius: 12px; overflow: hidden; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <div class="paper-image" style="flex: 0 0 350px; position: relative; padding: 15px; min-width: 0;">
+      <img src='images/papers/InSty-Framework.jpg' alt="InSty Framework" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+    </div>
+    <div class="paper-content" style="flex: 1; padding: 25px; min-width: 0;">
+      <div class="paper-tags" style="float: right; margin-left: 15px; margin-bottom: 10px;">
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <span style="background: #0366d6; color: white; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">SCIENTIA SINICA Informationis</span>
+          <span style="background: #28a745; color: white; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">SCI Q1/JCR Q1/CCF-A</span>
+          <span style="background: #6f42c1; color: white; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">IF=7.6</span>
+        </div>
+      </div>
+      <h3 style="margin: 0 0 15px 0; font-size: 16px; line-height: 1.3; color: #24292e;">
+        <a href="https://doi.org/10.1360/SSI-2025-0022" style="color: #0366d6; text-decoration: none; transition: color 0.2s;">InSty: A Robust Multi-Level Cross-Granularity Fingerprint Embedding Algorithm for Multi-Turn Dialogue in Large Language Models</a>
+      </h3>
+      <p style="margin: 0 0 15px 0; color: #586069; font-size: 15px; font-weight: 500;">
+        <strong style="color: #24292e;">Zhenhua Xu</strong>, Xubin Yue, Meng Han
+      </p>
+      <p style="margin: 0; color: #24292e; line-height: 1.6; font-size: 14px;">
+        We propose InSty, a novel fingerprinting method for LLMs in multi-turn dialogues that embeds cross-granularity (word- and sentence-level) triggers across turns, enabling robust, stealthy, and high-recall IP protection under black-box settings.
+      </p>
+    </div>
+  </div>
 </div>
 
+<div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 16px; padding: 15px; margin: 25px 0; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+  <h2 style="margin: 0 0 15px 0; color: #24292e; font-size: 20px; font-weight: 600;">Preprints</h2>
+  
+  <ul style="margin: 0; padding-left: 20px; color: #24292e;">
+    <li style="margin-bottom: 12px; line-height: 1.5;"><a href="https://arxiv.org/abs/2505.06304">RAP-SM: Robust Adversarial Prompt via Shadow Models for Copyright Verification of Large Language Models</a>, <strong>Zhebo Wang</strong> and <strong>Zhenhua Xu</strong> (co-first authors), Maike Li, Wenpeng Xing, Chunqiang Hu, Chen Zhi, Meng Han</li>
+    <li style="margin-bottom: 12px; line-height: 1.5;"><a href="https://arxiv.org/abs/2409.08846">FP-VEC: Fingerprinting Large Language Models via Efficient Vector Addition</a>, <strong>Zhenhua Xu</strong>, Wenpeng Xing, Zhebo Wang, Chang Hu, Chen Jie, Meng Han</li>
+    <li style="margin-bottom: 12px; line-height: 1.5;"><a href="https://arxiv.org/abs/2506.19676">A Survey of LLM-Driven AI Agent Communication: Protocols, Security Risks, and Defense Countermeasures</a>, Dezhang Kong, Shi Lin, <strong>Zhenhua Xu</strong>, Zhebo Wang, Minghao Li, Yufeng Li, Yilun Zhang, Zeyang Sha, Yuyuan Li, Changting Lin, Xun Wang, Xuan Liu, Muhammad Khurram Khan, Ningyu Zhang, Chaochao Chen, Meng Han</li>
+  </ul>
+</div>
 
-## Journal Papers
-*None yet.*
-
-## Preprints
-- [RAP-SM: Robust Adversarial Prompt via Shadow Models for Copyright Verification of Large Language Models](https://arxiv.org/abs/2505.06304), **Zhebo Wang** and **Zhenhua Xu** (co-first authors), Maike Li, Wenpeng Xing, Chunqiang Hu, Chen Zhi, Meng Han
-- [FP-VEC: Fingerprinting Large Language Models via Efficient Vector Addition](https://arxiv.org/abs/2409.08846), **Zhenhua Xu**, Wenpeng Xing, Zhebo Wang, Chang Hu, Chen Jie, Meng Han
-- [A Survey of LLM-Driven AI Agent Communication: Protocols, Security Risks, and Defense Countermeasures](https://arxiv.org/abs/2506.19676), Dezhang Kong, Shi Lin, **Zhenhua Xu**, Zhebo Wang, Minghao Li, Yufeng Li, Yilun Zhang, Zeyang Sha, Yuyuan Li, Changting Lin, Xun Wang, Xuan Liu, Muhammad Khurram Khan, Ningyu Zhang, Chaochao Chen, Meng Han
 # 🎖 Honors and Awards
 During Undergraduate Studies:
 - Outstanding Graduate of Zhejiang Province
