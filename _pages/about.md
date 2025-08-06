@@ -108,7 +108,8 @@ My research focuses on AI Security, specifically Model Watermarking and Fingerpr
         </div>
       </div>
       <h3 style="margin: 0 0 15px 0; font-size: 16px; line-height: 1.3; color: #24292e;">
-        <a href="https://doi.org/10.1360/SSI-2025-0022" style="color: #0366d6; text-decoration: none; transition: color 0.2s;">InSty: A Robust Multi-Level Cross-Granularity Fingerprint Embedding Algorithm for Multi-Turn Dialogue in Large Language Models</a>
+        <!-- <a href="https://doi.org/10.1360/SSI-2025-0022" style="color: #0366d6; text-decoration: none; transition: color 0.2s;">InSty: A Robust Multi-Level Cross-Granularity Fingerprint Embedding Algorithm for Multi-Turn Dialogue in Large Language Models</a> -->
+        InSty: A Robust Multi-Level Cross-Granularity Fingerprint Embedding Algorithm for Multi-Turn Dialogue in Large Language Models
       </h3>
       <p style="margin: 0 0 15px 0; color: #586069; font-size: 15px; font-weight: 500;">
         <strong style="color: #24292e;">Zhenhua Xu</strong>, Xubin Yue, Meng Han
