@@ -112,7 +112,7 @@ My research focuses on AI Security, specifically Model Watermarking and Fingerpr
         InSty: A Robust Multi-Level Cross-Granularity Fingerprint Embedding Algorithm for Multi-Turn Dialogue in Large Language Models
       </h3>
       <p style="margin: 0 0 15px 0; color: #586069; font-size: 15px; font-weight: 500;">
-        <strong style="color: #24292e;">Zhenhua Xu</strong>, Xubin Yue, Meng Han
+        <strong style="color: #24292e;">Zhenhua Xu</strong>, Meng Han, Xubin Yue, Wenpeng Xing 
       </p>
       <p style="margin: 0; color: #24292e; line-height: 1.6; font-size: 14px;">
         We propose InSty, a novel fingerprinting method for LLMs in multi-turn dialogues that embeds cross-granularity (word- and sentence-level) triggers across turns, enabling robust, stealthy, and high-recall IP protection under black-box settings.
