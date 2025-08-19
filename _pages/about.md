@@ -119,6 +119,58 @@ redirect_from:
   background: rgba(0,0,0,0.8);
 }
 
+/* 文本截断和悬停显示 */
+.text-truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.text-truncate:hover {
+  -webkit-line-clamp: unset;
+  max-height: none;
+  overflow: visible;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  z-index: 100;
+  position: relative;
+}
+
+/* 自定义列表符号 */
+.star-list {
+  list-style: none;
+}
+
+.star-list li::before {
+  content: "★";
+  color: #ffd700;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  margin-right: 0.5em;
+}
+
+.square-list {
+  list-style: none;
+}
+
+.square-list li::before {
+  content: "■";
+  color: #6c757d;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  margin-right: 0.5em;
+}
+
 /* 响应式调整 */
 @media (max-width: 768px) {
   .modal-close {
@@ -127,6 +179,10 @@ redirect_from:
     width: 40px;
     height: 40px;
     font-size: 30px;
+  }
+  
+  .text-truncate:hover {
+    padding: 8px;
   }
 }
 </style>
@@ -199,7 +255,7 @@ My research focuses on AI Security, specifically Model Watermarking and Fingerpr
 - *2025.05*: &nbsp;🎉🎉 One paper was accepted by [ACL 2025 Main Conference](https://2025.aclweb.org/).
 
 # 🚀 Projects
-- [Awesome LLM Copyright Protection](https://github.com/Xuzhenhua55/awesome-llm-copyright-protection) - A curated collection of research and techniques for protecting intellectual property of large language models, including watermarking, fingerprinting, and more. [[Website]](https://xuzhenhua55.github.io/awesome-llm-copyright-protection/)
+- [Awesome LLM Copyright Protection](https://github.com/Xuzhenhua55/awesome-llm-copyright-protection) - A curated collection of research and techniques for protecting intellectual property of large language models, including watermarking, fingerprinting, and more. [[Website]](https://xuzhenhua55.github.io/awesome-llm-copyright-protection/)[[Paper Link]](https://arxiv.org/abs/2508.11548)
 
 # 📝 Publications 
 
@@ -230,12 +286,12 @@ My research focuses on AI Security, specifically Model Watermarking and Fingerpr
         </div>
       </div>
       <h3 style="margin: 0 0 15px 0; font-size: 16px; line-height: 1.3; color: #24292e;">
-        <a href="https://arxiv.org/abs/2506.12551" style="color: #0366d6; text-decoration: none; transition: color 0.2s;">MEraser: An Effective Fingerprint Erasure Approach for Large Language Models</a>
+        <a href="https://aclanthology.org/2025.acl-long.1455/" style="color: #0366d6; text-decoration: none; transition: color 0.2s;">MEraser: An Effective Fingerprint Erasure Approach for Large Language Models</a>
       </h3>
       <p style="margin: 0 0 15px 0; color: #586069; font-size: 15px; font-weight: 500;">
         <strong style="color: #24292e;">Jingxuan Zhang</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Rui Hu, Wenpeng Xing, Xuhong Zhang, Meng Han  <a href="https://github.com/fatdove77/MEraser" target="_blank" class="github-btn" style="display:inline-block;padding:2px 10px;border:1px solid #333;border-radius:5px;color:#333;text-decoration:none;"><i class="fab fa-github"></i> Code</a>
       </p>
-      <p style="margin: 0; color: #24292e; line-height: 1.6; font-size: 14px;">
+      <p class="text-truncate" style="margin: 0; color: #24292e; line-height: 1.6; font-size: 14px;">
         LLMs are widely used, raising concerns about model ownership. MEraser is a method to remove backdoor-based fingerprints from LLMs while preserving performance. It uses a two-phase fine-tuning strategy with mismatched and clean datasets, achieving fingerprint removal with minimal data. The method is transferable across models without repeated training, highlighting vulnerabilities in current techniques and setting benchmarks for better model protection.
       </p>
     </div>
@@ -263,7 +319,7 @@ My research focuses on AI Security, specifically Model Watermarking and Fingerpr
       <p style="margin: 0 0 15px 0; color: #586069; font-size: 15px; font-weight: 500;">
         <strong style="color: #24292e;">Zhenhua Xu</strong>, Meng Han, Xubin Yue, Wenpeng Xing 
       </p>
-      <p style="margin: 0; color: #24292e; line-height: 1.6; font-size: 14px;">
+      <p class="text-truncate" style="margin: 0; color: #24292e; line-height: 1.6; font-size: 14px;">
         We propose InSty, a novel fingerprinting method for LLMs in multi-turn dialogues that embeds cross-granularity (word- and sentence-level) triggers across turns, enabling robust, stealthy, and high-recall IP protection under black-box settings.
       </p>
     </div>
@@ -271,19 +327,23 @@ My research focuses on AI Security, specifically Model Watermarking and Fingerpr
 </div>
 
 <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 16px; padding: 15px; margin: 25px 0; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
-  <h2 style="margin: 0 0 15px 0; color: #24292e; font-size: 20px; font-weight: 600;">Preprints</h2>
+  <!-- <h2 style="margin: 0 0 15px 0; color: #24292e; font-size: 20px; font-weight: 600;">Preprints</h2> -->
   
-  <ul style="margin: 0; padding-left: 20px; color: #24292e;">
-    <li style="margin-bottom: 12px; line-height: 1.5;"><a href="https://arxiv.org/abs/2505.06304">RAP-SM: Robust Adversarial Prompt via Shadow Models for Copyright Verification of Large Language Models</a>, <strong>Zhebo Wang</strong> and <strong>Zhenhua Xu</strong> (co-first authors), Maike Li, Wenpeng Xing, Chunqiang Hu, Chen Zhi, Meng Han</li>
+  <h3 style="margin: 20px 0 15px 0; color: #24292e; font-size: 16px; font-weight: 600;">Key Preprints</h3>
+  <ul class="star-list" style="margin: 0; padding-left: 20px; color: #24292e;">
+    <li style="margin-bottom: 12px; line-height: 1.5;"><a href="https://arxiv.org/abs/2508.11548">Copyright Protection for Large Language Models: A Survey of Methods, Challenges, and Trends</a>, <strong>Zhenhua Xu</strong>, Xubin Yue, Zhebo Wang et al. <a href="https://github.com/Xuzhenhua55/awesome-llm-copyright-protection" target="_blank" class="github-btn" style="display:inline-block;padding:2px 10px;border:1px solid #333;border-radius:5px;color:#333;text-decoration:none;"><i class="fab fa-github"></i> Github</a></li>
+  </ul>
+  
+  <!-- <h3 style="margin: 20px 0 15px 0; color: #24292e; font-size: 16px; font-weight: 600;">Other Preprints</h3> -->
+  <ul class="square-list" style="margin: 0; padding-left: 20px; color: #24292e;">
     <li style="margin-bottom: 12px; line-height: 1.5;"><a href="https://arxiv.org/abs/2409.08846">FP-VEC: Fingerprinting Large Language Models via Efficient Vector Addition</a>, <strong>Zhenhua Xu</strong>, Wenpeng Xing, Zhebo Wang, Chang Hu, Chen Jie, Meng Han</li>
+    <li style="margin-bottom: 12px; line-height: 1.5;"><a href="https://arxiv.org/abs/2505.06304">RAP-SM: Robust Adversarial Prompt via Shadow Models for Copyright Verification of Large Language Models</a>, <strong>Zhebo Wang</strong> and <strong>Zhenhua Xu</strong> (co-first authors), Maike Li, Wenpeng Xing, Chunqiang Hu, Chen Zhi, Meng Han</li>
     <li style="margin-bottom: 12px; line-height: 1.5;"><a href="https://arxiv.org/abs/2506.19676">A Survey of LLM-Driven AI Agent Communication: Protocols, Security Risks, and Defense Countermeasures</a>, Dezhang Kong, Shi Lin, <strong>Zhenhua Xu</strong>, Zhebo Wang, Minghao Li, Yufeng Li, Yilun Zhang, Zeyang Sha, Yuyuan Li, Changting Lin, Xun Wang, Xuan Liu, Muhammad Khurram Khan, Ningyu Zhang, Chaochao Chen, Meng Han</li>
   </ul>
 </div>
 
-# 🎖 Honors and Awards
-During Undergraduate Studies:
-- Outstanding Graduate of Zhejiang Province
-- Zhejiang Provincial Government Scholarship, First-Class Scholarship for Outstanding Students, First-Class Academic Scholarship
+<!-- # 🎖 Honors and Awards -->
+
 
 # 💻 Internships
 
@@ -303,6 +363,13 @@ During Undergraduate Studies:
 **Primary Responsibilities:** As a backend development engineer, participated in the development and maintenance of the "Account+" payment system. This system is one of the company's core business platforms, primarily responsible for managing merchant partnerships and associated user information, handling financial operations between the company and merchants including account recharge, internal fund transfers, withdrawals, and reconciliation processes.
 
 # 📖 Educations
-- *2024.06 - Present*, Master's student in Software Engineering, College of Software, Zhejiang University
-- *2020.09 - 2024.06*, Bachelor's degree in Digital Media Technology, College of Computer Science and Technology, College of Software, Zhejiang University of Technology
 
+College of Software, Zhejiang University | *June 2024 - Present* | Master of Software Engineering | GPA: 4.27/5.0
+
+Zhejiang University of Technology | *September 2020 - June 2024* | Bachelor of Digital Media Technology  | GPA: 3.84/5.0
+
+**Honors and Awards:** Comprehensive Assessment: 100/100 (Ranked 1st in Major), Outstanding Graduate of Zhejiang Province, Outstanding Student Award
+
+**Scholarships:** Zhejiang Provincial Government Scholarship (Top 5%), First-Class Scholarship for Outstanding Students (Top 2%), First-Class Academic Scholarship
+
+*Note: Digital Media Technology is a computer science major covering fundamental courses including Computer Networks, Data Structures, Operating Systems, and Computer Architecture. While the program later specializes in game design, human-computer interaction, and 3D animation programming, my academic focus shifted toward artificial intelligence and software development, leading to my current pursuit in software engineering.*
