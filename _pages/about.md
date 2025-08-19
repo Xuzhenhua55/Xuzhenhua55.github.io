@@ -28,7 +28,157 @@ redirect_from:
     justify-content: flex-start !important;
   }
 }
+
+/* 标题样式优化 */
+.section-header {
+  margin: 0 0 15px 0;
+  color: #24292e;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  padding-left: 20px;
+}
+
+.section-header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #0366d6;
+  border-radius: 2px;
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 6px rgba(3, 102, 214, 0.6);
+  }
+}
+
+/* 图片悬停效果 */
+.paper-image img {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.paper-image img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* 图片放大模态框 */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.image-modal img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+  background: rgba(0,0,0,0.5);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.modal-close:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .modal-close {
+    top: 15px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+  }
+}
 </style>
+
+<!-- 图片放大模态框 -->
+<div id="imageModal" class="image-modal">
+  <span class="modal-close">&times;</span>
+  <img id="modalImage" alt="">
+</div>
+
+<script>
+// 图片点击放大功能
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImage');
+  const closeBtn = document.querySelector('.modal-close');
+  
+  // 为所有论文图片添加点击事件
+  const paperImages = document.querySelectorAll('.paper-image img');
+  paperImages.forEach(img => {
+    img.addEventListener('click', function() {
+      modal.style.display = 'block';
+      modalImg.src = this.src;
+      modalImg.alt = this.alt;
+      document.body.style.overflow = 'hidden'; // 防止背景滚动
+    });
+  });
+  
+  // 关闭模态框
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // 恢复滚动
+  }
+  
+  // 点击关闭按钮
+  closeBtn.addEventListener('click', closeModal);
+  
+  // 点击背景关闭
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+  
+  // ESC键关闭
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeModal();
+    }
+  });
+});
+</script>
 
 {% if site.google_scholar_stats_use_cdn %}
 {% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
@@ -66,7 +216,7 @@ My research focuses on AI Security, specifically Model Watermarking and Fingerpr
 </div> -->
 
 <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 16px; padding: 15px; margin: 25px 0; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
-  <h2 style="margin: 0 0 15px 0; color: #24292e; font-size: 20px; font-weight: 600;">Conference Papers</h2>
+  <h2 class="section-header">Conference Papers</h2>
   
   <div class="paper-container" style="display: flex; flex-direction: row; margin: 20px 0; border: 1px solid #e1e4e8; border-radius: 12px; overflow: hidden; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
     <div class="paper-image" style="flex: 0 0 350px; position: relative; padding: 15px; min-width: 0;">
@@ -93,7 +243,7 @@ My research focuses on AI Security, specifically Model Watermarking and Fingerpr
 </div>
 
 <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 16px; padding: 15px; margin: 25px 0; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
-  <h2 style="margin: 0 0 15px 0; color: #24292e; font-size: 20px; font-weight: 600;">Journal Papers</h2>
+  <h2 class="section-header">Journal Papers</h2>
   
   <div class="paper-container" style="display: flex; flex-direction: row; margin: 20px 0; border: 1px solid #e1e4e8; border-radius: 12px; overflow: hidden; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
     <div class="paper-image" style="flex: 0 0 350px; position: relative; padding: 15px; min-width: 0;">
@@ -108,8 +258,7 @@ My research focuses on AI Security, specifically Model Watermarking and Fingerpr
         </div>
       </div>
       <h3 style="margin: 0 0 15px 0; font-size: 16px; line-height: 1.3; color: #24292e;">
-        <!-- <a href="https://doi.org/10.1360/SSI-2025-0022" style="color: #0366d6; text-decoration: none; transition: color 0.2s;">InSty: A Robust Multi-Level Cross-Granularity Fingerprint Embedding Algorithm for Multi-Turn Dialogue in Large Language Models</a> -->
-        InSty: A Robust Multi-Level Cross-Granularity Fingerprint Embedding Algorithm for Multi-Turn Dialogue in Large Language Models
+        <a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0022" style="color: #0366d6; text-decoration: none; transition: color 0.2s;">InSty: A Robust Multi-Level Cross-Granularity Fingerprint Embedding Algorithm for Multi-Turn Dialogue in Large Language Models</a>
       </h3>
       <p style="margin: 0 0 15px 0; color: #586069; font-size: 15px; font-weight: 500;">
         <strong style="color: #24292e;">Zhenhua Xu</strong>, Meng Han, Xubin Yue, Wenpeng Xing 
@@ -137,7 +286,21 @@ During Undergraduate Studies:
 - Zhejiang Provincial Government Scholarship, First-Class Scholarship for Outstanding Students, First-Class Academic Scholarship
 
 # 💻 Internships
-- *2023.11 - 2024.5*, [LianLianPay (LianLian Yintong Electronic Payment Co., Ltd.)](https://www.lianlianpay.com/home), China.
+
+**Research Intern - AI Security** | *July 2024 - Present* | [Zhejiang University Binjiang Institute](http://ibj.zju.edu.cn/) and [Gentel Future Technology Co., Ltd.](https://gentel.io/zh/home), Hangzhou, Zhejiang, China
+
+**Primary Responsibilities:** Conducting research on large language model security and AI ecosystem governance, focusing on model copyright protection (digital watermarking and model fingerprinting), jailbreak attacks and defenses, adversarial attack strategies, hallucination detection frameworks, and multi-agent system security.
+
+**Key Contributions:**
+- Led 10+ high-quality research projects as first author and co-first author, with 10+ papers submitted to top-tier conferences and journals including ACL, EMNLP, AAAI, NDSS, and SCIENTIA SINICA
+- Independently mentored multiple interns through complete research workflows, from topic selection and methodology design to experimental replication and paper writing
+- Filed 8 invention patents (3 granted, 5 under review), achieving initial industrial transformation and intellectual property implementation of research outcomes
+
+---
+
+**Java Backend Development Engineer** | *November 2023 - May 2024* | [LianLianPay](https://www.lianlianpay.com/home), Hangzhou, Zhejiang, China
+
+**Primary Responsibilities:** As a backend development engineer, participated in the development and maintenance of the "Account+" payment system. This system is one of the company's core business platforms, primarily responsible for managing merchant partnerships and associated user information, handling financial operations between the company and merchants including account recharge, internal fund transfers, withdrawals, and reconciliation processes.
 
 # 📖 Educations
 - *2024.06 - Present*, Master's student in Software Engineering, College of Software, Zhejiang University
