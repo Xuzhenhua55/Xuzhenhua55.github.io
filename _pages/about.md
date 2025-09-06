@@ -400,12 +400,11 @@ My research focuses on AI Security, specifically Model Watermarking and Fingerpr
         </div>
       </div>
       <h3 style="margin: 0 0 15px 0; font-size: 16px; line-height: 1.3; color: #24292e;">
-        <!-- <a href="#" style="color: #0366d6; text-decoration: none; transition: color 0.2s;">EverTracer: Hunting Stolen Large Language Models via Stealthy and Robust Probabilistic Fingerprint</a> -->
-        EverTracer: Hunting Stolen Large Language Models via Stealthy and Robust Probabilistic Fingerprint
+        <a href="https://arxiv.org/abs/2509.03058" style="color: #0366d6; text-decoration: none; transition: color 0.2s;">EverTracer: Hunting Stolen Large Language Models via Stealthy and Robust Probabilistic Fingerprint</a>
       </h3>
       <p style="margin: 0 0 15px 0; color: #586069; font-size: 15px; font-weight: 500;">
         <strong style="color: #24292e;">Zhenhua Xu</strong>, Meng Han, Wenpeng Xing
-        <!-- <a href="https://github.com/fatdove77/MEraser" target="_blank" class="github-btn" style="display:inline-block;padding:2px 10px;border:1px solid #333;border-radius:5px;color:#333;text-decoration:none;"><i class="fab fa-github"></i> Code</a> -->
+        <a href="https://github.com/Xuzhenhua55/EverTracer" target="_blank" class="github-btn" style="display:inline-block;padding:2px 10px;border:1px solid #333;border-radius:5px;color:#333;text-decoration:none;"><i class="fab fa-github"></i> Code</a>
       </p>
       <p class="text-truncate" style="margin: 0; color: #24292e; line-height: 1.6; font-size: 14px;">
         The proliferation of large language models (LLMs) has intensified concerns over model theft and license violations, necessitating robust and stealthy ownership verification. Existing fingerprinting methods either require impractical white-box access or introduce detectable statistical anomalies. We propose EverTracer, a novel gray-box fingerprinting framework that ensures stealthy and robust model provenance tracing. EverTracer is the first to repurpose Membership Inference Attacks (MIAs) for defensive use, embedding ownership signals via memorization instead of artificial trigger-output overfitting. It consists of Fingerprint Injection, which fine-tunes the model on any natural language data without detectable artifacts, and Verification, which leverages calibrated probability variation signal to distinguish fingerprinted models. This approach remains robust against adaptive adversaries, including input level modification, and model-level modifications. Extensive experiments across architectures demonstrate EverTracer’s state-of-the-art effectiveness, stealthness, and resilience, establishing it as a practical solution for securing LLM intellectual property.
@@ -430,7 +429,7 @@ My research focuses on AI Security, specifically Model Watermarking and Fingerpr
       </h3>
       <p style="margin: 0 0 15px 0; color: #586069; font-size: 15px; font-weight: 500;">
         <strong style="color: #24292e;">Zhenhua Xu</strong>, Xixiang Zhao, Xubin Yue, shengwei tian, Changting Lin, Meng Han
-        <!-- <a href="https://github.com/fatdove77/MEraser" target="_blank" class="github-btn" style="display:inline-block;padding:2px 10px;border:1px solid #333;border-radius:5px;color:#333;text-decoration:none;"><i class="fab fa-github"></i> Code</a> -->
+        <a href="https://github.com/Xuzhenhua55/CTCC" target="_blank" class="github-btn" style="display:inline-block;padding:2px 10px;border:1px solid #333;border-radius:5px;color:#333;text-decoration:none;"><i class="fab fa-github"></i> Code</a>
       </p>
       <p class="text-truncate" style="margin: 0; color: #24292e; line-height: 1.6; font-size: 14px;">
         The widespread deployment of large language models (LLMs) has intensified concerns around intellectual property (IP) protection, as model theft and unauthorized redistribution become increasingly feasible. To address this, model fingerprinting aims to embed verifiable ownership traces into LLMs. However, existing methods face inherent trade-offs between stealthness, robustness, and generalizability—being either detectable via distributional shifts, vulnerable to adversarial modifications, or easily invalidated once the fingerprint is revealed. In this work, we introduce CTCC, a novel rule-driven fingerprinting framework that encodes contextual correlations across multiple dialogue turns—such as counterfactual—rather than relying on token-level or single-turn triggers. CTCC enables fingerprint verification under black-box access while mitigating false positives and fingerprint leakage, supporting continuous construction under a shared semantic rule even if partial triggers are exposed. Extensive experiments across multiple LLM architectures demonstrate that CTCC consistently achieves stronger stealth and robustness than prior work. Our findings position CTCC as a reliable and practical solution for ownership verification in real-world LLM deployment scenarios.
@@ -450,12 +449,11 @@ My research focuses on AI Security, specifically Model Watermarking and Fingerpr
         </div>
       </div>
       <h3 style="margin: 0 0 15px 0; font-size: 16px; line-height: 1.3; color: #24292e;">
-        <!-- <a href="#" style="color: #0366d6; text-decoration: none; transition: color 0.2s;">EverTracer: Hunting Stolen Large Language Models via Stealthy and Robust Probabilistic Fingerprint</a> -->
-        Unlocking the Effectiveness of LoRA-FP for Seamless Transfer Implantation of Fingerprints in Downstream Models
+        <a href="https://arxiv.org/abs/2509.00820" style="color: #0366d6; text-decoration: none; transition: color 0.2s;">Unlocking the Effectiveness of LoRA-FP for Seamless Transfer Implantation of Fingerprints in Downstream Models</a>
       </h3>
       <p style="margin: 0 0 15px 0; color: #586069; font-size: 15px; font-weight: 500;">
         <strong style="color: #24292e;">Zhenhua Xu</strong>, Zhaokun Yan, Binhan Xu, Xin Tong, Haitao Xu, Yourong Chen, Meng Han
-        <!-- <a href="https://github.com/fatdove77/MEraser" target="_blank" class="github-btn" style="display:inline-block;padding:2px 10px;border:1px solid #333;border-radius:5px;color:#333;text-decoration:none;"><i class="fab fa-github"></i> Code</a> -->
+        <a href="https://github.com/Xuzhenhua55/LoRA-FP" target="_blank" class="github-btn" style="display:inline-block;padding:2px 10px;border:1px solid #333;border-radius:5px;color:#333;text-decoration:none;"><i class="fab fa-github"></i> Code</a>
       </p>
       <p class="text-truncate" style="margin: 0; color: #24292e; line-height: 1.6; font-size: 14px;">
                  With the rapid development of large language models (LLMs), protecting intellectual property (IP) has become increasingly crucial. To tackle high costs and potential contamination in fingerprint integration, we propose LoRA-FP, a lightweight plug-and-play framework that encodes backdoor fingerprints into LoRA adapters via constrained fine-tuning. This enables seamless fingerprint transplantation through parameter fusion, eliminating full-parameter updates while maintaining integrity. Experiments demonstrate that LoRA-FP achieves superior robustness against various scenarios like incremental training and model fusion, while significantly reducing computational overhead compared to traditional approaches.
@@ -476,8 +474,7 @@ My research focuses on AI Security, specifically Model Watermarking and Fingerpr
         </div>
       </div>
       <h3 style="margin: 0 0 15px 0; font-size: 16px; line-height: 1.3; color: #24292e;">
-        <!-- <a href="#" style="color: #0366d6; text-decoration: none; transition: color 0.2s;">EverTracer: Hunting Stolen Large Language Models via Stealthy and Robust Probabilistic Fingerprint</a> -->
-        PREE: Towards Harmless and Adaptive Fingerprint Editing in Large Language Models via Knowledge Prefix Enhancement
+        <a href="https://arxiv.org/abs/2509.00918" style="color: #0366d6; text-decoration: none; transition: color 0.2s;">        PREE: Towards Harmless and Adaptive Fingerprint Editing in Large Language Models via Knowledge Prefix Enhancement</a>
       </h3>
       <p style="margin: 0 0 15px 0; color: #586069; font-size: 15px; font-weight: 500;">
         <strong style="color: #24292e;">Xubin Yue</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Wenpeng Xing, Jiahui Yu, Mohan Li, Meng Han
