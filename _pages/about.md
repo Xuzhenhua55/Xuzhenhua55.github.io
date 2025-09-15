@@ -424,8 +424,7 @@ My research focuses on AI Security, specifically Model Watermarking and Fingerpr
         </div>
       </div>
       <h3 style="margin: 0 0 15px 0; font-size: 16px; line-height: 1.3; color: #24292e;">
-        <!-- <a href="#" style="color: #0366d6; text-decoration: none; transition: color 0.2s;">EverTracer: Hunting Stolen Large Language Models via Stealthy and Robust Probabilistic Fingerprint</a> -->
-        CTCC: A Robust and Stealthy Fingerprinting Framework for Large Language Models via Cross-Turn Contextual Correlation Backdoor
+        <a href="https://arxiv.org/abs/2509.09703" style="color: #0366d6; text-decoration: none; transition: color 0.2s;">CTCC: A Robust and Stealthy Fingerprinting Framework for Large Language Models via Cross-Turn Contextual Correlation Backdoor</a>
       </h3>
       <p style="margin: 0 0 15px 0; color: #586069; font-size: 15px; font-weight: 500;">
         <strong style="color: #24292e;">Zhenhua Xu</strong>, Xixiang Zhao, Xubin Yue, shengwei tian, Changting Lin, Meng Han
