@@ -351,7 +351,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   <summary>Chinese Bio (click to expand)</summary>
   <div style="margin-top:6px; color:#374151; line-height:1.7;">
     Hi~我是徐振华，浙江大学软件学院科研练习长达“一年半”的研二选手（2024级）！，隶属于浙江大学数智融合研究中心实验室
-    （<a href="https://gentellab.github.io/index.html" target="_blank">实验室主页</a>），导师为 <a href="https://scholar.google.com/citations?user=TnCrl1cAAAAJ" target="_blank">韩蒙</a> 教授。
+    （<a href="https://gentellab.github.io/index.html" target="_blank">实验室主页</a>），导师为 <a href="https://scholar.google.com/citations?user=TnCrl1cAAAAJ" target="_blank">韩蒙</a> 老师。
     我的研究方向主要为大模型版权保护（模型水印与模型指纹），以及在此之上的更广泛的人工智能安全议题（如智能体系统的安全风险等），同时也涉猎强化学习相关内容。
     在硕士第一年，我与多位优秀同学（包含组内实习生）合作，在多个国际会议与期刊发表了若干成果。目前我也在寻找对科研有热情的合作者（欢迎有保研/升学计划的本科生与硕士生），并期待与更多研究者开展合作。
     如对我的工作感兴趣，欢迎邮件联系：<strong>xuzhenhua0326@zju.edu.cn</strong>。
