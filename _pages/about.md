@@ -877,7 +877,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 }
 </style>
 
-<div class="news-section">
+<div class="news-section" id="-news">
   <div class="news-header">
     <div class="news-icon">🔥</div>
     <h2 class="news-title">News</h2>
@@ -926,7 +926,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   <li><a href="https://github.com/Xuzhenhua55/awesome-llm-copyright-protection" style="color: #2563eb;">Awesome LLM Copyright Protection</a> - A curated collection of research and techniques for protecting intellectual property of large language models, including watermarking, fingerprinting, and more. <a href="https://xuzhenhua55.github.io/awesome-llm-copyright-protection/" style="color: #2563eb;">[Website]</a><a href="https://arxiv.org/abs/2508.11548" style="color: #2563eb;">[Paper Link]</a></li>
 </ul>
 
-<h2 class="section-header" style="margin-top: 30px;"><span style="margin-right: 8px;">📝</span>Publications</h2> 
+<h2 class="section-header" id="-publications" style="margin-top: 30px;"><span style="margin-right: 8px;">📝</span>Publications</h2> 
 
 <!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -1289,7 +1289,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 <!-- # 🎖 Honors and Awards -->
 
 
-<h2 class="section-header" style="margin-top: 30px;"><span style="margin-right: 8px;">💻</span>Internships</h2>
+<h2 class="section-header" id="-internships" style="margin-top: 30px;"><span style="margin-right: 8px;">💻</span>Internships</h2>
 
 <div class="internships-container">
 
@@ -1358,7 +1358,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 
 </div>
 
-<h2 class="section-header" style="margin-top: 30px;"><span style="margin-right: 8px;">📖</span>Educations</h2>
+<h2 class="section-header" id="-educations" style="margin-top: 30px;"><span style="margin-right: 8px;">📖</span>Educations</h2>
 
 <div class="education-container">
 
