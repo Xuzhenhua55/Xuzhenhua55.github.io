@@ -52,48 +52,52 @@ redirect_from:
 
 .paper-top { display: block; }
 
-.paper-badges { display: inline-flex; gap: 6px; flex-wrap: wrap; margin-left: 8px; vertical-align: middle; }
+.paper-badges { display: inline-flex; gap: 4px; flex-wrap: wrap; margin-right: 8px; align-items: center; vertical-align: middle; }
 
 .paper-badge {
   background: #0366d6;
   color: #fff;
-  padding: 2px 8px;
-  border-radius: 999px;
-  font-size: 10px;
+  padding: 0 5px;
+  border-radius: 3px;
+  font-size: 11px;
   font-weight: 600;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  line-height: 18px;
+  height: 18px;
 }
 
 .paper-badge--star {
-  background: #f59e0b;
-  color: #111827;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: #ffffff;
 }
 
 .paper-badge-link {
   background: #2563eb;
   color: #ffffff !important;
-  padding: 2px 8px;
-  border-radius: 999px;
-  font-size: 10px;
-  font-weight: 700;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  padding: 0 5px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 18px;
+  height: 18px;
   text-decoration: none;
-  display: inline-block;
-  border: 1px solid rgba(255,255,255,0.3);
+  display: inline-flex;
+  align-items: center;
 }
 .paper-badge-link:hover { background: #1d4ed8; color: #ffffff !important; }
 
 .bib-copy {
   background: #6b7280;
   color: #ffffff !important;
-  padding: 2px 8px;
-  border-radius: 999px;
-  font-size: 10px;
+  padding: 0 5px;
+  border-radius: 3px;
+  font-size: 11px;
   font-weight: 600;
+  line-height: 18px;
+  height: 18px;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
 }
 .bib-copy:hover { background: #4b5563; color: #ffffff !important; }
@@ -102,7 +106,7 @@ redirect_from:
 
 .paper-title a { color: #0366d6; text-decoration: none; }
 .paper-title { margin: 0 0 6px 0; font-size: 14px !important; line-height: 1.35; color: #24292e; display: inline; }
-.paper-meta { margin: 0 0 8px 0; color: #64748b; font-size: 11px !important; font-weight: 500; }
+.paper-meta { margin: 0 0 8px 0; color: #64748b; font-size: 12px !important; font-weight: 500; }
 .paper-meta strong { font-size: inherit; }
 .paper-bib { margin-top: 6px; }
 .paper-bib summary { cursor: pointer; font-size: 11px; color: #2563eb; list-style: none; }
@@ -243,7 +247,7 @@ redirect_from:
   text-overflow: initial;
   cursor: default;
   transition: none;
-  font-size: 12px !important;
+  font-size: 13px !important;
   line-height: 1.65 !important;
   color: #64748b !important;
 }
@@ -258,9 +262,9 @@ redirect_from:
 .preprints-section .paper-card { padding: 12px; margin: 0; gap: 12px; }
 .preprints-section .paper-top { display: block; }
 .preprints-section .paper-title { font-size: 13px; margin: 0; display: inline; }
-.preprints-section .paper-meta { font-size: 11px; margin: 2px 0 0 0; }
-.preprints-section .paper-badge, .preprints-section .paper-badge-link { font-size: 10px; padding: 1px 7px; }
-.preprints-section .paper-badges { gap: 6px; margin-left: 6px; }
+.preprints-section .paper-meta { font-size: 12px; margin: 2px 0 0 0; }
+.preprints-section .paper-badge, .preprints-section .paper-badge-link { font-size: 11px; padding: 0 5px; line-height: 18px; height: 18px; }
+.preprints-section .paper-badges { gap: 4px; margin-right: 6px; vertical-align: middle; }
 @media (max-width: 768px) {
   .preprints-section .preprints-grid { grid-template-columns: 1fr; }
 }
@@ -564,7 +568,7 @@ details.internship summary::-webkit-details-marker { display: none; }
 .education-honors summary {
   cursor: pointer;
   color: #64748b;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   user-select: none;
 }
@@ -576,7 +580,7 @@ details.internship summary::-webkit-details-marker { display: none; }
 .education-honors-content {
   margin-top: 10px;
   color: #475569;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.7;
 }
 
@@ -949,10 +953,9 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     </div> -->
     <div class="paper-body">
       <div class="paper-top">
-        <h3 class="paper-title"><a href="https://aclanthology.org/2025.acl-long.1455/">MEraser: An Effective Fingerprint Erasure Approach for Large Language Models</a><span class="paper-badges"><span class="paper-badge">ACL 2025 Main</span><span class="paper-badge" style="background:#28a745;">CCF-A</span><a href="https://github.com/fatdove77/MEraser" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-meraser">Bib</span></span></h3>
+        <h3 class="paper-title"><a href="https://aclanthology.org/2025.acl-long.1455/">MEraser: An Effective Fingerprint Erasure Approach for Large Language Models</a></h3>
       </div>
-      <p class="paper-meta">
-        <strong style="color: #24292e;">Jingxuan Zhang</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Rui Hu, Wenpeng Xing, Xuhong Zhang, Meng Han
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ACL 2025 Main</span><span class="paper-badge" style="background:#28a745;">CCF-A</span><a href="https://github.com/fatdove77/MEraser" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-meraser">Bib</span></span><strong style="color: #24292e;">Jingxuan Zhang</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Rui Hu, Wenpeng Xing, Xuhong Zhang, Meng Han
       </p>
       <p class="text-truncate" style="margin: 0;">
         We propose MEraser, a two-phase fine-tuning method that erases backdoor-based fingerprints from LLMs while preserving utility, transferring across models with minimal data and no repeated training.
@@ -979,10 +982,9 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     </div> -->
     <div class="paper-body">
       <div class="paper-top">
-        <h3 class="paper-title"><a href="https://arxiv.org/abs/2509.03058">EverTracer: Hunting Stolen Large Language Models via Stealthy and Robust Probabilistic Fingerprint</a><span class="paper-badges"><span class="paper-badge">EMNLP 2025 Main</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><a href="https://github.com/Xuzhenhua55/EverTracer" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-evertracer">Bib</span></span></h3>
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2509.03058">EverTracer: Hunting Stolen Large Language Models via Stealthy and Robust Probabilistic Fingerprint</a></h3>
       </div>
-      <p class="paper-meta">
-        <strong style="color: #24292e;">Zhenhua Xu</strong>, Meng Han, Wenpeng Xing
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">EMNLP 2025 Main</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><a href="https://github.com/Xuzhenhua55/EverTracer" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-evertracer">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Meng Han, Wenpeng Xing
       </p>
       <p class="text-truncate" style="margin: 0;">
         We propose EverTracer, a gray-box probabilistic fingerprint that leverages calibrated probability shifts from MIA-style memorization to enable stealthy, robust provenance tracing against input and model-level modifications.
@@ -1009,10 +1011,9 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     </div> -->
     <div class="paper-body">
       <div class="paper-top">
-        <h3 class="paper-title"><a href="https://arxiv.org/abs/2509.09703">CTCC: A Robust and Stealthy Fingerprinting Framework for Large Language Models via Cross-Turn Contextual Correlation Backdoor</a><span class="paper-badges"><span class="paper-badge">EMNLP 2025 Main</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><a href="https://github.com/Xuzhenhua55/CTCC" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-ctcc">Bib</span></span></h3>
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2509.09703">CTCC: A Robust and Stealthy Fingerprinting Framework for Large Language Models via Cross-Turn Contextual Correlation Backdoor</a></h3>
       </div>
-      <p class="paper-meta">
-        <strong style="color: #24292e;">Zhenhua Xu</strong>, Xixiang Zhao, Xubin Yue, shengwei tian, Changting Lin, Meng Han
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">EMNLP 2025 Main</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><a href="https://github.com/Xuzhenhua55/CTCC" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-ctcc">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Xixiang Zhao, Xubin Yue, shengwei tian, Changting Lin, Meng Han
       </p>
       <p class="text-truncate" style="margin: 0;">
         We propose CTCC, a rule-driven fingerprint that encodes cross-turn contextual correlations in dialogue to achieve black-box verification with higher stealth and robustness and reduced false positives.
@@ -1039,10 +1040,9 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     </div> -->
     <div class="paper-body">
       <div class="paper-top">
-        <h3 class="paper-title"><a href="https://arxiv.org/abs/2509.00820">Unlocking the Effectiveness of LoRA-FP for Seamless Transfer Implantation of Fingerprints in Downstream Models</a><span class="paper-badges"><span class="paper-badge">EMNLP 2025 Findings</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><a href="https://github.com/Xuzhenhua55/LoRA-FP" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-lorafp">Bib</span></span></h3>
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2509.00820">Unlocking the Effectiveness of LoRA-FP for Seamless Transfer Implantation of Fingerprints in Downstream Models</a></h3>
       </div>
-      <p class="paper-meta">
-        <strong style="color: #24292e;">Zhenhua Xu</strong>, Zhaokun Yan, Binhan Xu, Xin Tong, Haitao Xu, Yourong Chen, Meng Han
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">EMNLP 2025 Findings</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><a href="https://github.com/Xuzhenhua55/LoRA-FP" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-lorafp">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Zhaokun Yan, Binhan Xu, Xin Tong, Haitao Xu, Yourong Chen, Meng Han
       </p>
       <p class="text-truncate" style="margin: 0;">
         We propose LoRA-FP, a plug-and-play approach that encodes backdoor fingerprints into LoRA adapters and transfers them to downstream models via parameter fusion, enabling low-cost, robust, and contamination-free fingerprinting.
@@ -1070,10 +1070,9 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     </div> -->
     <div class="paper-body">
       <div class="paper-top">
-        <h3 class="paper-title"><a href="https://arxiv.org/abs/2509.00918">        PREE: Towards Harmless and Adaptive Fingerprint Editing in Large Language Models via Knowledge Prefix Enhancement</a><span class="paper-badges"><span class="paper-badge">EMNLP 2025 Findings</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><span class="bib-copy" data-bib="bib-pree">Bib</span></span></h3>
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2509.00918">PREE: Towards Harmless and Adaptive Fingerprint Editing in Large Language Models via Knowledge Prefix Enhancement</a></h3>
       </div>
-      <p class="paper-meta">
-        <strong style="color: #24292e;">Xubin Yue</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Wenpeng Xing, Jiahui Yu, Mohan Li, Meng Han
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">EMNLP 2025 Findings</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><span class="bib-copy" data-bib="bib-pree">Bib</span></span><strong style="color: #24292e;">Xubin Yue</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Wenpeng Xing, Jiahui Yu, Mohan Li, Meng Han
       </p>
       <p class="text-truncate" style="margin: 0;">
         We propose PREE, a prefix-enhanced fingerprint editing framework that embeds copyright information as minimal parameter offsets via dual-channel knowledge editing, delivering high trigger precision and strong robustness under incremental fine-tuning and defenses.
@@ -1097,10 +1096,9 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   <div class="paper-card">
     <div class="paper-body">
       <div class="paper-top">
-        <h3 class="paper-title"><a href="https://arxiv.org/abs/2601.08223">DNF: Dual-Layer Nested Fingerprinting for Large Language Model Intellectual Property Protection</a><span class="paper-badges"><span class="paper-badge">ICASSP 2026</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><span class="bib-copy" data-bib="bib-dnf">Bib</span></span></h3>
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2601.08223">DNF: Dual-Layer Nested Fingerprinting for Large Language Model Intellectual Property Protection</a></h3>
       </div>
-      <p class="paper-meta">
-        <strong style="color: #24292e;">Zhenhua Xu</strong>, Yiran Zhao, Mengting Zhong, Dezhang Kong, Changting Lin, Tong Qiao, Meng Han
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ICASSP 2026</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><span class="bib-copy" data-bib="bib-dnf">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Yiran Zhao, Mengting Zhong, Dezhang Kong, Changting Lin, Tong Qiao, Meng Han
       </p>
       <p class="text-truncate" style="margin: 0;">
         We propose DNF, a dual-layer nested fingerprinting framework that couples domain-specific stylistic cues with implicit semantic triggers to embed hierarchical backdoor-based fingerprints into large language models, enabling black-box ownership verification with enhanced stealth and resilience to detection and filtering.
@@ -1120,10 +1118,9 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   <div class="paper-card">
     <div class="paper-body">
       <div class="paper-top">
-        <h3 class="paper-title"><a href="https://arxiv.org/abs/2601.08189">ForgetMark: Stealthy Fingerprint Embedding via Targeted Unlearning in Language Models</a><span class="paper-badges"><span class="paper-badge">ICASSP 2026</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><a href="https://github.com/Xuzhenhua55/ForgetMark" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-forgetmark">Bib</span></span></h3>
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2601.08189">ForgetMark: Stealthy Fingerprint Embedding via Targeted Unlearning in Language Models</a></h3>
       </div>
-      <p class="paper-meta">
-        <strong style="color: #24292e;">Zhenhua Xu</strong>, Haobo Zhang, Zhebo Wang, Qichen Liu, Haitao Xu, Wenpeng Xing, Meng Han
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ICASSP 2026</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><a href="https://github.com/Xuzhenhua55/ForgetMark" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-forgetmark">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Haobo Zhang, Zhebo Wang, Qichen Liu, Haitao Xu, Wenpeng Xing, Meng Han
       </p>
       <p class="text-truncate" style="margin: 0;">
         We propose ForgetMark, a targeted unlearning–based fingerprint that encodes model ownership via probabilistic forgetting traces, enabling stealthy and robust black-/gray-box verification with minimal performance impact and low false positives.
@@ -1143,10 +1140,9 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   <div class="paper-card">
     <div class="paper-body">
       <div class="paper-top">
-        <h3 class="paper-title"><a href="https://arxiv.org/abs/2601.12986">KinGuard: Hierarchical Kinship-Aware Fingerprinting to Defend Against Large Language Model Stealing</a><span class="paper-badges"><span class="paper-badge">ICASSP 2026</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><span class="bib-copy" data-bib="bib-kinguard">Bib</span></span></h3>
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2601.12986">KinGuard: Hierarchical Kinship-Aware Fingerprinting to Defend Against Large Language Model Stealing</a></h3>
       </div>
-      <p class="paper-meta">
-        <strong style="color: #24292e;">Zhenhua Xu</strong>, Xiaoning Tian, Wenjun Zeng, Wenpeng Xing, Tianliang Lu, Gaolei Li, Chaochao Chen, Meng Han
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ICASSP 2026</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><span class="bib-copy" data-bib="bib-kinguard">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Xiaoning Tian, Wenjun Zeng, Wenpeng Xing, Tianliang Lu, Gaolei Li, Chaochao Chen, Meng Han
       </p>
       <p class="text-truncate" style="margin: 0;">
         We propose KinGuard, a hierarchical kinship-aware fingerprinting framework that models derivation relationships among LLM variants to enable fine-grained provenance tracing and robust defense against model stealing attacks.
@@ -1174,10 +1170,9 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     </div> -->
     <div class="paper-body">
       <div class="paper-top">
-        <h3 class="paper-title"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0022">InSty: A Robust Multi-Level Cross-Granularity Fingerprint Embedding Algorithm for Multi-Turn Dialogue in Large Language Models</a><span class="paper-badges"><span class="paper-badge">SCIENTIA SINICA Informationis</span><span class="paper-badge" style="background:#28a745;">SCI Q1/JCR Q1/CCF-A</span><span class="paper-badge" style="background:#6f42c1;">IF=7.6</span><span class="bib-copy" data-bib="bib-insty">Bib</span></span></h3>
+        <h3 class="paper-title"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0022">InSty: A Robust Multi-Level Cross-Granularity Fingerprint Embedding Algorithm for Multi-Turn Dialogue in Large Language Models</a></h3>
       </div>
-      <p class="paper-meta">
-        <strong style="color: #24292e;">Zhenhua Xu</strong>, Meng Han, Xubin Yue, Wenpeng Xing 
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">SCIENTIA SINICA Informationis</span><span class="paper-badge" style="background:#28a745;">SCI Q1/JCR Q1/CCF-A</span><span class="paper-badge" style="background:#6f42c1;">IF=7.6</span><span class="bib-copy" data-bib="bib-insty">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Meng Han, Xubin Yue, Wenpeng Xing
       </p>
       <p class="text-truncate" style="margin: 0;">
         We propose InSty, a novel fingerprinting method for LLMs in multi-turn dialogues that embeds cross-granularity (word- and sentence-level) triggers across turns, enabling robust, stealthy, and high-recall IP protection under black-box settings.
@@ -1205,9 +1200,9 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   <div class="paper-card">
     <div class="paper-body">
       <div class="paper-top">
-        <h3 class="paper-title"><a href="https://arxiv.org/abs/2601.11007">AdaMARP: An Adaptive Multi-Agent Interaction Framework for General Immersive Role-Playing</a><span class="paper-badges"><span class="paper-badge paper-badge--star">★ Star</span><a href="https://xuzhenhua55.github.io/AdaMARP/" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-adamarp">Bib</span></span></h3>
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2601.11007">AdaMARP: An Adaptive Multi-Agent Interaction Framework for General Immersive Role-Playing</a></h3>
       </div>
-      <p class="paper-meta"><strong style="color: #24292e;">Zhenhua Xu</strong> and <strong style="color: #24292e;">Zhebo Wang</strong> (co-first authors), Dongsheng Chen, Shuo Wang, Jian Li, Chengjie Wang, Meng Han, Yabiao Wang</p>
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge paper-badge--star">★ Star</span><a href="https://xuzhenhua55.github.io/AdaMARP/" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-adamarp">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong> and <strong style="color: #24292e;">Zhebo Wang</strong> (co-first authors), Dongsheng Chen, Shuo Wang, Jian Li, Chengjie Wang, Meng Han, Yabiao Wang</p>
       <pre class="bib-data" id="bib-adamarp">{% raw %}@misc{xu2026adamarpadaptivemultiagentinteraction,
       title={AdaMARP: An Adaptive Multi-Agent Interaction Framework for General Immersive Role-Playing},
       author={Zhenhua Xu and Dongsheng Chen and Shuo Wang and Jian Li and Chengjie Wang and Meng Han and Yabiao Wang},
@@ -1223,9 +1218,9 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   <div class="paper-card">
     <div class="paper-body">
       <div class="paper-top">
-        <h3 class="paper-title"><a href="https://arxiv.org/abs/2505.06304">SRAF: Stealthy and Robust Adversarial Fingerprint for Copyright Verification of Large Language Models</a><span class="paper-badges"><span class="bib-copy" data-bib="bib-sraf">Bib</span></span></h3>
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2505.06304">SRAF: Stealthy and Robust Adversarial Fingerprint for Copyright Verification of Large Language Models</a></h3>
       </div>
-      <p class="paper-meta"><strong style="color: #24292e;">Zhebo Wang</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Maike Li, Wenpeng Xing, Chunqiang Hu, Chen Zhi, Meng Han</p>
+      <p class="paper-meta"><span class="paper-badges"><span class="bib-copy" data-bib="bib-sraf">Bib</span></span><strong style="color: #24292e;">Zhebo Wang</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Maike Li, Wenpeng Xing, Chunqiang Hu, Chen Zhi, Meng Han</p>
       <pre class="bib-data" id="bib-sraf">{% raw %}@misc{wang2026srafstealthyrobustadversarial,
       title={SRAF: Stealthy and Robust Adversarial Fingerprint for Copyright Verification of Large Language Models},
       author={Zhebo Wang and Zhenhua Xu and Maike Li and Wenpeng Xing and Chunqiang Hu and Chen Zhi and Meng Han},
@@ -1241,9 +1236,9 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   <div class="paper-card">
     <div class="paper-body">
       <div class="paper-top">
-        <h3 class="paper-title"><a href="https://arxiv.org/abs/2508.11548">Copyright Protection for Large Language Models: A Survey of Methods, Challenges, and Trends</a><span class="paper-badges"><span class="paper-badge paper-badge--star">★ Star</span><a href="https://github.com/Xuzhenhua55/awesome-llm-copyright-protection" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-copyright">Bib</span></span></h3>
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2508.11548">Copyright Protection for Large Language Models: A Survey of Methods, Challenges, and Trends</a></h3>
       </div>
-      <p class="paper-meta"><strong style="color: #24292e;">Zhenhua Xu</strong>, Xubin Yue, Zhebo Wang, Qichen Liu, Xixiang Zhao, et al.</p>
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge paper-badge--star">★ Star</span><a href="https://github.com/Xuzhenhua55/awesome-llm-copyright-protection" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-copyright">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Xubin Yue, Zhebo Wang, Qichen Liu, Xixiang Zhao, et al.</p>
       <pre class="bib-data" id="bib-copyright">{% raw %}@misc{xu2025copyrightprotectionlargelanguage,
       title={Copyright Protection for Large Language Models: A Survey of Methods, Challenges, and Trends},
       author={Zhenhua Xu and Xubin Yue and Zhebo Wang and Qichen Liu and Xixiang Zhao and Jingxuan Zhang and Wenjun Zeng and Wengpeng Xing and Dezhang Kong and Changting Lin and Meng Han},
@@ -1259,9 +1254,9 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   <div class="paper-card">
     <div class="paper-body">
       <div class="paper-top">
-        <h3 class="paper-title"><a href="https://arxiv.org/abs/2409.08846">Fingerprint Vector: Enabling Scalable and Efficient Model Fingerprint Transfer via Vector Addition</a><span class="paper-badges"><a href="https://github.com/Xuzhenhua55/Fingerprint-Vector" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-fpvector">Bib</span></span></h3>
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2409.08846">Fingerprint Vector: Enabling Scalable and Efficient Model Fingerprint Transfer via Vector Addition</a></h3>
       </div>
-      <p class="paper-meta"><strong style="color: #24292e;">Zhenhua Xu</strong>, Qichen Liu, Zhebo Wang, Wenpeng Xing, Dezhang Kong, Mohan Li, Meng Han</p>
+      <p class="paper-meta"><span class="paper-badges"><a href="https://github.com/Xuzhenhua55/Fingerprint-Vector" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-fpvector">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Qichen Liu, Zhebo Wang, Wenpeng Xing, Dezhang Kong, Mohan Li, Meng Han</p>
       <pre class="bib-data" id="bib-fpvector">{% raw %}@misc{xu2025fingerprintvectorenablingscalable,
       title={Fingerprint Vector: Enabling Scalable and Efficient Model Fingerprint Transfer via Vector Addition},
       author={Zhenhua Xu and Qichen Liu and Zhebo Wang and Wenpeng Xing and Dezhang Kong and Mohan Li and Meng Han},
@@ -1277,9 +1272,9 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   <div class="paper-card">
     <div class="paper-body">
       <div class="paper-top">
-        <h3 class="paper-title"><a href="https://arxiv.org/abs/2506.19676">A Survey of LLM-Driven AI Agent Communication: Protocols, Security Risks, and Defense Countermeasures</a><span class="paper-badges"><a href="https://github.com/theshi-1128/awesome-agent-communication-security" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-agentsurvey">Bib</span></span></h3>
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2506.19676">A Survey of LLM-Driven AI Agent Communication: Protocols, Security Risks, and Defense Countermeasures</a></h3>
       </div>
-      <p class="paper-meta">Dezhang Kong, Shi Lin, <strong style="color: #24292e;">Zhenhua Xu</strong>, Zhebo Wang, Minghao Li, et al.</p>
+      <p class="paper-meta"><span class="paper-badges"><a href="https://github.com/theshi-1128/awesome-agent-communication-security" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-agentsurvey">Bib</span></span>Dezhang Kong, Shi Lin, <strong style="color: #24292e;">Zhenhua Xu</strong>, Zhebo Wang, Minghao Li, et al.</p>
       <pre class="bib-data" id="bib-agentsurvey">{% raw %}@misc{kong2025surveyllmdrivenaiagent,
       title={A Survey of LLM-Driven AI Agent Communication: Protocols, Security Risks, and Defense Countermeasures},
       author={Dezhang Kong and Shi Lin and Zhenhua Xu and Zhebo Wang and Minghao Li and Yufeng Li and Yilun Zhang and Hujin Peng and Xiang Chen and Zeyang Sha and Yuyuan Li and Changting Lin and Xun Wang and Xuan Liu and Ningyu Zhang and Chaochao Chen and Chunming Wu and Muhammad Khurram Khan and Meng Han},
