@@ -1244,11 +1244,14 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
         <h3 class="paper-title"><a href="https://arxiv.org/abs/2508.11548">Copyright Protection for Large Language Models: A Survey of Methods, Challenges, and Trends</a><span class="paper-badges"><span class="paper-badge paper-badge--star">★ Star</span><a href="https://github.com/Xuzhenhua55/awesome-llm-copyright-protection" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-copyright">Bib</span></span></h3>
       </div>
       <p class="paper-meta"><strong style="color: #24292e;">Zhenhua Xu</strong>, Xubin Yue, Zhebo Wang, Qichen Liu, Xixiang Zhao, et al.</p>
-      <pre class="bib-data" id="bib-copyright">{% raw %}@article{xu2025copyright,
-  title={Copyright Protection for Large Language Models: A Survey of Methods, Challenges, and Trends},
-  author={Xu, Zhenhua and Yue, Xubin and Wang, Zhebo and Liu, Qichen and Zhao, Xixiang and Zhang, Jingxuan and Zeng, Wenjun and Xing, Wengpeng and Kong, Dezhang and Lin, Changting and others},
-  journal={arXiv preprint arXiv:2508.11548},
-  year={2025}
+      <pre class="bib-data" id="bib-copyright">{% raw %}@misc{xu2025copyrightprotectionlargelanguage,
+      title={Copyright Protection for Large Language Models: A Survey of Methods, Challenges, and Trends},
+      author={Zhenhua Xu and Xubin Yue and Zhebo Wang and Qichen Liu and Xixiang Zhao and Jingxuan Zhang and Wenjun Zeng and Wengpeng Xing and Dezhang Kong and Changting Lin and Meng Han},
+      year={2025},
+      eprint={2508.11548},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR},
+      url={https://arxiv.org/abs/2508.11548}, 
 }{% endraw %}</pre>
     </div>
   </div>
