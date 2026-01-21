@@ -1140,6 +1140,29 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     </div>
   </div>
 
+  <div class="paper-card">
+    <div class="paper-body">
+      <div class="paper-top">
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2601.12986">KinGuard: Hierarchical Kinship-Aware Fingerprinting to Defend Against Large Language Model Stealing</a><span class="paper-badges"><span class="paper-badge">ICASSP 2026</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><span class="bib-copy" data-bib="bib-kinguard">Bib</span></span></h3>
+      </div>
+      <p class="paper-meta">
+        <strong style="color: #24292e;">Zhenhua Xu</strong>, Xiaoning Tian, Wenjun Zeng, Wenpeng Xing, Tianliang Lu, Gaolei Li, Chaochao Chen, Meng Han
+      </p>
+      <p class="text-truncate" style="margin: 0;">
+        We propose KinGuard, a hierarchical kinship-aware fingerprinting framework that models derivation relationships among LLM variants to enable fine-grained provenance tracing and robust defense against model stealing attacks.
+      </p>
+      <pre class="bib-data" id="bib-kinguard">{% raw %}@misc{xu2026kinguardhierarchicalkinshipawarefingerprinting,
+      title={KinGuard: Hierarchical Kinship-Aware Fingerprinting to Defend Against Large Language Model Stealing}, 
+      author={Zhenhua Xu and Xiaoning Tian and Wenjun Zeng and Wenpeng Xing and Tianliang Lu and Gaolei Li and Chaochao Chen and Meng Han},
+      year={2026},
+      eprint={2601.12986},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR},
+      url={https://arxiv.org/abs/2601.12986}, 
+}{% endraw %}</pre>
+    </div>
+  </div>
+
 </div>
 
 <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 16px; padding: 15px; margin: 25px 0; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
