@@ -1198,6 +1198,58 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     </div>
   </div>
 
+  <div class="paper-card">
+    <div class="paper-body">
+      <div class="paper-top">
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2601.11007">AdaMARP: An Adaptive Multi-Agent Interaction Framework for General Immersive Role-Playing</a></h3>
+      </div>
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ACL 2026 Findings</span><span class="paper-badge" style="background:#28a745;">CCF-A</span><a href="https://xuzhenhua55.github.io/AdaMARP" target="_blank" class="paper-badge-link">Website</a></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Dongsheng Chen, Shuo Wang, Jian Li, Chengjie Wang, Meng Han, Yabiao Wang
+      </p>
+      <p class="text-truncate" style="margin: 0;">
+        We propose an adaptive multi-agent role-playing framework, AdaMARP, featuring an immersive message format that interleaves [Thought], (Action), &lt;Environment&gt;, and Speech, together with an explicit Scene Manager that governs role-playing through discrete actions (init_scene, pick_speaker, switch_scene, add_role, end) accompanied by rationales. To train these capabilities, we construct AdaRPSet for the Actor Model and AdaSMSet for supervising orchestration decisions, and introduce AdaptiveBench for trajectory-level evaluation.
+      </p>
+    </div>
+  </div>
+
+  <div class="paper-card">
+    <div class="paper-body">
+      <div class="paper-top">
+        <h3 class="paper-title">AttnDiff: Attention-based Differential Fingerprinting for Large Language Models</h3>
+      </div>
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ACL 2026 Main</span><span class="paper-badge" style="background:#28a745;">CCF-A</span></span><strong style="color: #24292e;">Haobo Zhang</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Junxian Li, Shangfeng Sheng, Dezhang Kong, Meng Han
+      </p>
+      <p class="text-truncate" style="margin: 0;">
+        We propose AttnDiff, a data-efficient white-box framework that extracts fingerprints from models via intrinsic information-routing behavior. AttnDiff probes minimally edited prompt pairs that induce controlled semantic conflicts, captures differential attention patterns, summarizes them with compact spectral descriptors, and compares models using CKA.
+      </p>
+    </div>
+  </div>
+
+  <div class="paper-card">
+    <div class="paper-body">
+      <div class="paper-top">
+        <h3 class="paper-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=yDX0t54AAAAJ&citation_for_view=yDX0t54AAAAJ:zYLM7Y9cAGgC">Web Fraud Attacks Against LLM-Driven Multi-Agent Systems</a></h3>
+      </div>
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ACL 2026 Findings</span><span class="paper-badge" style="background:#28a745;">CCF-A</span><a href="https://github.com/JiangYingEr/Web-Fraud-Attack-in-MAS" target="_blank" class="paper-badge-link">GitHub</a></span>Dezhang Kong, Hujin Peng, Yilun Zhang, Lele Zhao, <strong style="color: #24292e;">Zhenhua Xu</strong>, Shi Lin, Changting Lin, Meng Han <span style="margin-left:6px; color:#7c3aed; font-size:12px; font-weight:500;">(co-corresponding authors: Zhenhua Xu, Meng Han)</span>
+      </p>
+      <p class="text-truncate" style="margin: 0;">
+        We propose Web Fraud Attacks, a novel type of attack manipulating unique structures of web links to deceive MAS. We design 12 representative attack variants that encompass various methods, such as homoglyph deception, sub-directory nesting, and parameter obfuscation.
+      </p>
+    </div>
+  </div>
+
+  <div class="paper-card">
+    <div class="paper-body">
+      <div class="paper-top">
+        <h3 class="paper-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=yDX0t54AAAAJ&citation_for_view=yDX0t54AAAAJ:8k81kl-MbHgC">MalURLBench: A Benchmark Evaluating Agents' Vulnerabilities When Processing Web URLs</a></h3>
+      </div>
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ACL 2026 Findings</span><span class="paper-badge" style="background:#28a745;">CCF-A</span><a href="https://github.com/JiangYingEr/MalURLBench" target="_blank" class="paper-badge-link">GitHub</a></span>Dezhang Kong, Zhuxi Wu, Shiqi Liu, ZhiCheng Tan, Kuichen Lu, Minghao Li, Qichen Liu, Shengyu Chu, <strong style="color: #24292e;">Zhenhua Xu</strong>, Xuan Liu, Meng Han <span style="margin-left:6px; color:#7c3aed; font-size:12px; font-weight:500;">(co-corresponding authors: Zhenhua Xu, Meng Han)</span>
+      </p>
+      <p class="text-truncate" style="margin: 0;">
+        We propose MalURLBench, the first benchmark for evaluating LLMs' vulnerabilities to malicious URLs. MalURLBench contains 61,845 attack instances spanning 10 real-world scenarios and 7 categories of real malicious websites.
+      </p>
+    </div>
+  </div>
+
 </div>
 
 <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 16px; padding: 15px; margin: 25px 0; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
@@ -1236,23 +1288,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   <h2 class="section-header">Key Preprints</h2>
 
   <div class="preprints-grid">
-  <div class="paper-card">
-    <div class="paper-body">
-      <div class="paper-top">
-        <h3 class="paper-title"><a href="https://arxiv.org/abs/2601.11007">AdaMARP: An Adaptive Multi-Agent Interaction Framework for General Immersive Role-Playing</a></h3>
-      </div>
-      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge paper-badge--star">★ Star</span><a href="https://xuzhenhua55.github.io/AdaMARP/" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-adamarp">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong> and <strong style="color: #24292e;">Zhebo Wang</strong> (co-first authors), Dongsheng Chen, Shuo Wang, Jian Li, Chengjie Wang, Meng Han, Yabiao Wang</p>
-      <pre class="bib-data" id="bib-adamarp">{% raw %}@misc{xu2026adamarpadaptivemultiagentinteraction,
-      title={AdaMARP: An Adaptive Multi-Agent Interaction Framework for General Immersive Role-Playing},
-      author={Zhenhua Xu and Dongsheng Chen and Shuo Wang and Jian Li and Chengjie Wang and Meng Han and Yabiao Wang},
-      year={2026},
-      eprint={2601.11007},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2601.11007}, 
-}{% endraw %}</pre>
-    </div>
-  </div>
+
 
   <div class="paper-card">
     <div class="paper-body">
