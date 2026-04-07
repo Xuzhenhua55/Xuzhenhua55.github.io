@@ -1403,10 +1403,6 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   </summary>
   <div class="internship-content">
     <p><strong>Primary Responsibilities:</strong> Conducting research on LLM role-playing to improve character consistency, dialogue fluency, and narrative engagement when models portray custom or specific characters.</p>
-    <p><strong>Key Contributions:</strong></p>
-    <ul>
-      <li>Proposed AdaMARP, an adaptive multi-agent role-playing framework featuring an immersive message format and an explicit Scene Manager for orchestration. Trained an Actor Model on AdaRPSet for enhanced character consistency, and a Scene Manager on AdaSMSet for smoother transitions and natural role introductions—8B Actor outperforms commercial LLMs, 14B Scene Manager surpasses Claude Sonnet 4.5</li>
-    </ul>
   </div>
 </details>
 
@@ -1426,12 +1422,6 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   </summary>
   <div class="internship-content">
     <p><strong>Primary Responsibilities:</strong> Conducting research on large language model security and AI ecosystem governance, focusing on model copyright protection (digital watermarking and model fingerprinting), jailbreak attacks and defenses, adversarial attack strategies, and agent system security risks.</p>
-    <p><strong>Key Contributions:</strong></p>
-    <ul>
-      <li>Led 10+ high-quality research projects as first author and co-first author, with 10+ papers submitted to top-tier conferences and journals including ACL, EMNLP, AAAI, ICASSP, and SCIENTIA SINICA</li>
-      <li>Independently mentored multiple interns through complete research workflows, from topic selection and methodology design to experimental replication and paper writing</li>
-      <li>Filed 8 invention patents, achieving initial industrial transformation and intellectual property implementation of research outcomes</li>
-    </ul>
   </div>
 </details>
 
