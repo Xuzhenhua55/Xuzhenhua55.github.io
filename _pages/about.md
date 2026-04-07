@@ -769,37 +769,40 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 </div>
 
 <style>
-/* News 简化样式 */
+/* News 美化样式 */
 .news-section {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 20px 24px;
   margin: 20px 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 }
 
 .news-header {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 
 .news-icon {
   width: 36px;
   height: 36px;
-  background: #f97316;
+  background: linear-gradient(135deg, #f97316, #ef4444);
   color: #ffffff;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18px;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.35);
 }
 
 .news-title {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   color: #24292e;
   margin: 0;
 }
@@ -807,47 +810,74 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 .news-divider {
   flex: 1;
   height: 1px;
-  background: #e2e8f0;
-  margin-left: 12px;
+  background: linear-gradient(to right, #e2e8f0, transparent);
+  margin-left: 8px;
 }
 
 .news-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0;
+  padding-left: 4px;
+  border-left: 2px solid #e2e8f0;
+  margin-left: 6px;
 }
 
 .news-item-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 8px 0 8px 18px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.news-item-card::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 14px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #94a3b8;
+  flex-shrink: 0;
+}
+
+.news-item-card:first-child::before {
+  border-color: #f97316;
+  background: #fff7ed;
 }
 
 .news-date {
-  background: #e2e8f0;
-  color: #334155;
-  padding: 2px 8px;
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+  color: #475569;
+  padding: 2px 10px;
   border-radius: 9999px;
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 11.5px;
+  font-weight: 700;
   flex-shrink: 0;
+  margin-top: 1px;
+  letter-spacing: 0.3px;
+  border: 1px solid #e2e8f0;
 }
 
 .news-emoji {
-  font-size: 16px;
+  font-size: 15px;
   flex-shrink: 0;
+  margin-top: 1px;
 }
 
 .news-text {
   color: #334155;
-  font-size: 12px !important;
+  font-size: 13px !important;
   font-weight: 500;
   flex: 1;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .news-text strong {
@@ -889,6 +919,15 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   </div>
   
   <div class="news-list">
+    <div class="news-item-card">
+      <span class="news-date">2026.04</span>
+      <span class="news-emoji">🎉</span>
+      <span class="news-text">
+        <strong><span class="news-count">Four</span> papers accepted by <a href="https://2026.aclweb.org/">ACL 2026</a></strong>
+        <span class="news-highlight"> · 1 Main, 3 Findings</span>
+      </span>
+    </div>
+
     <div class="news-item-card">
       <span class="news-date">2026.01</span>
       <span class="news-emoji">🎉</span>
