@@ -745,7 +745,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <span class='anchor' id='about-me'></span>
 
 <div class="about-me">
-I am Zhenhua Xu, a second‑year M.S. student (since Sep. 2024) in the College of Software at Zhejiang University, affiliated with the <a href="https://ifrc.zju.edu.cn/" target="_blank">Intelligence Fusion Research Center</a> (IFRC) and advised by <a href="https://scholar.google.com/citations?user=TnCrl1cAAAAJ" target="_blank">Meng Han</a>.
+I am Zhenhua Xu, a second‑year M.S. student (since Sep. 2024) in the College of Software at Zhejiang University, affiliated with the <a href="https://ifrc-zju.github.io/" target="_blank">Intelligence Fusion Research Center</a> (IFRC) and advised by <a href="https://scholar.google.com/citations?user=TnCrl1cAAAAJ" target="_blank">Meng Han</a>.
 
 My research interests center on copyright protection for large language models, including model watermarking and fingerprinting, as well as broader topics in AI security (e.g., risks in agentic systems).
 
@@ -758,7 +758,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 <details class="bio">
   <summary>Chinese Bio (click to expand)</summary>
   <div style="margin-top:6px; color:#374151; line-height:1.7;">
-    Hi~我是徐振华，浙江大学软件学院科研练习长达“一年半”的研二选手（2024级）！，隶属于<a href="https://ifrc.zju.edu.cn/" target="_blank">浙江大学数智融合研究中心实验室</a>，导师为 <a href="https://scholar.google.com/citations?user=TnCrl1cAAAAJ" target="_blank">韩蒙</a> 老师。
+    Hi~我是徐振华，浙江大学软件学院科研练习长达“一年半”的研二选手（2024级）！，隶属于<a href="https://ifrc-zju.github.io/" target="_blank">浙江大学数智融合研究中心实验室</a>，导师为 <a href="https://scholar.google.com/citations?user=TnCrl1cAAAAJ" target="_blank">韩蒙</a> 老师。
     我的研究方向主要为大模型版权保护（模型水印与模型指纹），以及在此之上的更广泛的人工智能安全议题（如智能体系统的安全风险等）。
     在加入<a href="https://open.youtu.qq.com/#/open" target="_blank">腾讯优图实验室</a>实习后，研究方向进一步扩展到通用大模型的角色扮演，以及在此基础上的后训练（SFT、RLHF 等）。
     在硕士第一年，我与多位优秀同学（包含组内实习生）合作，在多个国际会议与期刊发表了若干成果，并期待与更多研究者开展合作。
