@@ -278,29 +278,101 @@ redirect_from:
 .internships-container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin: 20px 0;
+  gap: 0;
+  margin: 24px 0;
+  position: relative;
+  padding-left: 28px;
+}
+
+.internships-container::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 12px;
+  bottom: 12px;
+  width: 2px;
+  background: linear-gradient(180deg, #6366f1 0%, #3b82f6 50%, #06b6d4 100%);
+  border-radius: 2px;
+  opacity: 0.5;
 }
 
 .internship-card {
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e8edf5;
+  border-radius: 14px;
   padding: 0;
   overflow: hidden;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+  margin-bottom: 16px;
+}
+
+.internship-card::before {
+  content: '';
+  position: absolute;
+  left: -28px;
+  top: 22px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #6366f1;
+  z-index: 1;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.internship-card:nth-child(2)::before { border-color: #3b82f6; }
+.internship-card:nth-child(3)::before { border-color: #06b6d4; }
+
+.internship-card:hover::before { background: #6366f1; }
+.internship-card:nth-child(2):hover::before { background: #3b82f6; }
+.internship-card:nth-child(3):hover::before { background: #06b6d4; }
+
+.internship-card[open]::before { background: #6366f1; }
+.internship-card:nth-child(2)[open]::before { background: #3b82f6; }
+.internship-card:nth-child(3)[open]::before { background: #06b6d4; }
+
+.internship-card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #6366f1, #818cf8);
+  border-radius: 14px 0 0 14px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.internship-card:nth-child(2)::after { background: linear-gradient(180deg, #3b82f6, #60a5fa); }
+.internship-card:nth-child(3)::after { background: linear-gradient(180deg, #06b6d4, #22d3ee); }
+
+.internship-card:hover::after,
+.internship-card[open]::after {
+  opacity: 1;
 }
 
 .internship-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  border-color: #cbd5e1;
+  transform: translateX(3px);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+  border-color: #d1d9e6;
 }
 
 .internship-card[open] {
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.1);
   border-color: #c7d2fe;
-  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.12);
+}
+
+.internship-card:nth-child(2)[open] {
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.1);
+  border-color: #bfdbfe;
+}
+
+.internship-card:nth-child(3)[open] {
+  box-shadow: 0 8px 24px rgba(6, 182, 212, 0.1);
+  border-color: #a5f3fc;
 }
 
 .internship-header {
@@ -308,27 +380,28 @@ redirect_from:
   align-items: stretch;
   cursor: pointer;
   user-select: none;
+  padding: 0;
 }
 
 .internship-header:focus-visible {
-  outline: 2px solid rgba(59, 130, 246, 0.45);
+  outline: 2px solid rgba(99, 102, 241, 0.4);
   outline-offset: -2px;
+  border-radius: 14px;
 }
-
 
 .internship-main {
   flex: 1;
-  padding: 16px 20px;
+  padding: 16px 18px 14px 18px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
 }
 
 .internship-title-row {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 4px;
+  gap: 10px;
+  margin-bottom: 2px;
 }
 
 .internship-title {
@@ -336,24 +409,27 @@ redirect_from:
   font-weight: 700;
   color: #1e293b;
   margin: 0;
+  line-height: 1.3;
 }
 
 .internship-title a {
   color: #1e293b;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 .internship-title a:hover {
-  text-decoration: underline;
+  color: #6366f1;
+  text-decoration: none;
 }
 
 .internship-logo {
-  height: 28px;
-  padding: 4px 8px;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+  height: 26px;
+  padding: 3px 7px;
+  background: #f8fafc;
+  border: 1px solid #e8edf5;
+  border-radius: 7px;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.05);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -363,81 +439,125 @@ redirect_from:
 .internship-logo img {
   height: 100%;
   width: auto;
-  max-width: 100px;
+  max-width: 90px;
   object-fit: contain;
 }
 
+.internship-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2px;
+}
+
 .internship-role {
-  font-size: 13px !important;
-  color: #475569;
+  font-size: 12.5px !important;
+  color: #334155;
   margin: 0;
+  font-weight: 500;
 }
 
 .internship-location {
-  font-size: 13px !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 11.5px !important;
   color: #64748b;
-  margin-left: 8px;
+  background: #f1f5f9;
+  padding: 2px 8px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.internship-location::before {
+  content: '';
+  font-size: 10px;
 }
 
 .internship-date {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-  color: #475569;
-  padding: 4px 12px;
+  gap: 5px;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e8eeff 100%);
+  color: #4f46e5;
+  padding: 3px 10px;
   border-radius: 20px;
   font-size: 11px;
   font-weight: 500;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #c7d2fe;
+  letter-spacing: 0.01em;
+}
+
+.internship-card:nth-child(2) .internship-date {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  color: #1d4ed8;
+  border-color: #bfdbfe;
+}
+
+.internship-card:nth-child(3) .internship-date {
+  background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%);
+  color: #0e7490;
+  border-color: #a5f3fc;
 }
 
 .internship-arrow {
-  width: 40px;
+  width: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #94a3b8;
-  font-size: 14px;
+  color: #cbd5e1;
+  font-size: 12px;
   transition: transform 0.3s ease, color 0.3s ease;
   flex-shrink: 0;
+  border-left: 1px solid #f1f5f9;
 }
 
 .internship-card[open] .internship-arrow {
   transform: rotate(90deg);
-  color: #3b82f6;
+  color: #6366f1;
 }
 
+.internship-card:nth-child(2)[open] .internship-arrow { color: #3b82f6; }
+.internship-card:nth-child(3)[open] .internship-arrow { color: #06b6d4; }
+
 .internship-content {
-  padding: 0 20px 20px 20px;
+  padding: 14px 18px 16px 18px;
   color: #475569;
-  font-size: 13px;
-  line-height: 1.7;
-  border-top: 1px solid #e2e8f0;
-  margin-top: -1px;
+  font-size: 12.5px;
+  line-height: 1.75;
+  border-top: 1px dashed #e8edf5;
+  background: linear-gradient(180deg, #fafbff 0%, #ffffff 100%);
 }
 
 .internship-content p {
-  margin: 12px 0;
+  margin: 8px 0;
+}
+
+.internship-content strong {
+  color: #1e293b;
+  font-weight: 600;
 }
 
 .internship-content ul {
-  margin: 10px 0;
-  padding-left: 20px;
+  margin: 8px 0;
+  padding-left: 18px;
 }
 
 .internship-content li {
-  margin: 6px 0;
+  margin: 5px 0;
   color: #334155;
 }
 
 .internship-content li::marker {
-  color: #3b82f6;
+  color: #6366f1;
 }
 
-details.internship { border: none; margin: 0; padding: 0; background: none; }
-details.internship summary { list-style: none; }
-details.internship summary::-webkit-details-marker { display: none; }
+.internship-card:nth-child(2) .internship-content li::marker { color: #3b82f6; }
+.internship-card:nth-child(3) .internship-content li::marker { color: #06b6d4; }
+
+details.internship-card summary { list-style: none; }
+details.internship-card summary::-webkit-details-marker { display: none; }
 
 /* Education 美化样式 */
 .education-container {
@@ -1396,8 +1516,11 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
         <div class="internship-logo"><img src="images/tencentyoutu.jpg" alt="Tencent YouTu Lab"></div>
         <h3 class="internship-title"><a href="https://open.youtu.qq.com/#/open">Tencent YouTu Lab</a></h3>
       </div>
-      <p class="internship-role">LLM Algorithm Intern (Research) <span class="internship-location">Shanghai, China</span></p>
-      <span class="internship-date">📅 November 2025 - Present</span>
+      <div class="internship-meta">
+<p class="internship-role">LLM Algorithm Intern (Research)</p>
+        <span class="internship-location">Shanghai, China</span>
+        <span class="internship-date">Nov 2025 – Present</span>
+      </div>
     </div>
     <div class="internship-arrow">▸</div>
   </summary>
@@ -1412,11 +1535,14 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
       <div class="internship-title-row">
         <div class="internship-logo"><img src="images/GenTel-Research.png" alt="GenTel Research"></div>
         <h3 class="internship-title">
-          <a href="http://ibj.zju.edu.cn/">Zhejiang University Binjiang Institute</a> and <a href="https://gentel.io/zh/home">GenTel.io</a>
+          <a href="http://ibj.zju.edu.cn/">ZJU Binjiang Institute</a> &amp; <a href="https://gentel.io/zh/home">GenTel.io</a>
         </h3>
       </div>
-      <p class="internship-role">Research Intern - AI Security <span class="internship-location">Hangzhou, China</span></p>
-      <span class="internship-date">📅 July 2024 - October 2025</span>
+      <div class="internship-meta">
+<p class="internship-role">Research Intern – AI Security</p>
+        <span class="internship-location">Hangzhou, China</span>
+        <span class="internship-date">Jul 2024 – Oct 2025</span>
+      </div>
     </div>
     <div class="internship-arrow">▸</div>
   </summary>
@@ -1432,8 +1558,11 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
         <div class="internship-logo"><img src="images/LianlianPay.png" alt="LianLianPay"></div>
         <h3 class="internship-title"><a href="https://www.lianlianpay.com/home">LianLianPay</a></h3>
       </div>
-      <p class="internship-role">Java Backend Development Engineer <span class="internship-location">Hangzhou, China</span></p>
-      <span class="internship-date">📅 November 2023 - May 2024</span>
+      <div class="internship-meta">
+<p class="internship-role">Java Backend Development Engineer</p>
+        <span class="internship-location">Hangzhou, China</span>
+        <span class="internship-date">Nov 2023 – May 2024</span>
+      </div>
     </div>
     <div class="internship-arrow">▸</div>
   </summary>
