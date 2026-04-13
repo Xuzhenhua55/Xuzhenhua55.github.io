@@ -1535,7 +1535,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
       <div class="internship-title-row">
         <div class="internship-logo"><img src="images/GenTel-Research.png" alt="GenTel Research"></div>
         <h3 class="internship-title">
-          <a href="http://ibj.zju.edu.cn/">ZJU Binjiang Institute</a> &amp; <a href="https://gentel.io/zh/home">GenTel.io</a>
+          <a href="http://ibj.zju.edu.cn/">ZJU Binjiang Institute</a> / <a href="https://gentel.io/zh/home">GenTel.io</a>
         </h3>
       </div>
       <div class="internship-meta">
