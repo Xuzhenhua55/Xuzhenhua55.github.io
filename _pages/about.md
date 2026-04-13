@@ -1104,7 +1104,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 </div> -->
 
 <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 16px; padding: 15px; margin: 25px 0; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
-  <h2 class="section-header">Conference Papers</h2>
+<h2 class="section-header">Conference Papers</h2>
   
   <div class="paper-card">
     <!-- <div class="paper-thumb">
@@ -1334,7 +1334,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   <div class="paper-card">
     <div class="paper-body">
       <div class="paper-top">
-        <h3 class="paper-title">AttnDiff: Attention-based Differential Fingerprinting for Large Language Models</h3>
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2604.05502">AttnDiff: Attention-based Differential Fingerprinting for Large Language Models</a></h3>
       </div>
       <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ACL 2026 Main</span><span class="paper-badge" style="background:#28a745;">CCF-A</span></span><strong style="color: #24292e;">Haobo Zhang</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Junxian Li, Shangfeng Sheng, Dezhang Kong, Meng Han
       </p>
@@ -1373,7 +1373,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 </div>
 
 <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 16px; padding: 15px; margin: 25px 0; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
-  <h2 class="section-header">Journal Papers</h2>
+<h2 class="section-header">Journal Papers</h2>
   
   <div class="paper-card">
     <!-- <div class="paper-thumb">
@@ -1405,7 +1405,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 </div>
 
 <div class="preprints-section" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 16px; padding: 15px; margin: 25px 0; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
-  <h2 class="section-header">Key Preprints</h2>
+<h2 class="section-header">Key Preprints</h2>
 
   <div class="preprints-grid">
 
