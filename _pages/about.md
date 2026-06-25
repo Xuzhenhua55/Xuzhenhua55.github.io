@@ -14,21 +14,24 @@ redirect_from:
   display: flex;
   align-items: stretch;
   gap: 16px;
-  margin: 16px 0;
-  padding: 16px;
-  border: 1px solid #e1e4e8;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  margin: 10px 0;
+  padding: 12px 14px;
+  border: 1px solid #e5e1da;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: none;
+  transition: background 0.12s, border-color 0.12s;
 }
+.paper-card:hover { background: rgba(255, 255, 255, 0.85); border-color: #d4d0c8; }
 
 .paper-thumb {
   flex: 0 0 180px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f8fafc;
-  border-radius: 8px;
+  background: rgba(240, 237, 232, 0.6);
+  border: 1px solid #e5e1da;
+  border-radius: 6px;
   padding: 10px;
 }
 
@@ -55,7 +58,7 @@ redirect_from:
 .paper-badges { display: inline-flex; gap: 4px; flex-wrap: wrap; margin-right: 8px; align-items: center; vertical-align: middle; }
 
 .paper-badge {
-  background: #0366d6;
+  background: #2563eb;
   color: #fff;
   padding: 0 5px;
   border-radius: 3px;
@@ -104,8 +107,9 @@ redirect_from:
 .bib-copy.copied { background: #10b981; }
 .bib-data { display: none; }
 
-.paper-title a { color: #0366d6; text-decoration: none; }
-.paper-title { margin: 0 0 6px 0; font-size: 14px !important; line-height: 1.35; color: #24292e; display: inline; }
+.paper-title a { color: #2563eb; text-decoration: none; }
+.paper-title a:hover { color: #1d4ed8; text-decoration: underline; }
+.paper-title { margin: 0 0 6px 0; font-size: 14px !important; line-height: 1.35; color: #1a1a1a; display: inline; }
 .paper-meta { margin: 0 0 8px 0; color: #64748b; font-size: 12px !important; font-weight: 500; }
 .paper-meta strong { font-size: inherit; }
 .paper-bib { margin-top: 6px; }
@@ -114,9 +118,9 @@ redirect_from:
 .paper-bib pre {
   margin: 6px 0 0 0;
   padding: 8px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
+  background: rgba(240, 237, 232, 0.6);
+  border: 1px solid #e5e1da;
+  border-radius: 6px;
   font-size: 11px;
   line-height: 1.45;
   white-space: pre-wrap;
@@ -889,207 +893,160 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 </div>
 
 <style>
-/* News 美化样式 */
-.news-section {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  padding: 20px 24px;
-  margin: 20px 0;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+/* News — handwritten minimal style (inspired by tianxingchen.github.io) */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+.news-block {
+  --news-text: #1a1a1a;
+  --news-muted: #666;
+  --news-accent: #2563eb;
+  --news-accent-hover: #1d4ed8;
+  --news-border: #d4d0c8;
+  --news-tag-bg: #f0ede8;
+  --news-panel-bg: rgba(255, 255, 255, 0.52);
+  margin: 20px 0 30px;
 }
 
-.news-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 18px;
-}
-
-.news-icon {
-  width: 36px;
-  height: 36px;
-  background: linear-gradient(135deg, #f97316, #ef4444);
-  color: #ffffff;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.35);
-}
-
-.news-title {
-  font-size: 18px;
+.news-block .news-title {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
   font-weight: 700;
-  color: #24292e;
-  margin: 0;
+  color: var(--news-text);
+  margin: 0 0 10px;
+  line-height: 1.15;
 }
 
-.news-divider {
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(to right, #e2e8f0, transparent);
-  margin-left: 8px;
+.news-block .news-panel {
+  background: var(--news-panel-bg);
+  border: 1px solid var(--news-border);
+  border-radius: 6px;
+  padding: 6px 10px 8px;
 }
 
-.news-list {
+.news-block .news-list {
+  list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0;
-  padding-left: 4px;
-  border-left: 2px solid #e2e8f0;
-  margin-left: 6px;
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+  border-left: none;
 }
 
-.news-item-card {
+.news-block .news-item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 4px 6px;
+  margin: 0;
   background: transparent;
   border: none;
+  border-radius: 4px;
+  transition: background 0.12s;
+  position: static;
+}
+.news-block .news-item::before { content: none; }
+.news-block .news-item:hover { background: rgba(0, 0, 0, 0.035); }
+
+.news-block .news-date {
+  flex-shrink: 0;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.64rem;
+  font-weight: 500;
+  color: var(--news-muted);
+  letter-spacing: 0.03em;
+  line-height: 1.25;
+  padding: 2px 6px;
+  margin: 0;
+  background: var(--news-tag-bg);
+  border: 1px solid var(--news-border);
+  border-radius: 3px;
+}
+
+.news-block .news-content {
+  color: var(--news-text);
+  min-width: 0;
+  font-size: 0.87rem !important;
+  font-weight: 400;
+  line-height: 1.42;
+}
+.news-block .news-content strong { color: var(--news-text); font-weight: 600; }
+.news-block .news-content a { color: var(--news-accent); font-weight: 500; text-decoration: none; }
+.news-block .news-content a:hover { color: var(--news-accent-hover); text-decoration: underline; }
+
+.news-block .news-hidden { display: none; }
+.news-block .news-list.news-expanded .news-hidden { display: flex; }
+
+.news-block .news-toggle {
+  margin-top: 6px;
+  width: 100%;
+  background: none;
+  border: none;
+  border-top: 1px dashed var(--news-border);
   border-radius: 0;
-  padding: 8px 0 8px 18px;
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  position: relative;
-  transition: background 0.2s;
+  padding: 7px 0 2px;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.7rem;
+  color: var(--news-muted);
+  cursor: pointer;
+  transition: color 0.15s;
 }
+.news-block .news-toggle:hover { color: var(--news-accent); }
 
-.news-item-card::before {
-  content: '';
-  position: absolute;
-  left: -6px;
-  top: 14px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #fff;
-  border: 2px solid #94a3b8;
-  flex-shrink: 0;
-}
-
-.news-item-card:first-child::before {
-  border-color: #f97316;
-  background: #fff7ed;
-}
-
-.news-date {
-  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
-  color: #475569;
-  padding: 2px 10px;
-  border-radius: 9999px;
-  font-size: 11.5px;
-  font-weight: 700;
-  flex-shrink: 0;
-  margin-top: 1px;
-  letter-spacing: 0.3px;
-  border: 1px solid #e2e8f0;
-}
-
-.news-emoji {
-  font-size: 15px;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-
-.news-text {
-  color: #334155;
-  font-size: 13px !important;
-  font-weight: 500;
-  flex: 1;
-  line-height: 1.6;
-}
-
-.news-text strong {
-  color: #0f172a;
-}
-
-.news-text a {
-  color: #2563eb;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.news-text a:hover {
-  text-decoration: underline;
-}
-
-.news-count {
-  display: inline-block;
-  padding: 0 6px;
-  border-radius: 6px;
-  background: #eef2ff;
-  color: #4f46e5;
-  font-weight: 700;
-  font-size: 13px;
-  margin: 0 2px;
-}
-
-.news-highlight {
-  color: #64748b;
-  font-weight: 500;
+@media (max-width: 768px) {
+  .news-block .news-item { flex-direction: column; align-items: flex-start; gap: 3px; padding: 5px 6px; }
+  .news-block .news-list.news-expanded .news-hidden { flex-direction: column; align-items: flex-start; }
 }
 </style>
 
-<div class="news-section" id="-news">
-  <div class="news-header">
-    <div class="news-icon">🔥</div>
-    <h2 class="news-title">News</h2>
-    <div class="news-divider"></div>
-  </div>
-  
-  <div class="news-list">
-    <div class="news-item-card">
-      <span class="news-date">2026.04</span>
-      <span class="news-emoji">🎉</span>
-      <span class="news-text">
-        <strong><span class="news-count">Four</span> papers accepted by <a href="https://2026.aclweb.org/">ACL 2026</a></strong>
-        <span class="news-highlight"> · 1 Main, 3 Findings</span>
-      </span>
-    </div>
-
-    <div class="news-item-card">
-      <span class="news-date">2026.01</span>
-      <span class="news-emoji">🎉</span>
-      <span class="news-text">
-        <strong><span class="news-count">Three</span> papers accepted by <a href="https://2026.ieeeicassp.org/event/about-conference/">ICASSP 2026</a></strong>
-      </span>
-    </div>
-
-    <div class="news-item-card">
-      <span class="news-date">2025.08</span>
-      <span class="news-emoji">🎉</span>
-      <span class="news-text">
-        <strong><span class="news-count">Four</span> papers accepted by <a href="https://2025.emnlp.org/">EMNLP 2025</a></strong>
-        <span class="news-highlight"> · 2 Main, 2 Findings</span>
-      </span>
-    </div>
-
-    <div class="news-item-card">
-      <span class="news-date">2025.08</span>
-      <span class="news-emoji">🎉</span>
-      <span class="news-text">
-        <strong>One paper accepted by <a href="http://scis.scichina.com/">SCIENTIA SINICA Informationis</a></strong>
-      </span>
-    </div>
-
-    <div class="news-item-card">
-      <span class="news-date">2025.05</span>
-      <span class="news-emoji">🎉</span>
-      <span class="news-text">
-        <strong>One paper accepted by <a href="https://2025.aclweb.org/">ACL 2025 Main Conference</a></strong>
-      </span>
-    </div>
+<div class="news-block" id="-news">
+  <h2 class="news-title">News</h2>
+  <div class="news-panel">
+    <ul class="news-list" id="news-list">
+      <li class="news-item">
+        <span class="news-date">04/2026</span>
+        <span class="news-content">🎉 <strong>Four</strong> papers accepted by <a href="https://2026.aclweb.org/" target="_blank">ACL 2026</a> · 1 Main, 3 Findings !</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">01/2026</span>
+        <span class="news-content">🎉 <strong>Three</strong> papers accepted by <a href="https://2026.ieeeicassp.org/event/about-conference/" target="_blank">ICASSP 2026</a> !</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">08/2025</span>
+        <span class="news-content">🎉 <strong>Four</strong> papers accepted by <a href="https://2025.emnlp.org/" target="_blank">EMNLP 2025</a> · 2 Main, 2 Findings !</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">08/2025</span>
+        <span class="news-content">🎉 One paper accepted by <a href="http://scis.scichina.com/" target="_blank">SCIENTIA SINICA Informationis</a> !</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">05/2025</span>
+        <span class="news-content">🎉 One paper accepted by <a href="https://2025.aclweb.org/" target="_blank">ACL 2025 Main Conference</a> !</span>
+      </li>
+    </ul>
   </div>
 </div>
 
-<h2 class="section-header" style="margin-top: 30px;"><span style="margin-right: 8px;">🚀</span>Projects</h2>
+<style>
+.art-title {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 30px 0 10px;
+  line-height: 1.15;
+  padding-left: 0;
+}
+.art-title::before { content: none; }
+</style>
+
+<h2 class="art-title">Projects</h2>
 
 <ul style="font-size: 14px; color: #475569; line-height: 1.5; margin-top: 10px;">
   <li><a href="https://github.com/Xuzhenhua55/awesome-llm-copyright-protection" style="color: #2563eb;">Awesome LLM Copyright Protection</a> - A curated collection of research and techniques for protecting intellectual property of large language models, including watermarking, fingerprinting, and more. <a href="https://xuzhenhua55.github.io/awesome-llm-copyright-protection/" style="color: #2563eb;">[Website]</a><a href="https://arxiv.org/abs/2508.11548" style="color: #2563eb;">[Paper Link]</a></li>
 </ul>
 
-<h2 class="section-header" id="-publications" style="margin-top: 30px;"><span style="margin-right: 8px;">📝</span>Publications</h2> 
+<h2 class="art-title" id="-publications">Publications</h2> 
 
 <!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -1505,115 +1462,253 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 <!-- # 🎖 Honors and Awards -->
 
 
-<h2 class="section-header" id="-internships" style="margin-top: 30px;"><span style="margin-right: 8px;">💻</span>Internships</h2>
+<style>
+/* CV lists (Experience / Education) — handwritten minimal style */
+.cv-block {
+  --cv-text: #1a1a1a;
+  --cv-muted: #666;
+  --cv-accent: #2563eb;
+  --cv-accent-hover: #1d4ed8;
+  --cv-border: #d4d0c8;
+  --cv-tag-bg: #f0ede8;
+  --cv-panel-bg: rgba(255, 255, 255, 0.52);
+  margin: 30px 0 0;
+}
 
-<div class="internships-container">
+.cv-block .cv-title {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--cv-text);
+  margin: 0 0 10px;
+  line-height: 1.15;
+}
 
-<details class="internship-card">
-  <summary class="internship-header">
-    <div class="internship-main">
-      <div class="internship-title-row">
-        <div class="internship-logo"><img src="images/tencentyoutu.jpg" alt="Tencent YouTu Lab"></div>
-        <h3 class="internship-title"><a href="https://open.youtu.qq.com/#/open">Tencent YouTu Lab</a></h3>
-      </div>
-      <div class="internship-meta">
-<p class="internship-role">LLM Algorithm Intern (Research)</p>
-        <span class="internship-location">Shanghai, China</span>
-        <span class="internship-date">Nov 2025 – Present</span>
+.cv-block .cv-panel {
+  background: var(--cv-panel-bg);
+  border-top: 1px solid var(--cv-border);
+  border-bottom: 1px solid var(--cv-border);
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  padding: 2px 10px;
+}
+
+.cv-block .cv-item {
+  display: grid;
+  grid-template-columns: 88px 150px 1fr;
+  gap: 0 16px;
+  align-items: center;
+  padding: 14px 6px;
+  border-bottom: 1px solid var(--cv-border);
+}
+.cv-block .cv-item:last-child { border-bottom: none; }
+
+.cv-block .cv-period {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.64rem;
+  font-weight: 500;
+  color: var(--cv-muted);
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.cv-block .cv-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cv-block .cv-logo img {
+  max-width: 100%;
+  max-height: 56px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.cv-block .cv-content { min-width: 0; }
+.cv-block .cv-org {
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--cv-text);
+  line-height: 1.35;
+}
+.cv-block .cv-org a { color: var(--cv-text); text-decoration: none; }
+.cv-block .cv-org a:hover { color: var(--cv-accent); text-decoration: underline; }
+.cv-block .cv-role {
+  font-size: 0.86rem;
+  color: var(--cv-muted);
+  font-style: normal;
+  margin-top: 2px;
+  line-height: 1.4;
+}
+.cv-block .cv-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+.cv-block .cv-tag {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.62rem;
+  font-weight: 500;
+  color: var(--cv-muted);
+  letter-spacing: 0.02em;
+  padding: 2px 7px;
+  background: var(--cv-tag-bg);
+  border: 1px solid var(--cv-border);
+  border-radius: 3px;
+}
+
+.cv-block .cv-detail { margin-top: 8px; }
+.cv-block .cv-detail summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.68rem;
+  color: var(--cv-muted);
+  user-select: none;
+  transition: color 0.15s;
+}
+.cv-block .cv-detail summary::-webkit-details-marker { display: none; }
+.cv-block .cv-detail summary:hover { color: var(--cv-accent); }
+.cv-block .cv-detail[open] summary { color: var(--cv-accent); }
+.cv-block .cv-detail-body {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: #475569;
+}
+.cv-block .cv-detail-body p { margin: 4px 0; }
+.cv-block .cv-detail-body strong { color: var(--cv-text); }
+
+@media (max-width: 768px) {
+  .cv-block .cv-item { grid-template-columns: 70px 92px 1fr; gap: 0 10px; }
+  .cv-block .cv-logo img { max-height: 40px; }
+}
+</style>
+
+<div class="cv-block" id="-internships">
+  <h2 class="cv-title">Research Experience</h2>
+  <div class="cv-panel">
+
+    <div class="cv-item">
+      <div class="cv-period">Nov 2025<br>—<br>Present</div>
+      <div class="cv-logo"><img src="images/tencentyoutu.jpg" alt="Tencent YouTu Lab"></div>
+      <div class="cv-content">
+        <div class="cv-org"><a href="https://open.youtu.qq.com/#/open" target="_blank">Tencent YouTu Lab</a></div>
+        <div class="cv-role">LLM Algorithm Intern (Research) · Shanghai, China</div>
+        <details class="cv-detail">
+          <summary>Details ▾</summary>
+          <div class="cv-detail-body">
+            <p><strong>Primary Responsibilities:</strong> Conducting research on LLM role-playing to improve character consistency, dialogue fluency, and narrative engagement when models portray custom or specific characters.</p>
+          </div>
+        </details>
       </div>
     </div>
-    <div class="internship-arrow">▸</div>
-  </summary>
-  <div class="internship-content">
-    <p><strong>Primary Responsibilities:</strong> Conducting research on LLM role-playing to improve character consistency, dialogue fluency, and narrative engagement when models portray custom or specific characters.</p>
-  </div>
-</details>
 
-<details class="internship-card">
-  <summary class="internship-header">
-    <div class="internship-main">
-      <div class="internship-title-row">
-        <div class="internship-logo"><img src="images/GenTel-Research.png" alt="GenTel Research"></div>
-        <h3 class="internship-title">
-          <a href="http://ibj.zju.edu.cn/">ZJU Binjiang Institute</a> / <a href="https://gentel.io/zh/home">GenTel.io</a>
-        </h3>
-      </div>
-      <div class="internship-meta">
-<p class="internship-role">Research Intern – AI Security</p>
-        <span class="internship-location">Hangzhou, China</span>
-        <span class="internship-date">Jul 2024 – Oct 2025</span>
+    <div class="cv-item">
+      <div class="cv-period">Jul 2024<br>—<br>Oct 2025</div>
+      <div class="cv-logo"><img src="images/GenTel-Research.png" alt="GenTel Research"></div>
+      <div class="cv-content">
+        <div class="cv-org"><a href="http://ibj.zju.edu.cn/" target="_blank">ZJU Binjiang Institute</a> / <a href="https://gentel.io/zh/home" target="_blank">GenTel.io</a></div>
+        <div class="cv-role">Research Intern – AI Security · Hangzhou, China</div>
+        <details class="cv-detail">
+          <summary>Details ▾</summary>
+          <div class="cv-detail-body">
+            <p><strong>Primary Responsibilities:</strong> Conducting research on large language model security and AI ecosystem governance, focusing on model copyright protection (digital watermarking and model fingerprinting), jailbreak attacks and defenses, adversarial attack strategies, and agent system security risks.</p>
+          </div>
+        </details>
       </div>
     </div>
-    <div class="internship-arrow">▸</div>
-  </summary>
-  <div class="internship-content">
-    <p><strong>Primary Responsibilities:</strong> Conducting research on large language model security and AI ecosystem governance, focusing on model copyright protection (digital watermarking and model fingerprinting), jailbreak attacks and defenses, adversarial attack strategies, and agent system security risks.</p>
-  </div>
-</details>
 
-<details class="internship-card">
-  <summary class="internship-header">
-    <div class="internship-main">
-      <div class="internship-title-row">
-        <div class="internship-logo"><img src="images/LianlianPay.png" alt="LianLianPay"></div>
-        <h3 class="internship-title"><a href="https://www.lianlianpay.com/home">LianLianPay</a></h3>
-      </div>
-      <div class="internship-meta">
-<p class="internship-role">Java Backend Development Engineer</p>
-        <span class="internship-location">Hangzhou, China</span>
-        <span class="internship-date">Nov 2023 – May 2024</span>
+    <div class="cv-item">
+      <div class="cv-period">Nov 2023<br>—<br>May 2024</div>
+      <div class="cv-logo"><img src="images/LianlianPay.png" alt="LianLianPay"></div>
+      <div class="cv-content">
+        <div class="cv-org"><a href="https://www.lianlianpay.com/home" target="_blank">LianLianPay</a></div>
+        <div class="cv-role">Java Backend Development Engineer · Hangzhou, China</div>
+        <details class="cv-detail">
+          <summary>Details ▾</summary>
+          <div class="cv-detail-body">
+            <p><strong>Primary Responsibilities:</strong> As a backend development engineer, participated in the development and maintenance of the "Account+" payment system. This system is one of the company's core business platforms, primarily responsible for managing merchant partnerships and associated user information, handling financial operations between the company and merchants including account recharge, internal fund transfers, withdrawals, and reconciliation processes.</p>
+          </div>
+        </details>
       </div>
     </div>
-    <div class="internship-arrow">▸</div>
-  </summary>
-  <div class="internship-content">
-    <p><strong>Primary Responsibilities:</strong> As a backend development engineer, participated in the development and maintenance of the "Account+" payment system. This system is one of the company's core business platforms, primarily responsible for managing merchant partnerships and associated user information, handling financial operations between the company and merchants including account recharge, internal fund transfers, withdrawals, and reconciliation processes.</p>
-  </div>
-</details>
 
+  </div>
 </div>
 
-<h2 class="section-header" id="-educations" style="margin-top: 30px;"><span style="margin-right: 8px;">📖</span>Educations</h2>
+<div class="cv-block" id="-educations">
+  <h2 class="cv-title">Education</h2>
+  <div class="cv-panel">
 
-<div class="education-container">
-
-  <div class="education-card">
-    <div class="education-dot master"><img src="images/universities/ZJU-LOGO.png" alt="ZJU"></div>
-    <div class="education-info">
-      <h3 class="education-school">Zhejiang University</h3>
-      <p class="education-degree">College of Software · Master of Software Engineering</p>
-      <div class="education-meta">
-        <span class="education-date-badge">📅 September 2024 - June 2027 (Expected)</span>
-        <span class="education-gpa">📊 GPA: 4.27/5.0</span>
-      </div>
-      <details class="education-honors">
-        <summary>🏆 Selected Honors (click to expand)</summary>
-        <div class="education-honors-content">
-          <p><strong>🥇 Honors and Awards:</strong> Outstanding Graduate Student (First Year), Five-Good Graduate Student (First Year)</p>
-          <p><strong>💰 Scholarships:</strong> 2025 National Scholarship (First Year)</p>
+    <div class="cv-item">
+      <div class="cv-period">Sep 2024<br>—<br>Jun 2027<br>(expected)</div>
+      <div class="cv-logo"><img src="images/universities/ZJU-LOGO.png" alt="ZJU"></div>
+      <div class="cv-content">
+        <div class="cv-org">Zhejiang University</div>
+        <div class="cv-role">College of Software · Master of Software Engineering</div>
+        <div class="cv-tags">
+          <span class="cv-tag">GPA 4.27/5.0</span>
         </div>
-      </details>
-    </div>
-  </div>
-
-  <div class="education-card">
-    <div class="education-dot bachelor"><img src="images/universities/ZJUT-LOGO.png" alt="ZJUT"></div>
-    <div class="education-info">
-      <h3 class="education-school">Zhejiang University of Technology</h3>
-      <p class="education-degree">Bachelor of Digital Media Technology</p>
-      <div class="education-meta">
-        <span class="education-date-badge">📅 September 2020 - June 2024</span>
-        <span class="education-gpa">📊 GPA: 3.84/5.0</span>
+        <details class="cv-detail">
+          <summary>Selected Honors ▾</summary>
+          <div class="cv-detail-body">
+            <p><strong>Honors and Awards:</strong> Outstanding Graduate Student (First Year), Five-Good Graduate Student (First Year)</p>
+            <p><strong>Scholarships:</strong> 2025 National Scholarship (First Year)</p>
+          </div>
+        </details>
       </div>
-      <details class="education-honors">
-        <summary>🏆 Selected Honors and Notes (click to expand)</summary>
-        <div class="education-honors-content">
-          <p><strong>🥇 Honors and Awards:</strong> Comprehensive Assessment: 100/100 (Ranked 1st in Major), Outstanding Graduate of Zhejiang Province, Outstanding Student Award</p>
-          <p><strong>💰 Scholarships:</strong> Zhejiang Provincial Government Scholarship (Top 5%), First-Class Scholarship for Outstanding Students (Top 2%), First-Class Academic Scholarship</p>
-          <p><em>📝 Note:</em> Digital Media Technology is a computer science major covering fundamental courses including Computer Networks, Data Structures, Operating Systems, and Computer Architecture. While the program later specializes in game design, human-computer interaction, and 3D animation programming, my academic focus shifted toward artificial intelligence and software development, leading to my current pursuit in software engineering.</p>
-        </div>
-      </details>
     </div>
-  </div>
 
+    <div class="cv-item">
+      <div class="cv-period">Sep 2020<br>—<br>Jun 2024</div>
+      <div class="cv-logo"><img src="images/universities/ZJUT-LOGO.png" alt="ZJUT"></div>
+      <div class="cv-content">
+        <div class="cv-org">Zhejiang University of Technology</div>
+        <div class="cv-role">Bachelor of Digital Media Technology</div>
+        <div class="cv-tags">
+          <span class="cv-tag">GPA 3.84/5.0</span>
+        </div>
+        <details class="cv-detail">
+          <summary>Selected Honors &amp; Notes ▾</summary>
+          <div class="cv-detail-body">
+            <p><strong>Honors and Awards:</strong> Comprehensive Assessment: 100/100 (Ranked 1st in Major), Outstanding Graduate of Zhejiang Province, Outstanding Student Award</p>
+            <p><strong>Scholarships:</strong> Zhejiang Provincial Government Scholarship (Top 5%), First-Class Scholarship for Outstanding Students (Top 2%), First-Class Academic Scholarship</p>
+            <p><em>Note:</em> Digital Media Technology is a computer science major covering fundamental courses including Computer Networks, Data Structures, Operating Systems, and Computer Architecture. While the program later specializes in game design, human-computer interaction, and 3D animation programming, my academic focus shifted toward artificial intelligence and software development, leading to my current pursuit in software engineering.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+  </div>
 </div>
+
+<style>
+.site-footer {
+  margin: 44px 0 8px;
+  padding-top: 18px;
+  border-top: 1px solid #d4d0c8;
+  text-align: center;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  color: #666;
+}
+.site-footer p {
+  margin: 0 0 12px;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+}
+.site-footer .footer-badge img {
+  height: 20px;
+  vertical-align: middle;
+}
+</style>
+
+<footer class="site-footer">
+  <p>&copy; Zhenhua Xu &nbsp;&middot;&nbsp; Latest updated Jun. 2026</p>
+  <span class="footer-badge">
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=xuzhenhua55.github.io&left_color=%232ccce4&right_color=%230158f9&left_text=visitors" alt="visitor badge">
+  </span>
+</footer>
