@@ -12,106 +12,110 @@ redirect_from:
 /* 通用论文卡片样式（复用于 Conference/Journal） */
 .paper-card {
   display: flex;
-  align-items: stretch;
-  gap: 16px;
-  margin: 10px 0;
-  padding: 12px 14px;
-  border: 1px solid #e5e1da;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.6);
+  align-items: flex-start;
+  gap: 18px;
+  margin: 0;
+  padding: 14px 6px;
+  border: none;
+  border-bottom: 1px solid #e5e1da;
+  border-radius: 0;
+  background: transparent;
   box-shadow: none;
-  transition: background 0.12s, border-color 0.12s;
+  transition: background 0.12s;
 }
-.paper-card:hover { background: rgba(255, 255, 255, 0.85); border-color: #d4d0c8; }
+.paper-card:hover { background: rgba(0, 0, 0, 0.025); }
+.paper-card:last-child { border-bottom: none; }
 
+/* 配图（可选）：固定宽度、自然高度、不裁剪；缺省时正文自动占满整行 */
 .paper-thumb {
-  flex: 0 0 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(240, 237, 232, 0.6);
-  border: 1px solid #e5e1da;
-  border-radius: 6px;
-  padding: 10px;
+  flex: 0 0 240px;
+  width: 240px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  display: block;
 }
 
 .paper-thumb img {
   width: 100%;
-  height: 120px;
+  height: auto;
   object-fit: contain;
-  border-radius: 8px;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid #d4d0c8;
+  transition: transform 0.3s ease;
+}
+.paper-thumb img:hover { transform: scale(1.03); }
+
+/* 图片缺失时的占位回退（可选） */
+.paper-thumb-placeholder {
+  flex: 0 0 240px;
+  width: 240px;
+  height: 135px;
+  border-radius: 5px;
+  border: 1px solid #d4d0c8;
+  background: #f0ede8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 11px;
+  color: #999;
+  text-align: center;
+  padding: 8px;
 }
 
 /* 横向（宽幅）配图优化，可在容器上加 .wide */
-.paper-thumb.wide { flex-basis: 260px; }
-.paper-thumb.wide img { height: 140px; }
+.paper-thumb.wide { flex: 0 0 260px; width: 260px; }
 
 .paper-body {
   flex: 1;
   min-width: 0;
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 
 .paper-top { display: block; }
 
-.paper-badges { display: inline-flex; gap: 4px; flex-wrap: wrap; margin-right: 8px; align-items: center; vertical-align: middle; }
+.paper-badges { display: inline-flex; gap: 6px; flex-wrap: wrap; margin-right: 8px; align-items: center; vertical-align: middle; }
 
-.paper-badge {
-  background: #2563eb;
-  color: #fff;
-  padding: 0 5px;
-  border-radius: 3px;
+.paper-badge,
+.paper-badge-link,
+.bib-copy {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
   font-size: 11px;
-  font-weight: 600;
-  line-height: 18px;
-  height: 18px;
+  font-weight: 500;
+  padding: 2px 9px;
+  line-height: 1.5;
+  border: 1px solid #d4d0c8;
+  border-radius: 3px;
+  background: #f0ede8;
+  color: #666 !important;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: border-color 0.15s, color 0.15s;
 }
+
+.paper-badge-link:hover,
+.bib-copy:hover { border-color: #2563eb; color: #2563eb !important; text-decoration: none; }
+
+.bib-copy { cursor: pointer; }
+.bib-copy.copied { border-color: #10b981; color: #10b981 !important; }
 
 .paper-badge--star {
-  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-  color: #ffffff;
+  color: #b45309 !important;
+  border-color: #e0c089;
+  background: #fdf6e3;
 }
-
-.paper-badge-link {
-  background: #2563eb;
-  color: #ffffff !important;
-  padding: 0 5px;
-  border-radius: 3px;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 18px;
-  height: 18px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-}
-.paper-badge-link:hover { background: #1d4ed8; color: #ffffff !important; }
-
-.bib-copy {
-  background: #6b7280;
-  color: #ffffff !important;
-  padding: 0 5px;
-  border-radius: 3px;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 18px;
-  height: 18px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-}
-.bib-copy:hover { background: #4b5563; color: #ffffff !important; }
-.bib-copy.copied { background: #10b981; }
 .bib-data { display: none; }
 
-.paper-title a { color: #2563eb; text-decoration: none; }
-.paper-title a:hover { color: #1d4ed8; text-decoration: underline; }
-.paper-title { margin: 0 0 6px 0; font-size: 14px !important; line-height: 1.35; color: #1a1a1a; display: inline; }
-.paper-meta { margin: 0 0 8px 0; color: #64748b; font-size: 12px !important; font-weight: 500; }
-.paper-meta strong { font-size: inherit; }
+.paper-title a { color: #1a1a1a; text-decoration: none; }
+.paper-title a:hover { color: #2563eb; text-decoration: none; }
+.paper-title { margin: 0; font-size: 14px !important; font-weight: 600; line-height: 1.45; color: #1a1a1a; display: inline; }
+.paper-meta { margin: 0; color: #666; font-size: 12px !important; font-weight: 400; line-height: 1.55; }
+.paper-meta strong { font-size: inherit; color: #1a1a1a !important; font-weight: 600; text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 2px; }
 .paper-bib { margin-top: 6px; }
 .paper-bib summary { cursor: pointer; font-size: 11px; color: #2563eb; list-style: none; }
 .paper-bib summary::-webkit-details-marker { display: none; }
@@ -127,11 +131,10 @@ redirect_from:
 }
 
 @media (max-width: 768px) {
-  .paper-card { flex-direction: column; }
-  .paper-thumb { flex: 0 0 auto; }
-  .paper-thumb img { height: 160px; }
-  .paper-thumb.wide { flex-basis: auto; }
-  .paper-thumb.wide img { height: 180px; }
+  .paper-card { flex-direction: column; gap: 10px; }
+  .paper-thumb { flex: 0 0 auto; width: 100%; }
+  .paper-thumb.wide { flex: 0 0 auto; width: 100%; }
+  .paper-thumb-placeholder { flex: 0 0 auto; width: 100%; height: 160px; }
 }
 
 @media (max-width: 768px) {
@@ -156,35 +159,17 @@ redirect_from:
 
 /* 标题样式优化 */
 .section-header {
-  margin: 0 0 15px 0;
-  color: #24292e;
-  font-size: 18px;
-  font-weight: 600;
+  margin: 0 0 10px 0;
+  color: #1a1a1a;
+  font-family: 'Caveat', cursive;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.15;
   position: relative;
-  padding-left: 20px;
+  padding-left: 0;
 }
 
-.section-header::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 4px;
-  height: 100%;
-  background: #0366d6;
-  border-radius: 2px;
-  animation: glow 3s ease-in-out infinite;
-}
-
-@keyframes glow {
-  0%, 100% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 1;
-    box-shadow: 0 0 6px rgba(3, 102, 214, 0.6);
-  }
-}
+.section-header::before { content: none; }
 
 /* 图片悬停效果 */
 .paper-image img {
@@ -244,11 +229,13 @@ redirect_from:
   background: rgba(0,0,0,0.8);
 }
 
-/* 文本截断和悬停显示 */
+/* 论文摘要：默认折叠为 2 行，行尾 more 展开 */
 .text-truncate {
-  display: block;
-  overflow: visible;
-  text-overflow: initial;
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
   cursor: default;
   transition: none;
   font-size: 13px !important;
@@ -256,27 +243,125 @@ redirect_from:
   color: #64748b !important;
 }
 
+.text-truncate.expanded {
+  -webkit-line-clamp: unset;
+  display: block;
+  overflow: visible;
+}
+
 .text-truncate:hover {
   background: transparent;
 }
 
-/* Key Preprints 区域：更小字体与更紧凑留白 */
-.preprints-section { font-size: 12px; }
-.preprints-section .preprints-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
-.preprints-section .paper-card { padding: 12px; margin: 0; gap: 12px; }
-.preprints-section .paper-top { display: block; }
-.preprints-section .paper-title { font-size: 13px; margin: 0; display: inline; }
-.preprints-section .paper-meta { font-size: 12px; margin: 2px 0 0 0; }
-.preprints-section .paper-badge, .preprints-section .paper-badge-link { font-size: 11px; padding: 0 5px; line-height: 18px; height: 18px; }
-.preprints-section .paper-badges { gap: 4px; margin-right: 6px; vertical-align: middle; }
-@media (max-width: 768px) {
-  .preprints-section .preprints-grid { grid-template-columns: 1fr; }
+.paper-toggle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding-left: 28px;
+  background: linear-gradient(90deg, rgba(251, 251, 249, 0), #fbfbf9 45%);
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 11px;
+  color: #2563eb;
+  border: none;
+  cursor: pointer;
+  transition: color 0.15s;
 }
+.text-truncate.expanded .paper-toggle {
+  position: static;
+  padding-left: 6px;
+  background: none;
+}
+.paper-toggle:hover { color: #1d4ed8; text-decoration: underline; }
+
+/* Key Preprints 区域：与 Conference/Journal 一致的逐行分隔样式 */
+.preprints-section { font-size: 12px; }
+.preprints-section .preprints-grid { display: block; margin-top: 8px; }
+.preprints-section .paper-card { padding: 14px 6px; margin: 0; gap: 18px; border: none; border-bottom: 1px solid #e5e1da; border-radius: 0; background: transparent; }
+.preprints-section .paper-card:hover { background: rgba(0, 0, 0, 0.025); }
+.preprints-section .paper-card:last-child { border-bottom: none; }
+.preprints-section .paper-top { display: block; }
+.preprints-section .paper-title { font-size: 14px; margin: 0; display: inline; }
+.preprints-section .paper-meta { font-size: 12px; margin: 0; }
+.preprints-section .paper-badges { margin-right: 8px; vertical-align: middle; }
+
+/* Key Preprints 收缩：默认隐藏 copyright 之后的卡片，点击 show more 展开 */
+.preprints-section .preprints-grid .paper-card.preprint-hidden { display: none; }
+.preprints-section .preprints-grid.preprints-expanded .paper-card.preprint-hidden { display: flex; }
+.preprints-section .preprint-toggle {
+  margin-top: 6px;
+  width: 100%;
+  background: none;
+  border: none;
+  border-top: 1px dashed #d4d0c8;
+  border-radius: 0;
+  padding: 9px 0 2px;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.72rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.preprints-section .preprint-toggle:hover { color: #2563eb; }
 
 /* Projects 区域：字号与 paper title 接近（不改变结构） */
 #-projects + ul { font-size: 14px !important; color: #475569; line-height: 1.5; }
 #-projects + ul a { color: #2563eb; }
 #-projects + ul a:hover { text-decoration: underline; }
+
+/* 侧边栏联系方式：改成方块按钮风格（location / Email / Github / Scholar 等） */
+.author__urls.social-icons > li:not(:first-child) {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 5px 11px;
+  border: 1.5px solid #d4d0c8;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.6);
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #1a1a1a;
+  letter-spacing: 0.01em;
+  max-width: 100%;
+  white-space: normal;
+  word-break: break-word;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+.author__urls.social-icons > li:not(:first-child):hover {
+  border-color: #2563eb;
+  color: #2563eb;
+  background: rgba(255, 255, 255, 0.9);
+}
+.author__urls.social-icons > li:not(:first-child) a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+.author__urls.social-icons > li:not(:first-child):hover a { color: #2563eb; }
+.author__urls.social-icons > li:not(:first-child) a:hover { text-decoration: none; }
+.author__urls.social-icons > li:not(:first-child) i { color: #64748b; transition: color 0.15s; }
+.author__urls.social-icons > li:not(:first-child):hover i { color: #2563eb; }
+
+@media (min-width: 1200px) {
+  .author__urls.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+  }
+  .author__urls.social-icons::before,
+  .author__urls.social-icons::after { display: none; }
+}
 
 /* Internships 美化样式 */
 .internships-container {
@@ -856,6 +941,45 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  // 论文摘要折叠/展开（仅在确实超过 2 行时显示行尾 more 按钮）
+  document.querySelectorAll('.text-truncate').forEach(summary => {
+    if (summary.scrollHeight - summary.clientHeight < 2) return;
+    const toggle = document.createElement('button');
+    toggle.className = 'paper-toggle';
+    toggle.textContent = 'more';
+    toggle.addEventListener('click', function() {
+      const expanded = summary.classList.toggle('expanded');
+      toggle.textContent = expanded ? ' less' : 'more';
+    });
+    summary.appendChild(toggle);
+  });
+
+  // Key Preprints 收缩：默认隐藏 copyright 之后的卡片，show more 展开
+  const preprintsGrid = document.querySelector('.preprints-section .preprints-grid');
+  if (preprintsGrid && preprintsGrid.querySelector('.paper-card.preprint-hidden')) {
+    const preToggle = document.createElement('button');
+    preToggle.className = 'preprint-toggle';
+    preToggle.textContent = 'Show more \u25BE';
+    preToggle.addEventListener('click', function() {
+      const expanded = preprintsGrid.classList.toggle('preprints-expanded');
+      preToggle.textContent = expanded ? 'Show less \u25B4' : 'Show more \u25BE';
+    });
+    preprintsGrid.after(preToggle);
+  }
+
+  // Internships 收缩：默认隐藏部分经历，show more 展开
+  const internPanel = document.querySelector('#-internships .cv-panel');
+  if (internPanel && internPanel.querySelector('.cv-item.cv-hidden')) {
+    const internToggle = document.createElement('button');
+    internToggle.className = 'cv-toggle';
+    internToggle.textContent = 'Show more \u25BE';
+    internToggle.addEventListener('click', function() {
+      const expanded = internPanel.classList.toggle('cv-expanded');
+      internToggle.textContent = expanded ? 'Show less \u25B4' : 'Show more \u25BE';
+    });
+    internPanel.appendChild(internToggle);
+  }
 });
 </script>
 
@@ -1004,12 +1128,20 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   <div class="news-panel">
     <ul class="news-list" id="news-list">
       <li class="news-item">
+        <span class="news-date">05/2026</span>
+        <span class="news-content">🎉 One paper accepted by <a href="https://www.usenix.org/conference/usenixsecurity26" target="_blank">USENIX Security 2026</a> !</span>
+      </li>
+      <li class="news-item">
         <span class="news-date">04/2026</span>
         <span class="news-content">🎉 <strong>Four</strong> papers accepted by <a href="https://2026.aclweb.org/" target="_blank">ACL 2026</a> · 1 Main, 3 Findings !</span>
       </li>
       <li class="news-item">
         <span class="news-date">01/2026</span>
         <span class="news-content">🎉 <strong>Three</strong> papers accepted by <a href="https://2026.ieeeicassp.org/event/about-conference/" target="_blank">ICASSP 2026</a> !</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">12/2025</span>
+        <span class="news-content">🎉 One paper accepted by <a href="https://infocom2026.ieee-infocom.org/" target="_blank">IEEE INFOCOM 2026</a> !</span>
       </li>
       <li class="news-item">
         <span class="news-date">08/2025</span>
@@ -1060,35 +1192,38 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 </div>
 </div> -->
 
-<div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 16px; padding: 15px; margin: 25px 0; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+<div style="background: rgba(255, 255, 255, 0.52); border: 1px solid #d4d0c8; border-radius: 6px; padding: 12px 16px; margin: 18px 0;">
 <h2 class="section-header">Conference Papers</h2>
   
   <div class="paper-card">
-    <!-- <div class="paper-thumb">
-      <img src='images/papers/MEraser-Framework.png' alt="MEraser Framework">
-    </div> -->
+    <div class="paper-thumb">
+      <img src="{{ '/images/papers/AdaMARP-Framework.png' | relative_url }}" alt="AdaMARP Framework">
+    </div>
     <div class="paper-body">
       <div class="paper-top">
-        <h3 class="paper-title"><a href="https://aclanthology.org/2025.acl-long.1455/">MEraser: An Effective Fingerprint Erasure Approach for Large Language Models</a></h3>
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2601.11007">AdaMARP: An Adaptive Multi-Agent Interaction Framework for General Immersive Role-Playing</a></h3>
       </div>
-      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ACL 2025 Main</span><span class="paper-badge" style="background:#28a745;">CCF-A</span><a href="https://github.com/fatdove77/MEraser" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-meraser">Bib</span></span><strong style="color: #24292e;">Jingxuan Zhang</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Rui Hu, Wenpeng Xing, Xuhong Zhang, Meng Han
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ACL 2026 Findings</span><span class="paper-badge">CCF-A</span><a href="https://xuzhenhua55.github.io/AdaMARP" target="_blank" class="paper-badge-link">Website</a></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Dongsheng Chen, Shuo Wang, Jian Li, Chengjie Wang, Meng Han, Yabiao Wang
       </p>
       <p class="text-truncate" style="margin: 0;">
-        We propose MEraser, a two-phase fine-tuning method that erases backdoor-based fingerprints from LLMs while preserving utility, transferring across models with minimal data and no repeated training.
+        We propose an adaptive multi-agent role-playing framework, AdaMARP, featuring an immersive message format that interleaves [Thought], (Action), &lt;Environment&gt;, and Speech, together with an explicit Scene Manager that governs role-playing through discrete actions (init_scene, pick_speaker, switch_scene, add_role, end) accompanied by rationales. To train these capabilities, we construct AdaRPSet for the Actor Model and AdaSMSet for supervising orchestration decisions, and introduce AdaptiveBench for trajectory-level evaluation.
       </p>
-      <pre class="bib-data" id="bib-meraser">{% raw %}@inproceedings{zhangMEraserEffectiveFingerprint2025,
-  title = {{{MEraser}}: {{An Effective Fingerprint Erasure Approach}} for {{Large Language Models}}},
-  booktitle = {Proceedings of the 63rd {{Annual Meeting}} of the {{Association}} for {{Computational Linguistics}} ({{Volume}} 1: {{Long Papers}})},
-  author = {Zhang, Jingxuan and Xu, Zhenhua and Hu, Rui and Xing, Wenpeng and Zhang, Xuhong and Han, Meng},
-  editor = {Che, Wanxiang and Nabende, Joyce and Shutova, Ekaterina and Pilehvar, Mohammad Taher},
-  year = 2025,
-  pages = {30136--30153},
-  publisher = {Association for Computational Linguistics},
-  address = {Vienna, Austria},
-  doi = {10.18653/v1/2025.acl-long.1455},
-  urldate = {2025-11-14},
-  isbn = {979-8-89176-251-0}
-}{% endraw %}</pre>
+    </div>
+  </div>
+
+  <div class="paper-card">
+    <div class="paper-thumb">
+      <img src="{{ '/images/papers/AttnDiff-Framework.png' | relative_url }}" alt="AttnDiff Framework">
+    </div>
+    <div class="paper-body">
+      <div class="paper-top">
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2604.05502">AttnDiff: Attention-based Differential Fingerprinting for Large Language Models</a></h3>
+      </div>
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ACL 2026 Main</span><span class="paper-badge">CCF-A</span></span><strong style="color: #24292e;">Haobo Zhang</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Junxian Li, Shangfeng Sheng, Dezhang Kong, Meng Han
+      </p>
+      <p class="text-truncate" style="margin: 0;">
+        We propose AttnDiff, a data-efficient white-box framework that extracts fingerprints from models via intrinsic information-routing behavior. AttnDiff probes minimally edited prompt pairs that induce controlled semantic conflicts, captures differential attention patterns, summarizes them with compact spectral descriptors, and compares models using CKA.
+      </p>
     </div>
   </div>
 
@@ -1100,7 +1235,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
       <div class="paper-top">
         <h3 class="paper-title"><a href="https://arxiv.org/abs/2509.03058">EverTracer: Hunting Stolen Large Language Models via Stealthy and Robust Probabilistic Fingerprint</a></h3>
       </div>
-      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">EMNLP 2025 Main</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><a href="https://github.com/Xuzhenhua55/EverTracer" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-evertracer">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Meng Han, Wenpeng Xing
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">EMNLP 2025 Main</span><span class="paper-badge">CCF-B</span><a href="https://github.com/Xuzhenhua55/EverTracer" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-evertracer">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Meng Han, Wenpeng Xing
       </p>
       <p class="text-truncate" style="margin: 0;">
         We propose EverTracer, a gray-box probabilistic fingerprint that leverages calibrated probability shifts from MIA-style memorization to enable stealthy, robust provenance tracing against input and model-level modifications.
@@ -1129,7 +1264,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
       <div class="paper-top">
         <h3 class="paper-title"><a href="https://arxiv.org/abs/2509.09703">CTCC: A Robust and Stealthy Fingerprinting Framework for Large Language Models via Cross-Turn Contextual Correlation Backdoor</a></h3>
       </div>
-      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">EMNLP 2025 Main</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><a href="https://github.com/Xuzhenhua55/CTCC" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-ctcc">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Xixiang Zhao, Xubin Yue, shengwei tian, Changting Lin, Meng Han
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">EMNLP 2025 Main</span><span class="paper-badge">CCF-B</span><a href="https://github.com/Xuzhenhua55/CTCC" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-ctcc">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Xixiang Zhao, Xubin Yue, shengwei tian, Changting Lin, Meng Han
       </p>
       <p class="text-truncate" style="margin: 0;">
         We propose CTCC, a rule-driven fingerprint that encodes cross-turn contextual correlations in dialogue to achieve black-box verification with higher stealth and robustness and reduced false positives.
@@ -1149,6 +1284,35 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 }{% endraw %}</pre>
     </div>
   </div>
+
+  <div class="paper-card">
+    <!-- <div class="paper-thumb">
+      <img src='images/papers/MEraser-Framework.png' alt="MEraser Framework">
+    </div> -->
+    <div class="paper-body">
+      <div class="paper-top">
+        <h3 class="paper-title"><a href="https://aclanthology.org/2025.acl-long.1455/">MEraser: An Effective Fingerprint Erasure Approach for Large Language Models</a></h3>
+      </div>
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ACL 2025 Main</span><span class="paper-badge">CCF-A</span><a href="https://github.com/fatdove77/MEraser" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-meraser">Bib</span></span><strong style="color: #24292e;">Jingxuan Zhang</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Rui Hu, Wenpeng Xing, Xuhong Zhang, Meng Han
+      </p>
+      <p class="text-truncate" style="margin: 0;">
+        We propose MEraser, a two-phase fine-tuning method that erases backdoor-based fingerprints from LLMs while preserving utility, transferring across models with minimal data and no repeated training.
+      </p>
+      <pre class="bib-data" id="bib-meraser">{% raw %}@inproceedings{zhangMEraserEffectiveFingerprint2025,
+  title = {{{MEraser}}: {{An Effective Fingerprint Erasure Approach}} for {{Large Language Models}}},
+  booktitle = {Proceedings of the 63rd {{Annual Meeting}} of the {{Association}} for {{Computational Linguistics}} ({{Volume}} 1: {{Long Papers}})},
+  author = {Zhang, Jingxuan and Xu, Zhenhua and Hu, Rui and Xing, Wenpeng and Zhang, Xuhong and Han, Meng},
+  editor = {Che, Wanxiang and Nabende, Joyce and Shutova, Ekaterina and Pilehvar, Mohammad Taher},
+  year = 2025,
+  pages = {30136--30153},
+  publisher = {Association for Computational Linguistics},
+  address = {Vienna, Austria},
+  doi = {10.18653/v1/2025.acl-long.1455},
+  urldate = {2025-11-14},
+  isbn = {979-8-89176-251-0}
+}{% endraw %}</pre>
+    </div>
+  </div>
     
   <div class="paper-card">
     <!-- <div class="paper-thumb">
@@ -1158,7 +1322,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
       <div class="paper-top">
         <h3 class="paper-title"><a href="https://arxiv.org/abs/2509.00820">Unlocking the Effectiveness of LoRA-FP for Seamless Transfer Implantation of Fingerprints in Downstream Models</a></h3>
       </div>
-      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">EMNLP 2025 Findings</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><a href="https://github.com/Xuzhenhua55/LoRA-FP" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-lorafp">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Zhaokun Yan, Binhan Xu, Xin Tong, Haitao Xu, Yourong Chen, Meng Han
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">EMNLP 2025 Findings</span><span class="paper-badge">CCF-B</span><a href="https://github.com/Xuzhenhua55/LoRA-FP" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-lorafp">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Zhaokun Yan, Binhan Xu, Xin Tong, Haitao Xu, Yourong Chen, Meng Han
       </p>
       <p class="text-truncate" style="margin: 0;">
         We propose LoRA-FP, a plug-and-play approach that encodes backdoor fingerprints into LoRA adapters and transfers them to downstream models via parameter fusion, enabling low-cost, robust, and contamination-free fingerprinting.
@@ -1188,7 +1352,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
       <div class="paper-top">
         <h3 class="paper-title"><a href="https://arxiv.org/abs/2509.00918">PREE: Towards Harmless and Adaptive Fingerprint Editing in Large Language Models via Knowledge Prefix Enhancement</a></h3>
       </div>
-      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">EMNLP 2025 Findings</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><span class="bib-copy" data-bib="bib-pree">Bib</span></span><strong style="color: #24292e;">Xubin Yue</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Wenpeng Xing, Jiahui Yu, Mohan Li, Meng Han
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">EMNLP 2025 Findings</span><span class="paper-badge">CCF-B</span><span class="bib-copy" data-bib="bib-pree">Bib</span></span><strong style="color: #24292e;">Xubin Yue</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Wenpeng Xing, Jiahui Yu, Mohan Li, Meng Han
       </p>
       <p class="text-truncate" style="margin: 0;">
         We propose PREE, a prefix-enhanced fingerprint editing framework that embeds copyright information as minimal parameter offsets via dual-channel knowledge editing, delivering high trigger precision and strong robustness under incremental fine-tuning and defenses.
@@ -1214,7 +1378,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
       <div class="paper-top">
         <h3 class="paper-title"><a href="https://arxiv.org/abs/2601.08223">DNF: Dual-Layer Nested Fingerprinting for Large Language Model Intellectual Property Protection</a></h3>
       </div>
-      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ICASSP 2026</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><span class="bib-copy" data-bib="bib-dnf">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Yiran Zhao, Mengting Zhong, Dezhang Kong, Changting Lin, Tong Qiao, Meng Han
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ICASSP 2026</span><span class="paper-badge">CCF-B</span><span class="bib-copy" data-bib="bib-dnf">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Yiran Zhao, Mengting Zhong, Dezhang Kong, Changting Lin, Tong Qiao, Meng Han
       </p>
       <p class="text-truncate" style="margin: 0;">
         We propose DNF, a dual-layer nested fingerprinting framework that couples domain-specific stylistic cues with implicit semantic triggers to embed hierarchical backdoor-based fingerprints into large language models, enabling black-box ownership verification with enhanced stealth and resilience to detection and filtering.
@@ -1236,7 +1400,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
       <div class="paper-top">
         <h3 class="paper-title"><a href="https://arxiv.org/abs/2601.08189">ForgetMark: Stealthy Fingerprint Embedding via Targeted Unlearning in Language Models</a></h3>
       </div>
-      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ICASSP 2026</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><a href="https://github.com/Xuzhenhua55/ForgetMark" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-forgetmark">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Haobo Zhang, Zhebo Wang, Qichen Liu, Haitao Xu, Wenpeng Xing, Meng Han
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ICASSP 2026</span><span class="paper-badge">CCF-B</span><a href="https://github.com/Xuzhenhua55/ForgetMark" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-forgetmark">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Haobo Zhang, Zhebo Wang, Qichen Liu, Haitao Xu, Wenpeng Xing, Meng Han
       </p>
       <p class="text-truncate" style="margin: 0;">
         We propose ForgetMark, a targeted unlearning–based fingerprint that encodes model ownership via probabilistic forgetting traces, enabling stealthy and robust black-/gray-box verification with minimal performance impact and low false positives.
@@ -1258,7 +1422,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
       <div class="paper-top">
         <h3 class="paper-title"><a href="https://arxiv.org/abs/2601.12986">KinGuard: Hierarchical Kinship-Aware Fingerprinting to Defend Against Large Language Model Stealing</a></h3>
       </div>
-      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ICASSP 2026</span><span class="paper-badge" style="background:#28a745;">CCF-B</span><span class="bib-copy" data-bib="bib-kinguard">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Xiaoning Tian, Wenjun Zeng, Wenpeng Xing, Tianliang Lu, Gaolei Li, Chaochao Chen, Meng Han
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ICASSP 2026</span><span class="paper-badge">CCF-B</span><span class="bib-copy" data-bib="bib-kinguard">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Xiaoning Tian, Wenjun Zeng, Wenpeng Xing, Tianliang Lu, Gaolei Li, Chaochao Chen, Meng Han
       </p>
       <p class="text-truncate" style="margin: 0;">
         We propose KinGuard, a hierarchical kinship-aware fingerprinting framework that models derivation relationships among LLM variants to enable fine-grained provenance tracing and robust defense against model stealing attacks.
@@ -1278,35 +1442,9 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   <div class="paper-card">
     <div class="paper-body">
       <div class="paper-top">
-        <h3 class="paper-title"><a href="https://arxiv.org/abs/2601.11007">AdaMARP: An Adaptive Multi-Agent Interaction Framework for General Immersive Role-Playing</a></h3>
-      </div>
-      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ACL 2026 Findings</span><span class="paper-badge" style="background:#28a745;">CCF-A</span><a href="https://xuzhenhua55.github.io/AdaMARP" target="_blank" class="paper-badge-link">Website</a></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Dongsheng Chen, Shuo Wang, Jian Li, Chengjie Wang, Meng Han, Yabiao Wang
-      </p>
-      <p class="text-truncate" style="margin: 0;">
-        We propose an adaptive multi-agent role-playing framework, AdaMARP, featuring an immersive message format that interleaves [Thought], (Action), &lt;Environment&gt;, and Speech, together with an explicit Scene Manager that governs role-playing through discrete actions (init_scene, pick_speaker, switch_scene, add_role, end) accompanied by rationales. To train these capabilities, we construct AdaRPSet for the Actor Model and AdaSMSet for supervising orchestration decisions, and introduce AdaptiveBench for trajectory-level evaluation.
-      </p>
-    </div>
-  </div>
-
-  <div class="paper-card">
-    <div class="paper-body">
-      <div class="paper-top">
-        <h3 class="paper-title"><a href="https://arxiv.org/abs/2604.05502">AttnDiff: Attention-based Differential Fingerprinting for Large Language Models</a></h3>
-      </div>
-      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ACL 2026 Main</span><span class="paper-badge" style="background:#28a745;">CCF-A</span></span><strong style="color: #24292e;">Haobo Zhang</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Junxian Li, Shangfeng Sheng, Dezhang Kong, Meng Han
-      </p>
-      <p class="text-truncate" style="margin: 0;">
-        We propose AttnDiff, a data-efficient white-box framework that extracts fingerprints from models via intrinsic information-routing behavior. AttnDiff probes minimally edited prompt pairs that induce controlled semantic conflicts, captures differential attention patterns, summarizes them with compact spectral descriptors, and compares models using CKA.
-      </p>
-    </div>
-  </div>
-
-  <div class="paper-card">
-    <div class="paper-body">
-      <div class="paper-top">
         <h3 class="paper-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=yDX0t54AAAAJ&citation_for_view=yDX0t54AAAAJ:zYLM7Y9cAGgC">Web Fraud Attacks Against LLM-Driven Multi-Agent Systems</a></h3>
       </div>
-      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ACL 2026 Findings</span><span class="paper-badge" style="background:#28a745;">CCF-A</span><a href="https://github.com/JiangYingEr/Web-Fraud-Attack-in-MAS" target="_blank" class="paper-badge-link">GitHub</a></span>Dezhang Kong, Hujin Peng, Yilun Zhang, Lele Zhao, <strong style="color: #24292e;">Zhenhua Xu</strong>, Shi Lin, Changting Lin, Meng Han <span style="margin-left:6px; color:#7c3aed; font-size:12px; font-weight:500;">(co-corresponding authors: Zhenhua Xu, Meng Han)</span>
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ACL 2026 Findings</span><span class="paper-badge">CCF-A</span><a href="https://github.com/JiangYingEr/Web-Fraud-Attack-in-MAS" target="_blank" class="paper-badge-link">GitHub</a></span>Dezhang Kong, Hujin Peng, Yilun Zhang, Lele Zhao, <strong style="color: #24292e;">Zhenhua Xu</strong>, Shi Lin, Changting Lin, Meng Han <span style="margin-left:6px; color:#7c3aed; font-size:12px; font-weight:500;">(co-corresponding authors: Zhenhua Xu, Meng Han)</span>
       </p>
       <p class="text-truncate" style="margin: 0;">
         We propose Web Fraud Attacks, a novel type of attack manipulating unique structures of web links to deceive MAS. We design 12 representative attack variants that encompass various methods, such as homoglyph deception, sub-directory nesting, and parameter obfuscation.
@@ -1319,7 +1457,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
       <div class="paper-top">
         <h3 class="paper-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=yDX0t54AAAAJ&citation_for_view=yDX0t54AAAAJ:8k81kl-MbHgC">MalURLBench: A Benchmark Evaluating Agents' Vulnerabilities When Processing Web URLs</a></h3>
       </div>
-      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ACL 2026 Findings</span><span class="paper-badge" style="background:#28a745;">CCF-A</span><a href="https://github.com/JiangYingEr/MalURLBench" target="_blank" class="paper-badge-link">GitHub</a></span>Dezhang Kong, Zhuxi Wu, Shiqi Liu, ZhiCheng Tan, Kuichen Lu, Minghao Li, Qichen Liu, Shengyu Chu, <strong style="color: #24292e;">Zhenhua Xu</strong>, Xuan Liu, Meng Han <span style="margin-left:6px; color:#7c3aed; font-size:12px; font-weight:500;">(co-corresponding authors: Zhenhua Xu, Meng Han)</span>
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ACL 2026 Findings</span><span class="paper-badge">CCF-A</span><a href="https://github.com/JiangYingEr/MalURLBench" target="_blank" class="paper-badge-link">GitHub</a></span>Dezhang Kong, Zhuxi Wu, Shiqi Liu, ZhiCheng Tan, Kuichen Lu, Minghao Li, Qichen Liu, Shengyu Chu, <strong style="color: #24292e;">Zhenhua Xu</strong>, Xuan Liu, Meng Han <span style="margin-left:6px; color:#7c3aed; font-size:12px; font-weight:500;">(co-corresponding authors: Zhenhua Xu, Meng Han)</span>
       </p>
       <p class="text-truncate" style="margin: 0;">
         We propose MalURLBench, the first benchmark for evaluating LLMs' vulnerabilities to malicious URLs. MalURLBench contains 61,845 attack instances spanning 10 real-world scenarios and 7 categories of real malicious websites.
@@ -1329,7 +1467,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 
 </div>
 
-<div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 16px; padding: 15px; margin: 25px 0; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+<div style="background: rgba(255, 255, 255, 0.52); border: 1px solid #d4d0c8; border-radius: 6px; padding: 12px 16px; margin: 18px 0;">
 <h2 class="section-header">Journal Papers</h2>
   
   <div class="paper-card">
@@ -1340,7 +1478,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
       <div class="paper-top">
         <h3 class="paper-title"><a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0022">InSty: A Robust Multi-Level Cross-Granularity Fingerprint Embedding Algorithm for Multi-Turn Dialogue in Large Language Models</a></h3>
       </div>
-      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">SCIENTIA SINICA Informationis</span><span class="paper-badge" style="background:#28a745;">SCI Q1/JCR Q1/CCF-A</span><span class="paper-badge" style="background:#6f42c1;">IF=7.6</span><span class="bib-copy" data-bib="bib-insty">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Meng Han, Xubin Yue, Wenpeng Xing
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">SCIENTIA SINICA Informationis</span><span class="paper-badge">SCI Q1/JCR Q1/CCF-A</span><span class="paper-badge">IF=7.6</span><span class="bib-copy" data-bib="bib-insty">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Meng Han, Xubin Yue, Wenpeng Xing
       </p>
       <p class="text-truncate" style="margin: 0;">
         We propose InSty, a novel fingerprinting method for LLMs in multi-turn dialogues that embeds cross-granularity (word- and sentence-level) triggers across turns, enabling robust, stealthy, and high-recall IP protection under black-box settings.
@@ -1361,31 +1499,40 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   </div>
 </div>
 
-<div class="preprints-section" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 16px; padding: 15px; margin: 25px 0; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);">
+<div class="preprints-section" style="background: rgba(255, 255, 255, 0.52); border: 1px solid #d4d0c8; border-radius: 6px; padding: 12px 16px; margin: 18px 0;">
 <h2 class="section-header">Key Preprints</h2>
 
   <div class="preprints-grid">
 
 
   <div class="paper-card">
+    <div class="paper-thumb">
+      <img src="{{ '/images/papers/RAPO-Framework.png' | relative_url }}" alt="Psy-CoT / RAPO Framework">
+    </div>
     <div class="paper-body">
       <div class="paper-top">
-        <h3 class="paper-title"><a href="https://arxiv.org/abs/2505.06304">SRAF: Stealthy and Robust Adversarial Fingerprint for Copyright Verification of Large Language Models</a></h3>
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2606.27025">Improving General Role-Playing Agents via Psychology-Grounded Reasoning and Role-Aware Policy Optimization</a></h3>
       </div>
-      <p class="paper-meta"><span class="paper-badges"><span class="bib-copy" data-bib="bib-sraf">Bib</span></span><strong style="color: #24292e;">Zhebo Wang</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Maike Li, Wenpeng Xing, Chunqiang Hu, Chen Zhi, Meng Han</p>
-      <pre class="bib-data" id="bib-sraf">{% raw %}@misc{wang2026srafstealthyrobustadversarial,
-      title={SRAF: Stealthy and Robust Adversarial Fingerprint for Copyright Verification of Large Language Models},
-      author={Zhebo Wang and Zhenhua Xu and Maike Li and Wenpeng Xing and Chunqiang Hu and Chen Zhi and Meng Han},
+      <p class="paper-meta"><span class="paper-badges"><a href="https://arxiv.org/abs/2606.27025" target="_blank" class="paper-badge-link">arXiv</a><span class="bib-copy" data-bib="bib-psycot">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Dongsheng Chen, Jian Li, Yitong Lin, Zhebo Wang, Jiafu Wu, Yizhang Jin, Chengjie Wang, Meng Han, Yabiao Wang</p>
+      <pre class="bib-data" id="bib-psycot">{% raw %}@misc{xu2026psycot,
+      title={Improving General Role-Playing Agents via Psychology-Grounded Reasoning and Role-Aware Policy Optimization},
+      author={Zhenhua Xu and Dongsheng Chen and Jian Li and Yitong Lin and Zhebo Wang and Jiafu Wu and Yizhang Jin and Chengjie Wang and Meng Han and Yabiao Wang},
       year={2026},
-      eprint={2505.06304},
+      eprint={2606.27025},
       archivePrefix={arXiv},
-      primaryClass={cs.CR},
-      url={https://arxiv.org/abs/2505.06304}, 
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2606.27025},
 }{% endraw %}</pre>
+      <p class="text-truncate" style="margin: 0;">
+        We propose Psy-CoT, a psychology-grounded chain-of-thought framework that decomposes pre-response reasoning into Interaction Perception, Psychological Empathy, and Logical Construction, so the model thinks dynamically from a character profile rather than mimicking surface patterns. We further introduce Role-Aware Policy Optimization (RAPO), which uses profile–token mutual information to weight gradients asymmetrically—amplifying role-specific tokens under positive advantage and attenuating them under negative advantage to curb reward hacking. On CoSER, CharacterBench, and CharacterEval, Psy-CoT outperforms existing role-playing CoT methods and RAPO consistently surpasses GRPO across model scales.
+      </p>
     </div>
   </div>
 
   <div class="paper-card">
+    <div class="paper-thumb">
+      <img src="{{ '/images/papers/FIngerprinting-Methods.png' | relative_url }}" alt="LLM Copyright Protection Survey">
+    </div>
     <div class="paper-body">
       <div class="paper-top">
         <h3 class="paper-title"><a href="https://arxiv.org/abs/2508.11548">Copyright Protection for Large Language Models: A Survey of Methods, Challenges, and Trends</a></h3>
@@ -1403,7 +1550,25 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     </div>
   </div>
 
-  <div class="paper-card">
+  <div class="paper-card preprint-hidden">
+    <div class="paper-body">
+      <div class="paper-top">
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2505.06304">SRAF: Stealthy and Robust Adversarial Fingerprint for Copyright Verification of Large Language Models</a></h3>
+      </div>
+      <p class="paper-meta"><span class="paper-badges"><span class="bib-copy" data-bib="bib-sraf">Bib</span></span><strong style="color: #24292e;">Zhebo Wang</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Maike Li, Wenpeng Xing, Chunqiang Hu, Chen Zhi, Meng Han</p>
+      <pre class="bib-data" id="bib-sraf">{% raw %}@misc{wang2026srafstealthyrobustadversarial,
+      title={SRAF: Stealthy and Robust Adversarial Fingerprint for Copyright Verification of Large Language Models},
+      author={Zhebo Wang and Zhenhua Xu and Maike Li and Wenpeng Xing and Chunqiang Hu and Chen Zhi and Meng Han},
+      year={2026},
+      eprint={2505.06304},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR},
+      url={https://arxiv.org/abs/2505.06304}, 
+}{% endraw %}</pre>
+    </div>
+  </div>
+
+  <div class="paper-card preprint-hidden">
     <div class="paper-body">
       <div class="paper-top">
         <h3 class="paper-title"><a href="https://arxiv.org/abs/2409.08846">Fingerprint Vector: Enabling Scalable and Efficient Model Fingerprint Transfer via Vector Addition</a></h3>
@@ -1421,7 +1586,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     </div>
   </div>
 
-  <div class="paper-card">
+  <div class="paper-card preprint-hidden">
     <div class="paper-body">
       <div class="paper-top">
         <h3 class="paper-title"><a href="https://arxiv.org/abs/2506.19676">A Survey of LLM-Driven AI Agent Communication: Protocols, Security Risks, and Defense Countermeasures</a></h3>
@@ -1582,6 +1747,25 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 .cv-block .cv-detail-body p { margin: 4px 0; }
 .cv-block .cv-detail-body strong { color: var(--cv-text); }
 
+/* Internships 收缩：默认隐藏部分经历，show more 展开 */
+#-internships .cv-item.cv-hidden { display: none; }
+#-internships .cv-panel.cv-expanded .cv-item.cv-hidden { display: grid; }
+#-internships .cv-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  border-top: 1px dashed var(--cv-border);
+  border-radius: 0;
+  margin: 0;
+  padding: 9px 0 2px;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 0.68rem;
+  color: var(--cv-muted);
+  cursor: pointer;
+  transition: color 0.15s;
+}
+#-internships .cv-toggle:hover { color: var(--cv-accent); }
+
 @media (max-width: 768px) {
   .cv-block .cv-item { grid-template-columns: 70px 92px 1fr; gap: 0 10px; }
   .cv-block .cv-logo img { max-height: 40px; }
@@ -1589,7 +1773,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 </style>
 
 <div class="cv-block" id="-internships">
-  <h2 class="cv-title">Research Experience</h2>
+  <h2 class="cv-title">Internship Experience</h2>
   <div class="cv-panel">
 
     <div class="cv-item">
@@ -1622,7 +1806,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
       </div>
     </div>
 
-    <div class="cv-item">
+    <div class="cv-item cv-hidden">
       <div class="cv-period">Nov 2023<br>—<br>May 2024</div>
       <div class="cv-logo"><img src="images/LianlianPay.png" alt="LianLianPay"></div>
       <div class="cv-content">
@@ -1646,7 +1830,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 
     <div class="cv-item">
       <div class="cv-period">Sep 2024<br>—<br>Jun 2027<br>(expected)</div>
-      <div class="cv-logo"><img src="images/universities/ZJU-LOGO.png" alt="ZJU"></div>
+      <div class="cv-logo"><img src="images/universities/ZJU-FULL-LOGO.png" alt="ZJU"></div>
       <div class="cv-content">
         <div class="cv-org">Zhejiang University</div>
         <div class="cv-role">College of Software · Master of Software Engineering</div>
@@ -1665,7 +1849,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 
     <div class="cv-item">
       <div class="cv-period">Sep 2020<br>—<br>Jun 2024</div>
-      <div class="cv-logo"><img src="images/universities/ZJUT-LOGO.png" alt="ZJUT"></div>
+      <div class="cv-logo"><img src="images/universities/ZJUT-FULL-LOGO.png" alt="ZJUT"></div>
       <div class="cv-content">
         <div class="cv-org">Zhejiang University of Technology</div>
         <div class="cv-role">Bachelor of Digital Media Technology</div>
