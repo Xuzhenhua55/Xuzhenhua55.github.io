@@ -347,6 +347,8 @@ redirect_from:
 .author__urls.social-icons > li:not(:first-child) a:hover { text-decoration: none; }
 .author__urls.social-icons > li:not(:first-child) i { color: #64748b; transition: color 0.15s; }
 .author__urls.social-icons > li:not(:first-child):hover i { color: #2563eb; }
+.author__urls.social-icons .brand-icon-img { width: 14px; height: 14px; object-fit: contain; vertical-align: -2px; flex-shrink: 0; }
+.author__urls_sm .brand-icon-img { width: 16px; height: 16px; object-fit: contain; vertical-align: middle; }
 
 @media (min-width: 1200px) {
   .author__urls.social-icons {
@@ -993,23 +995,26 @@ document.addEventListener('DOMContentLoaded', function() {
 <span class='anchor' id='about-me'></span>
 
 <div class="about-me">
-I am Zhenhua Xu, a second‑year M.S. student (since Sep. 2024) in the College of Software at Zhejiang University, affiliated with the <a href="https://ifrc-zju.github.io/" target="_blank">Intelligence Fusion Research Center</a> (IFRC) and advised by <a href="https://scholar.google.com/citations?user=TnCrl1cAAAAJ" target="_blank">Meng Han</a>.
+I am Zhenhua Xu, a second‑year M.S. student (2024–2027) in the College of Software at Zhejiang University, affiliated with the <a href="https://ifrc-zju.github.io/" target="_blank">Intelligence Fusion Research Center</a> (IFRC) and advised by <a href="https://scholar.google.com/citations?user=TnCrl1cAAAAJ" target="_blank">Meng Han</a>.
 
-My research interests center on copyright protection for large language models, including model watermarking and fingerprinting, as well as broader topics in AI security (e.g., risks in agentic systems).
+During my graduate studies, my research has centered on copyright protection for large language models (model watermarking and model fingerprinting), as well as broader topics in AI security (e.g., jailbreak attacks, adversarial examples).
 
-After joining Tencent <a href="https://open.youtu.qq.com/#/open" target="_blank">YouTu Lab</a> as an intern, my research scope expanded to improving general-purpose role-playing capability in base models via post-training (SFT, RLHF, etc.).
+After joining Tencent <a href="https://open.youtu.qq.com/#/open" target="_blank">YouTu Lab</a> as an intern, my research scope expanded to general-purpose role-playing in large language models and the post-training behind it (SFT, RLHF, etc.).
 
-During my first year of graduate study, I coauthored several publications across conferences and journals with outstanding collaborators, including interns in our group, and I look forward to collaborating with more researchers.
+After joining ByteDance's International E-commerce Intelligent Dialogue team, I began studying Agentic RL, including Tool Calling, Credit Assignment, RL environment scaling (Env Scaling), and Rubrics.
+
+During my master's studies, I have collaborated with many outstanding peers (including interns in our group) to publish several works across international conferences and journals, and I look forward to collaborating with more researchers.
 
 If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju.edu.cn</strong>.
 
 <details class="bio">
   <summary>Chinese Bio (click to expand)</summary>
   <div style="margin-top:6px; color:#374151; line-height:1.7;">
-    Hi~我是徐振华，浙江大学软件学院科研练习长达“一年半”的研二选手（2024级）！，隶属于<a href="https://ifrc-zju.github.io/" target="_blank">浙江大学数智融合研究中心实验室</a>，导师为 <a href="https://scholar.google.com/citations?user=TnCrl1cAAAAJ" target="_blank">韩蒙</a> 老师。
-    我的研究方向主要为大模型版权保护（模型水印与模型指纹），以及在此之上的更广泛的人工智能安全议题（如智能体系统的安全风险等）。
+    Hi~我是徐振华，浙江大学软件学院的研二选手（2024-2027）！，隶属于<a href="https://ifrc-zju.github.io/" target="_blank">浙江大学数智融合研究中心实验室</a>，导师为 <a href="https://scholar.google.com/citations?user=TnCrl1cAAAAJ" target="_blank">韩蒙</a> 老师。
+    硕士期间在校研究方向主要为大模型版权保护（模型水印与模型指纹），以及在此之上的更广泛的人工智能安全议题（越狱攻击、对抗样本等）。
     在加入<a href="https://open.youtu.qq.com/#/open" target="_blank">腾讯优图实验室</a>实习后，研究方向进一步扩展到通用大模型的角色扮演，以及在此基础上的后训练（SFT、RLHF 等）。
-    在硕士第一年，我与多位优秀同学（包含组内实习生）合作，在多个国际会议与期刊发表了若干成果，并期待与更多研究者开展合作。
+    在加入字节跳动国际电商智能对话团队后，开始学习 Agentic RL，包括工具调用（Tool Calling）、信用分配（Credit Assignment）、RL 环境搭建（Env Scaling）、Rubrics。
+    硕士期间我与多位优秀同学（包含组内实习生）合作，在多个国际会议与期刊发表了若干成果，并期待与更多研究者开展合作。
     如对我的工作感兴趣，欢迎邮件联系：<strong>xuzhenhua0326@zju.edu.cn</strong>。
   </div>
 </details>
@@ -1136,6 +1141,10 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
         <span class="news-content">🎉 <strong>Four</strong> papers accepted by <a href="https://2026.aclweb.org/" target="_blank">ACL 2026</a> · 1 Main, 3 Findings !</span>
       </li>
       <li class="news-item">
+        <span class="news-date">04/2026</span>
+        <span class="news-content">🎉 One paper accepted by <a href="http://wasa-conference.org/WASA2026/" target="_blank">WASA 2026</a> !</span>
+      </li>
+      <li class="news-item">
         <span class="news-date">01/2026</span>
         <span class="news-content">🎉 <strong>Three</strong> papers accepted by <a href="https://2026.ieeeicassp.org/event/about-conference/" target="_blank">ICASSP 2026</a> !</span>
       </li>
@@ -1170,6 +1179,40 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   padding-left: 0;
 }
 .art-title::before { content: none; }
+
+/* Publications heading: inline "My Google Scholar" badge with live citation count */
+.pub-title-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin: 30px 0 10px;
+}
+.pub-title-row .art-title { margin: 0; }
+.gs-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border: 1px solid #d4d0c8;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.6);
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #1a1a1a !important;
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+.gs-link:hover { border-color: #4285F4; color: #4285F4 !important; background: rgba(255, 255, 255, 0.9); text-decoration: none; }
+.gs-link i { color: #4285F4; }
+.gs-link .gs-cit {
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: #eef2fb;
+  color: #2563eb;
+  font-weight: 600;
+}
 </style>
 
 <h2 class="art-title">Projects</h2>
@@ -1178,7 +1221,13 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   <li><a href="https://github.com/Xuzhenhua55/awesome-llm-copyright-protection" style="color: #2563eb;">Awesome LLM Copyright Protection</a> - A curated collection of research and techniques for protecting intellectual property of large language models, including watermarking, fingerprinting, and more. <a href="https://xuzhenhua55.github.io/awesome-llm-copyright-protection/" style="color: #2563eb;">[Website]</a><a href="https://arxiv.org/abs/2508.11548" style="color: #2563eb;">[Paper Link]</a></li>
 </ul>
 
-<h2 class="art-title" id="-publications">Publications</h2> 
+<div class="pub-title-row">
+  <h2 class="art-title" id="-publications">Publications</h2>
+  <a class="gs-link" href="https://scholar.google.com/citations?user=yDX0t54AAAAJ&hl=en" target="_blank" rel="noopener">
+    <i class="ai ai-google-scholar"></i> My Google Scholar
+    <span class="gs-cit">Citations: <span id="total_cit">…</span></span>
+  </a>
+</div>
 
 <!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -1547,6 +1596,9 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
       primaryClass={cs.CR},
       url={https://arxiv.org/abs/2508.11548}, 
 }{% endraw %}</pre>
+      <p class="text-truncate" style="margin: 0;">
+        A comprehensive survey of LLM copyright protection technologies with a focus on model fingerprinting. We clarify the conceptual progression from text watermarking to model watermarking and fingerprinting under a unified terminology, compare text watermarking techniques and identify when they act as model fingerprinting, and systematically categorize existing model fingerprinting approaches. We further present—for the first time—fingerprint transfer and removal techniques, summarize evaluation metrics (effectiveness, harmlessness, robustness, stealthiness, and reliability), and discuss open challenges and future directions, offering researchers a thorough understanding of protecting LLM intellectual property.
+      </p>
     </div>
   </div>
 
@@ -1777,7 +1829,25 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   <div class="cv-panel">
 
     <div class="cv-item">
-      <div class="cv-period">Nov 2025<br>—<br>Present</div>
+      <div class="cv-period">May 2026<br>—<br>Present</div>
+      <div class="cv-logo"><img src="images/internship/bytedance.png" alt="ByteDance"></div>
+      <div class="cv-content">
+        <div class="cv-org">ByteDance · International E-commerce (TikTok Shop)</div>
+        <div class="cv-role">LLM Algorithm Intern (Business + Research) · Hangzhou, China</div>
+        <div class="cv-tags">
+          <span class="cv-tag">Top Talent · 前沿技术领域人才计划</span>
+        </div>
+        <details class="cv-detail">
+          <summary>Details ▾</summary>
+          <div class="cv-detail-body">
+            <p><strong>Primary Responsibilities:</strong> Post-training (Agentic RL) of foundation models for TikTok Shop's intelligent customer service scenarios, improving the model's tool calling and multi-turn dialogue capabilities across both consumer (Buyer) and merchant (Seller) business lines. My work mainly focuses on building offline RL environments, designing rubrics, and addressing credit assignment in long-horizon conversations.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="cv-item">
+      <div class="cv-period">Nov 2025<br>—<br>May 2026</div>
       <div class="cv-logo"><img src="images/tencentyoutu.jpg" alt="Tencent YouTu Lab"></div>
       <div class="cv-content">
         <div class="cv-org"><a href="https://open.youtu.qq.com/#/open" target="_blank">Tencent YouTu Lab</a></div>
@@ -1785,7 +1855,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
         <details class="cv-detail">
           <summary>Details ▾</summary>
           <div class="cv-detail-body">
-            <p><strong>Primary Responsibilities:</strong> Conducting research on LLM role-playing to improve character consistency, dialogue fluency, and narrative engagement when models portray custom or specific characters.</p>
+            <p><strong>Primary Responsibilities:</strong> Conducting research on LLM role-playing along two complementary directions—role-playing system design (framework) and post-training of the models themselves (SFT, RLHF)—jointly aimed at improving character consistency, dialogue fluency, narrative engagement, and the user's interactive experience with the role-playing system when models portray custom or specific characters.</p>
           </div>
         </details>
       </div>
@@ -1795,7 +1865,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
       <div class="cv-period">Jul 2024<br>—<br>Oct 2025</div>
       <div class="cv-logo"><img src="images/GenTel-Research.png" alt="GenTel Research"></div>
       <div class="cv-content">
-        <div class="cv-org"><a href="http://ibj.zju.edu.cn/" target="_blank">ZJU Binjiang Institute</a> / <a href="https://gentel.io/zh/home" target="_blank">GenTel.io</a></div>
+        <div class="cv-org"><a href="http://ibj.zju.edu.cn/" target="_blank">Binjiang Institute of Zhejiang University</a> / <a href="https://gentel.io/zh/home" target="_blank">GenTel</a></div>
         <div class="cv-role">Research Intern – AI Security · Hangzhou, China</div>
         <details class="cv-detail">
           <summary>Details ▾</summary>
