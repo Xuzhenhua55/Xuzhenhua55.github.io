@@ -1225,7 +1225,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   <h2 class="art-title" id="-publications">Publications</h2>
   <a class="gs-link" href="https://scholar.google.com/citations?user=yDX0t54AAAAJ&hl=en" target="_blank" rel="noopener">
     <i class="ai ai-google-scholar"></i> My Google Scholar
-    <span class="gs-cit">Citations: <span id="total_cit">…</span></span>
+    <span class="gs-cit">Citations: 200+</span>
   </a>
 </div>
 
@@ -1848,7 +1848,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 
     <div class="cv-item">
       <div class="cv-period">Nov 2025<br>—<br>May 2026</div>
-      <div class="cv-logo"><img src="images/tencentyoutu.jpg" alt="Tencent YouTu Lab"></div>
+      <div class="cv-logo"><img src="images/internship/tencent.png" alt="Tencent YouTu Lab"></div>
       <div class="cv-content">
         <div class="cv-org"><a href="https://open.youtu.qq.com/#/open" target="_blank">Tencent YouTu Lab</a></div>
         <div class="cv-role">LLM Algorithm Intern (Research) · Shanghai, China</div>
