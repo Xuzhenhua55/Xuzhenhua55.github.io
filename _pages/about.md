@@ -1133,6 +1133,10 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   <div class="news-panel">
     <ul class="news-list" id="news-list">
       <li class="news-item">
+        <span class="news-date">08/2026</span>
+        <span class="news-content">🎉 <strong>Two</strong> papers accepted by <a href="https://2026.emnlp.org/" target="_blank">EMNLP 2026</a> · 1 Main, 1 Findings !</span>
+      </li>
+      <li class="news-item">
         <span class="news-date">05/2026</span>
         <span class="news-content">🎉 One paper accepted by <a href="https://www.usenix.org/conference/usenixsecurity26" target="_blank">USENIX Security 2026</a> !</span>
       </li>
@@ -1225,7 +1229,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   <h2 class="art-title" id="-publications">Publications</h2>
   <a class="gs-link" href="https://scholar.google.com/citations?user=yDX0t54AAAAJ&hl=en" target="_blank" rel="noopener">
     <i class="ai ai-google-scholar"></i> My Google Scholar
-    <span class="gs-cit">Citations: 200+</span>
+    <span class="gs-cit">Citations: 300+</span>
   </a>
 </div>
 
@@ -1301,6 +1305,24 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   doi = {10.18653/v1/2025.emnlp-main.358},
   urldate = {2025-11-14},
   isbn = {979-8-89176-332-6}
+}{% endraw %}</pre>
+    </div>
+  </div>
+
+  <div class="paper-card">
+    <div class="paper-body">
+      <div class="paper-top">
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2505.06304">SRAF: Stealthy and Robust Adversarial Fingerprint for Copyright Verification of Large Language Models</a></h3>
+      </div>
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">EMNLP 2026 Main</span><span class="paper-badge">CCF-B</span><span class="bib-copy" data-bib="bib-sraf">Bib</span></span>Zhebo Wang, <strong style="color: #24292e;">Zhenhua Xu</strong>, Li Maike, Xilong Cheng, Wenpeng Xing, Chunqiang Hu, Chen Zhi, Meng Han</p>
+      <pre class="bib-data" id="bib-sraf">{% raw %}@misc{wang2026srafstealthyrobustadversarial,
+      title={SRAF: Stealthy and Robust Adversarial Fingerprint for Copyright Verification of Large Language Models},
+      author={Zhebo Wang and Zhenhua Xu and Li Maike and Xilong Cheng and Wenpeng Xing and Chunqiang Hu and Chen Zhi and Meng Han},
+      year={2026},
+      eprint={2505.06304},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR},
+      url={https://arxiv.org/abs/2505.06304},
 }{% endraw %}</pre>
     </div>
   </div>
@@ -1599,24 +1621,6 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
       <p class="text-truncate" style="margin: 0;">
         A comprehensive survey of LLM copyright protection technologies with a focus on model fingerprinting. We clarify the conceptual progression from text watermarking to model watermarking and fingerprinting under a unified terminology, compare text watermarking techniques and identify when they act as model fingerprinting, and systematically categorize existing model fingerprinting approaches. We further present—for the first time—fingerprint transfer and removal techniques, summarize evaluation metrics (effectiveness, harmlessness, robustness, stealthiness, and reliability), and discuss open challenges and future directions, offering researchers a thorough understanding of protecting LLM intellectual property.
       </p>
-    </div>
-  </div>
-
-  <div class="paper-card preprint-hidden">
-    <div class="paper-body">
-      <div class="paper-top">
-        <h3 class="paper-title"><a href="https://arxiv.org/abs/2505.06304">SRAF: Stealthy and Robust Adversarial Fingerprint for Copyright Verification of Large Language Models</a></h3>
-      </div>
-      <p class="paper-meta"><span class="paper-badges"><span class="bib-copy" data-bib="bib-sraf">Bib</span></span><strong style="color: #24292e;">Zhebo Wang</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Maike Li, Wenpeng Xing, Chunqiang Hu, Chen Zhi, Meng Han</p>
-      <pre class="bib-data" id="bib-sraf">{% raw %}@misc{wang2026srafstealthyrobustadversarial,
-      title={SRAF: Stealthy and Robust Adversarial Fingerprint for Copyright Verification of Large Language Models},
-      author={Zhebo Wang and Zhenhua Xu and Maike Li and Wenpeng Xing and Chunqiang Hu and Chen Zhi and Meng Han},
-      year={2026},
-      eprint={2505.06304},
-      archivePrefix={arXiv},
-      primaryClass={cs.CR},
-      url={https://arxiv.org/abs/2505.06304}, 
-}{% endraw %}</pre>
     </div>
   </div>
 
