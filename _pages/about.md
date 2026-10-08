@@ -284,9 +284,10 @@ redirect_from:
 .preprints-section .paper-meta { font-size: 12px; margin: 0; }
 .preprints-section .paper-badges { margin-right: 8px; vertical-align: middle; }
 
-/* Key Preprints 收缩：默认隐藏 copyright 之后的卡片，点击 show more 展开 */
+/* Key Preprints 收缩：默认隐藏 Fingerprint Vector 卡片，点击 show more 展开 */
 .preprints-section .preprints-grid .paper-card.preprint-hidden { display: none; }
 .preprints-section .preprints-grid.preprints-expanded .paper-card.preprint-hidden { display: flex; }
+.conference-section .conference-toggle,
 .preprints-section .preprint-toggle {
   margin-top: 6px;
   width: 100%;
@@ -301,7 +302,12 @@ redirect_from:
   cursor: pointer;
   transition: color 0.15s;
 }
+.conference-section .conference-toggle:hover,
 .preprints-section .preprint-toggle:hover { color: #2563eb; }
+
+/* Conference Papers: show RAPO, AdaMARP and AttnDiff by default. */
+.conference-section .paper-card.conference-hidden { display: none; }
+.conference-section.conference-expanded .paper-card.conference-hidden { display: flex; }
 
 /* Projects 区域：字号与 paper title 接近（不改变结构） */
 #-projects + ul { font-size: 14px !important; color: #475569; line-height: 1.5; }
@@ -957,7 +963,22 @@ document.addEventListener('DOMContentLoaded', function() {
     summary.appendChild(toggle);
   });
 
-  // Key Preprints 收缩：默认隐藏 copyright 之后的卡片，show more 展开
+  const conferenceSection = document.querySelector('.conference-section');
+  if (conferenceSection && conferenceSection.querySelector('.conference-hidden')) {
+    const conferenceToggle = document.createElement('button');
+    conferenceToggle.type = 'button';
+    conferenceToggle.className = 'conference-toggle';
+    conferenceToggle.textContent = 'Show more \u25BE';
+    conferenceToggle.setAttribute('aria-expanded', 'false');
+    conferenceToggle.addEventListener('click', function() {
+      const expanded = conferenceSection.classList.toggle('conference-expanded');
+      conferenceToggle.textContent = expanded ? 'Show less \u25B4' : 'Show more \u25BE';
+      conferenceToggle.setAttribute('aria-expanded', String(expanded));
+    });
+    conferenceSection.appendChild(conferenceToggle);
+  }
+
+  // Key Preprints 收缩：默认隐藏 Fingerprint Vector 卡片，show more 展开
   const preprintsGrid = document.querySelector('.preprints-section .preprints-grid');
   if (preprintsGrid && preprintsGrid.querySelector('.paper-card.preprint-hidden')) {
     const preToggle = document.createElement('button');
@@ -1133,6 +1154,10 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   <div class="news-panel">
     <ul class="news-list" id="news-list">
       <li class="news-item">
+        <span class="news-date">09/2026</span>
+        <span class="news-content">🎉 <strong>Two</strong> papers accepted by NeurIPS 2026 !</span>
+      </li>
+      <li class="news-item">
         <span class="news-date">08/2026</span>
         <span class="news-content">🎉 <strong>Two</strong> papers accepted by <a href="https://2026.emnlp.org/" target="_blank">EMNLP 2026</a> · 1 Main, 1 Findings !</span>
       </li>
@@ -1245,8 +1270,33 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 </div>
 </div> -->
 
-<div style="background: rgba(255, 255, 255, 0.52); border: 1px solid #d4d0c8; border-radius: 6px; padding: 12px 16px; margin: 18px 0;">
+<div class="conference-section" style="background: rgba(255, 255, 255, 0.52); border: 1px solid #d4d0c8; border-radius: 6px; padding: 12px 16px; margin: 18px 0;">
 <h2 class="section-header">Conference Papers</h2>
+  <div class="paper-card">
+    <div class="paper-thumb">
+      <img src="{{ '/images/papers/RAPO-Framework.png' | relative_url }}" alt="Psy-CoT / RAPO Framework">
+    </div>
+    <div class="paper-body">
+      <div class="paper-top">
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2606.27025">Improving General Role-Playing Agents via Psychology-Grounded Reasoning and Role-Aware Policy Optimization</a></h3>
+      </div>
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">NeurIPS 2026</span><span class="paper-badge">CCF-A</span><a href="https://arxiv.org/abs/2606.27025" target="_blank" class="paper-badge-link">arXiv</a><span class="bib-copy" data-bib="bib-psycot">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Dongsheng Chen, Jian Li, Yitong Lin, Zhebo Wang, Jiafu Wu, Yizhang Jin, Chengjie Wang, Meng Han, Yabiao Wang</p>
+      <pre class="bib-data" id="bib-psycot">{% raw %}@misc{xu2026psycot,
+      title={Improving General Role-Playing Agents via Psychology-Grounded Reasoning and Role-Aware Policy Optimization},
+      author={Zhenhua Xu and Dongsheng Chen and Jian Li and Yitong Lin and Zhebo Wang and Jiafu Wu and Yizhang Jin and Chengjie Wang and Meng Han and Yabiao Wang},
+      year={2026},
+      eprint={2606.27025},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2606.27025},
+}{% endraw %}</pre>
+      <p class="text-truncate" style="margin: 0;">
+        We propose Psy-CoT, a psychology-grounded chain-of-thought framework that decomposes pre-response reasoning into Interaction Perception, Psychological Empathy, and Logical Construction, so the model thinks dynamically from a character profile rather than mimicking surface patterns. We further introduce Role-Aware Policy Optimization (RAPO), which uses profile–token mutual information to weight gradients asymmetrically—amplifying role-specific tokens under positive advantage and attenuating them under negative advantage to curb reward hacking. On CoSER, CharacterBench, and CharacterEval, Psy-CoT outperforms existing role-playing CoT methods and RAPO consistently surpasses GRPO across model scales.
+      </p>
+    </div>
+  </div>
+
+
   
   <div class="paper-card">
     <div class="paper-thumb">
@@ -1272,7 +1322,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
       <div class="paper-top">
         <h3 class="paper-title"><a href="https://arxiv.org/abs/2604.05502">AttnDiff: Attention-based Differential Fingerprinting for Large Language Models</a></h3>
       </div>
-      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">ACL 2026 Main</span><span class="paper-badge">CCF-A</span></span><strong style="color: #24292e;">Haobo Zhang</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Junxian Li, Shangfeng Sheng, Dezhang Kong, Meng Han
+      <p class="paper-meta"><span class="paper-badges"><span class="paper-badge">NeurIPS 2026</span><span class="paper-badge">CCF-A</span></span><strong style="color: #24292e;">Haobo Zhang</strong> and <strong style="color: #24292e;">Zhenhua Xu</strong> (co-first authors), Junxian Li, Shangfeng Sheng, Dezhang Kong, Meng Han
       </p>
       <p class="text-truncate" style="margin: 0;">
         We propose AttnDiff, a data-efficient white-box framework that extracts fingerprints from models via intrinsic information-routing behavior. AttnDiff probes minimally edited prompt pairs that induce controlled semantic conflicts, captures differential attention patterns, summarizes them with compact spectral descriptors, and compares models using CKA.
@@ -1280,7 +1330,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     </div>
   </div>
 
-  <div class="paper-card">
+  <div class="paper-card conference-hidden">
     <!-- <div class="paper-thumb">
       <img src='images/papers/EverTracer-Framework.png' alt="EverTracer Framework">
     </div> -->
@@ -1309,7 +1359,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     </div>
   </div>
 
-  <div class="paper-card">
+  <div class="paper-card conference-hidden">
     <div class="paper-body">
       <div class="paper-top">
         <h3 class="paper-title"><a href="https://arxiv.org/abs/2505.06304">SRAF: Stealthy and Robust Adversarial Fingerprint for Copyright Verification of Large Language Models</a></h3>
@@ -1327,7 +1377,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     </div>
   </div>
 
-  <div class="paper-card">
+  <div class="paper-card conference-hidden">
     <!-- <div class="paper-thumb">
       <img src='images/papers/CTCC-Framework.png' alt="CTCC Framework">
     </div> -->
@@ -1356,7 +1406,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     </div>
   </div>
 
-  <div class="paper-card">
+  <div class="paper-card conference-hidden">
     <!-- <div class="paper-thumb">
       <img src='images/papers/MEraser-Framework.png' alt="MEraser Framework">
     </div> -->
@@ -1385,7 +1435,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     </div>
   </div>
     
-  <div class="paper-card">
+  <div class="paper-card conference-hidden">
     <!-- <div class="paper-thumb">
       <img src='images/papers/LoRA-FP-Framework.png' alt="LoRA-FP Framework">
     </div> -->
@@ -1415,7 +1465,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
   </div>
 
 
-  <div class="paper-card">
+  <div class="paper-card conference-hidden">
     <!-- <div class="paper-thumb wide">
       <img src='images/papers/PREE-Framework.jpg' alt="PREE Framework">
     </div> -->
@@ -1444,7 +1494,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     </div>
   </div>
 
-  <div class="paper-card">
+  <div class="paper-card conference-hidden">
     <div class="paper-body">
       <div class="paper-top">
         <h3 class="paper-title"><a href="https://arxiv.org/abs/2601.08223">DNF: Dual-Layer Nested Fingerprinting for Large Language Model Intellectual Property Protection</a></h3>
@@ -1466,7 +1516,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     </div>
   </div>
 
-  <div class="paper-card">
+  <div class="paper-card conference-hidden">
     <div class="paper-body">
       <div class="paper-top">
         <h3 class="paper-title"><a href="https://arxiv.org/abs/2601.08189">ForgetMark: Stealthy Fingerprint Embedding via Targeted Unlearning in Language Models</a></h3>
@@ -1488,7 +1538,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     </div>
   </div>
 
-  <div class="paper-card">
+  <div class="paper-card conference-hidden">
     <div class="paper-body">
       <div class="paper-top">
         <h3 class="paper-title"><a href="https://arxiv.org/abs/2601.12986">KinGuard: Hierarchical Kinship-Aware Fingerprinting to Defend Against Large Language Model Stealing</a></h3>
@@ -1510,7 +1560,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     </div>
   </div>
 
-  <div class="paper-card">
+  <div class="paper-card conference-hidden">
     <div class="paper-body">
       <div class="paper-top">
         <h3 class="paper-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=yDX0t54AAAAJ&citation_for_view=yDX0t54AAAAJ:zYLM7Y9cAGgC">Web Fraud Attacks Against LLM-Driven Multi-Agent Systems</a></h3>
@@ -1523,7 +1573,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     </div>
   </div>
 
-  <div class="paper-card">
+  <div class="paper-card conference-hidden">
     <div class="paper-body">
       <div class="paper-top">
         <h3 class="paper-title"><a href="https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=yDX0t54AAAAJ&citation_for_view=yDX0t54AAAAJ:8k81kl-MbHgC">MalURLBench: A Benchmark Evaluating Agents' Vulnerabilities When Processing Web URLs</a></h3>
@@ -1578,24 +1628,24 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 
   <div class="paper-card">
     <div class="paper-thumb">
-      <img src="{{ '/images/papers/RAPO-Framework.png' | relative_url }}" alt="Psy-CoT / RAPO Framework">
+      <img src="{{ '/images/papers/Agent-Communication-Framework.png' | relative_url }}" alt="Agent communication types and three-layer architecture">
     </div>
     <div class="paper-body">
       <div class="paper-top">
-        <h3 class="paper-title"><a href="https://arxiv.org/abs/2606.27025">Improving General Role-Playing Agents via Psychology-Grounded Reasoning and Role-Aware Policy Optimization</a></h3>
+        <h3 class="paper-title"><a href="https://arxiv.org/abs/2506.19676">A Survey of LLM-Driven AI Agent Communication: Protocols, Security Risks, and Defense Countermeasures</a></h3>
       </div>
-      <p class="paper-meta"><span class="paper-badges"><a href="https://arxiv.org/abs/2606.27025" target="_blank" class="paper-badge-link">arXiv</a><span class="bib-copy" data-bib="bib-psycot">Bib</span></span><strong style="color: #24292e;">Zhenhua Xu</strong>, Dongsheng Chen, Jian Li, Yitong Lin, Zhebo Wang, Jiafu Wu, Yizhang Jin, Chengjie Wang, Meng Han, Yabiao Wang</p>
-      <pre class="bib-data" id="bib-psycot">{% raw %}@misc{xu2026psycot,
-      title={Improving General Role-Playing Agents via Psychology-Grounded Reasoning and Role-Aware Policy Optimization},
-      author={Zhenhua Xu and Dongsheng Chen and Jian Li and Yitong Lin and Zhebo Wang and Jiafu Wu and Yizhang Jin and Chengjie Wang and Meng Han and Yabiao Wang},
-      year={2026},
-      eprint={2606.27025},
+      <p class="paper-meta"><span class="paper-badges"><a href="https://github.com/theshi-1128/awesome-agent-communication-security" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-agentsurvey">Bib</span></span>Dezhang Kong, Shi Lin, <strong style="color: #24292e;">Zhenhua Xu</strong>, Zhebo Wang, Minghao Li, et al.</p>
+      <pre class="bib-data" id="bib-agentsurvey">{% raw %}@misc{kong2025surveyllmdrivenaiagent,
+      title={A Survey of LLM-Driven AI Agent Communication: Protocols, Security Risks, and Defense Countermeasures},
+      author={Dezhang Kong and Shi Lin and Zhenhua Xu and Zhebo Wang and Minghao Li and Yufeng Li and Yilun Zhang and Hujin Peng and Xiang Chen and Zeyang Sha and Yuyuan Li and Changting Lin and Xun Wang and Xuan Liu and Ningyu Zhang and Chaochao Chen and Chunming Wu and Muhammad Khurram Khan and Meng Han},
+      year={2025},
+      eprint={2506.19676},
       archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2606.27025},
+      primaryClass={cs.CR},
+      url={https://arxiv.org/abs/2506.19676},
 }{% endraw %}</pre>
       <p class="text-truncate" style="margin: 0;">
-        We propose Psy-CoT, a psychology-grounded chain-of-thought framework that decomposes pre-response reasoning into Interaction Perception, Psychological Empathy, and Logical Construction, so the model thinks dynamically from a character profile rather than mimicking surface patterns. We further introduce Role-Aware Policy Optimization (RAPO), which uses profile–token mutual information to weight gradients asymmetrically—amplifying role-specific tokens under positive advantage and attenuating them under negative advantage to curb reward hacking. On CoSER, CharacterBench, and CharacterEval, Psy-CoT outperforms existing role-playing CoT methods and RAPO consistently surpasses GRPO across model scales.
+        We present a comprehensive survey of LLM-driven agent communication security, organizing user–agent, agent–agent, and agent–environment communication within a three-layer architecture spanning data transmission, interaction protocols, and semantic interpretation. We examine communication protocols such as MCP and A2A, map security risks to their underlying layers, and discuss potential defenses. Experiments with MCP and A2A illustrate emerging vulnerabilities, while open challenges and future directions outline a path toward more secure agent communication.
       </p>
     </div>
   </div>
@@ -1616,7 +1666,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
       eprint={2508.11548},
       archivePrefix={arXiv},
       primaryClass={cs.CR},
-      url={https://arxiv.org/abs/2508.11548}, 
+      url={https://arxiv.org/abs/2508.11548},
 }{% endraw %}</pre>
       <p class="text-truncate" style="margin: 0;">
         A comprehensive survey of LLM copyright protection technologies with a focus on model fingerprinting. We clarify the conceptual progression from text watermarking to model watermarking and fingerprinting under a unified terminology, compare text watermarking techniques and identify when they act as model fingerprinting, and systematically categorize existing model fingerprinting approaches. We further present—for the first time—fingerprint transfer and removal techniques, summarize evaluation metrics (effectiveness, harmlessness, robustness, stealthiness, and reliability), and discuss open challenges and future directions, offering researchers a thorough understanding of protecting LLM intellectual property.
@@ -1638,24 +1688,6 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
       archivePrefix={arXiv},
       primaryClass={cs.CR},
       url={https://arxiv.org/abs/2409.08846}, 
-}{% endraw %}</pre>
-    </div>
-  </div>
-
-  <div class="paper-card preprint-hidden">
-    <div class="paper-body">
-      <div class="paper-top">
-        <h3 class="paper-title"><a href="https://arxiv.org/abs/2506.19676">A Survey of LLM-Driven AI Agent Communication: Protocols, Security Risks, and Defense Countermeasures</a></h3>
-      </div>
-      <p class="paper-meta"><span class="paper-badges"><a href="https://github.com/theshi-1128/awesome-agent-communication-security" target="_blank" class="paper-badge-link">Code</a><span class="bib-copy" data-bib="bib-agentsurvey">Bib</span></span>Dezhang Kong, Shi Lin, <strong style="color: #24292e;">Zhenhua Xu</strong>, Zhebo Wang, Minghao Li, et al.</p>
-      <pre class="bib-data" id="bib-agentsurvey">{% raw %}@misc{kong2025surveyllmdrivenaiagent,
-      title={A Survey of LLM-Driven AI Agent Communication: Protocols, Security Risks, and Defense Countermeasures},
-      author={Dezhang Kong and Shi Lin and Zhenhua Xu and Zhebo Wang and Minghao Li and Yufeng Li and Yilun Zhang and Hujin Peng and Xiang Chen and Zeyang Sha and Yuyuan Li and Changting Lin and Xun Wang and Xuan Liu and Ningyu Zhang and Chaochao Chen and Chunming Wu and Muhammad Khurram Khan and Meng Han},
-      year={2025},
-      eprint={2506.19676},
-      archivePrefix={arXiv},
-      primaryClass={cs.CR},
-      url={https://arxiv.org/abs/2506.19676}, 
 }{% endraw %}</pre>
     </div>
   </div>
