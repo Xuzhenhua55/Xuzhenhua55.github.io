@@ -1897,7 +1897,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
       </div>
     </div>
 
-    <div class="cv-item">
+    <div class="cv-item cv-hidden">
       <div class="cv-period">Jul 2024<br>—<br>Oct 2025</div>
       <div class="cv-logo"><img src="images/GenTel-Research.png" alt="GenTel Research"></div>
       <div class="cv-content">
@@ -1997,7 +1997,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
 </style>
 
 <footer class="site-footer">
-  <p>&copy; Zhenhua Xu &nbsp;&middot;&nbsp; Latest updated Jun. 2026</p>
+  <p>&copy; Zhenhua Xu &nbsp;&middot;&nbsp; Latest updated Oct. 2026</p>
   <span class="footer-badge">
     <img src="https://visitor-badge.laobi.icu/badge?page_id=xuzhenhua55.github.io&left_color=%232ccce4&right_color=%230158f9&left_text=visitors" alt="visitor badge">
   </span>
