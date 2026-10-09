@@ -1155,7 +1155,7 @@ If you are interested in my work, please contact me at <strong>xuzhenhua0326@zju
     <ul class="news-list" id="news-list">
       <li class="news-item">
         <span class="news-date">09/2026</span>
-        <span class="news-content">🎉 <strong>Two</strong> papers accepted by NeurIPS 2026 !</span>
+        <span class="news-content">🎉 <strong>Two</strong> papers accepted by <a href="https://neurips.cc/Conferences/2026" target="_blank">NeurIPS 2026</a> !</span>
       </li>
       <li class="news-item">
         <span class="news-date">08/2026</span>
